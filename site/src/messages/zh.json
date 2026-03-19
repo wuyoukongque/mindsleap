@@ -1,0 +1,241 @@
+{
+  "metadata": {
+    "title": "MindsLeap 心智悦动 | AI时代企业转型加速器",
+    "description": "MindsLeap帮助企业家和组织实现AI转型，智胜全球市场。通过企业家AI俱乐部、独角兽孵化、高管培训和全球研学四大业务，连接中国企业与全球AI前沿。"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "业务板块",
+    "aiClub": "AI Club",
+    "incubation": "独角兽孵化",
+    "training": "AI培训/咨询",
+    "studyTours": "定制研学",
+    "news": "动态",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "slide1Title": "企业家AI俱乐部",
+    "slide1Heading": "Upgrade AI Mindsets\nfor Global Success",
+    "slide1Subtitle": "升级前沿AI思维，拒绝认知掉队",
+    "slide2Title": "独角兽孵化",
+    "slide2Heading": "Scaling Tomorrow's\nTech Giants",
+    "slide2Subtitle": "赋能全球增长，加速成为独角兽",
+    "slide3Title": "AI咨询/培训",
+    "slide3Heading": "Mastering and Implementing\nAI Strategy",
+    "slide3Subtitle": "制定AI战略，落地AI项目",
+    "slide4Title": "全球研学",
+    "slide4Heading": "Global Vision,\nLocal Implementation",
+    "slide4Subtitle": "深度探访前沿生态，开拓全球化视野",
+    "slide1Cta": "我想加入俱乐部",
+    "slide2Cta": "我想成为独角兽",
+    "slide3Cta": "开启AI转型",
+    "slide4Cta": "我想探索全世界",
+    "tagline": "Upgrade AI Mindsets for Global Success",
+    "subtitle": "连接中国传统企业家与全球AI前沿技术的转型加速器",
+    "description": "通过社群、内容、孵化、研学四大业务，帮助企业家轻松拥抱AI，实现从焦虑到落地的「悦动」式变革",
+    "cta": "了解更多",
+    "ctaContact": "联系我们"
+  },
+  "valueProp": {
+    "title": "心智悦动，轻快变革",
+    "paragraph1": "传统企业家在AI时代普遍处于「变革焦虑」中——知道AI很重要，却找不到清晰的落地路径。与此同时，科技企业家们忙于开发各种AI、机器人等应用，但是往往缺乏有效客户和真实场景。",
+    "paragraph2": "MindsLeap联合硅谷知名孵化器Founders Space，共同构建联动新旧产业、国内外资本以及硅谷科技圈的企业家生态，为中国产业AI转型，中国企业全球化贡献一份力量。并且我们希望这个过程可以是轻松愉悦的，欢迎大家加入我们一起「悦动」。",
+    "stat1Label": "硅谷知名孵化器Founders Space 全球合作伙伴",
+    "stat2Label": "目标转型企业",
+    "quote": "Upgrade AI Mindsets for Global Success. 我们的使命是陪伴传统企业实现AI转型，助力科技企业更快成长。",
+    "quoteRole": "MindsLeap 创始人 & CEO",
+    "quoteRole2": "Founders Space 全球合伙人",
+    "hoffmanQuote": "Founders Space and MindsLeap are coming together to help entrepreneurs and businesses transform with AI.",
+    "hoffmanRole": "Founder and Chairman of Founders Space"
+  },
+  "business": {
+    "title": "MindsLeap核心业务",
+    "subtitle": "四大板块全方位助力AI转型",
+    "aiClub": {
+      "title": "企业家AI俱乐部",
+      "description": "助力企业家实现AI转型，30-50人精品闭门私享会，优秀企业家同频共创，制定战略，落地项目。",
+      "tag": "核心产品"
+    },
+    "incubation": {
+      "title": "独角兽孵化",
+      "description": "通过辅导、陪跑、路演等形式，理清战略，连接客户与投资人，加速独角兽企业成长。",
+      "tag": "ToB 服务"
+    },
+    "training": {
+      "title": "高管培训 / 战略咨询",
+      "description": "硅谷大咖AI培训、AI战略咨询、转型陪跑、变革领导力，提升企业AI时代竞争力。",
+      "tag": "ToB 服务"
+    },
+    "studyTours": {
+      "title": "全球研学",
+      "description": "深度考察全球商业机会，硅谷GTC大会、名校参访、企业走访，认知升级+资源对接。",
+      "tag": "高端产品"
+    },
+    "learnMore": "了解详情"
+  },
+  "ecosystem": {
+    "title": "全球生态系统",
+    "subtitle": "MindsLeap构建基于AI的全球资源的网络，居于生态的中心，连接传统企业与AI创新者，资本以及硅谷生态。",
+    "network1": "Founders Space 全球网络",
+    "network2": "顶尖大学AI实验室（斯坦福/伯克利）",
+    "network3": "科技巨头（Google/NVIDIA/联想）",
+    "traditional": "传统行业创始人社群",
+    "ai": "AI+机器人企业创始人社群",
+    "silicon": "硅谷湾区AI创始人生态",
+    "investor": "天使/VC/PE投资人生态"
+  },
+  "latestEvents": {
+    "title": "最新活动",
+    "subtitle": "见证全球各地的「悦动」行动",
+    "viewMore": "查看更多",
+    "learnMore": "了解详情",
+    "event1Category": "社交活动",
+    "event1Title": "精英Founders Space GTC聚会",
+    "event1Desc": "汇聚全球创新者，探讨下一波生成式AI和机器人集成浪潮。",
+    "event2Category": "工作坊",
+    "event2Title": "AI战略与思维工作坊",
+    "event2Desc": "针对高管层的互动式课程，帮助克服「转型恐惧」。",
+    "event3Category": "主旨演讲",
+    "event3Title": "我们将与AI融合吗？",
+    "event3Desc": "高影响力演讲，探索人类智能与人工智能的融合。"
+  },
+  "mentors": {
+    "title": "全球导师智库",
+    "subtitle": "硅谷智库为您带来前沿科技与投资洞察"
+  },
+  "clients": {
+    "title": "服务过的企业",
+    "subtitle": "为全球领先企业提供AI创新与战略咨询"
+  },
+  "cta": {
+    "title": "准备好拥抱AI转型了吗？",
+    "subtitle": "加入MindsLeap，让变革成为一场愉悦的认知升级之旅",
+    "button": "立即咨询"
+  },
+  "aboutHero": {
+    "slide1Title": "关于MindsLeap",
+    "slide1Heading": "心智悦动\n轻快变革",
+    "slide1Subtitle": "AI时代的企业转型加速器",
+    "slide2Title": "Founders Space 全球合作伙伴",
+    "slide2Heading": "连接中国与硅谷\n共创AI未来",
+    "slide2Subtitle": "构建全球企业家生态网络"
+  },
+  "servicesHero": {
+    "slide1Title": "MindsLeap核心业务",
+    "slide1Heading": "四大业务板块\n全方位赋能AI转型",
+    "slide1Subtitle": "从认知升级到业务落地的全链路服务",
+    "slide2Title": "定制化解决方案",
+    "slide2Heading": "为每一位企业家\n量身打造AI路径",
+    "slide2Subtitle": "社群、孵化、培训、研学，总有一款适合你"
+  },
+  "newsHero": {
+    "slide1Title": "最新动态",
+    "slide1Heading": "MindsLeap\n活动与洞察",
+    "slide1Subtitle": "见证全球各地的「悦动」行动",
+    "slide2Title": "行业前沿",
+    "slide2Heading": "AI趋势解读\n与实战分享",
+    "slide2Subtitle": "来自硅谷和中国AI一线的深度观察"
+  },
+  "contactHero": {
+    "slide1Title": "联系我们",
+    "slide1Heading": "开启你的\nAI转型之旅",
+    "slide1Subtitle": "欢迎咨询MindsLeap的服务与合作",
+    "slide2Title": "加入我们",
+    "slide2Heading": "与全球企业家\n一起悦动",
+    "slide2Subtitle": "让变革成为一场愉悦的认知升级之旅"
+  },
+  "about": {
+    "title": "关于MindsLeap",
+    "mission": "品牌使命",
+    "missionText": "陪伴中国传统企业AI转型，助力中国科技企业更快成长",
+    "vision": "品牌愿景",
+    "story": "品牌故事",
+    "storyText": "MindsLeap（心智悦动）致力于打造AI时代的全球生态网络，构建链接传统企业家、AI/机器人等前沿科技创始人、投资人以及硅谷创业者四个核心生态位网络，帮助企业创始人和组织实现AI转型，智胜全球市场。",
+    "naming": "\"心\"代表心智与思维，\"智\"代表智慧与AI，\"悦\"代表喜悦与轻松，\"动\"代表行动与变革。心智悦动：让AI转型不再痛苦，而是一场愉悦的认知升级之旅。",
+    "founders": "创始团队",
+    "lincolnName": "Lincoln",
+    "lincolnRole": "MindsLeap 创始人 & CEO",
+    "lincolnRole2": "Founders Space 全球合伙人",
+    "lincolnBio": "曾担任全球排名第一教育科技公司32亿美元独角兽Emeritus中国区首席运营官，维京游轮中国区营销副总裁。拥有丰富的AI创业圈及硅谷资源，丰富的企业家战略辅导、企业培训与战略咨询、企业家社区资源链接，以及全球研学设计与运营经验。",
+    "hoffmanName": "Steve Hoffman",
+    "hoffmanRole": "Founders Space 创始人",
+    "hoffmanBio": "被誉为硅谷创投教父，指导并孵化了数百家初创企业。为高通、华为、阿里巴巴、博世、英特尔、迪士尼、大众汽车、普华永道等全球企业提供创新和AI战略咨询。",
+    "partnership": "Founders Space 全球合作伙伴",
+    "partnershipText": "MindsLeap是Founders Space的全球合作伙伴。Founders Space是一家全球风险投资平台，在22个国家/地区拥有50个战略合作伙伴。Founders Space的业务遍及全球，旨在帮助创业者、政府和企业运用人工智能进行创新并加速增长。"
+  },
+  "services": {
+    "title": "业务板块",
+    "subtitle": "四大业务全方位赋能AI转型"
+  },
+  "news": {
+    "title": "最新动态",
+    "subtitle": "活动资讯与行业洞察",
+    "readMore": "阅读全文",
+    "allPosts": "全部",
+    "events": "活动",
+    "insights": "洞察",
+    "backToList": "返回列表"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "欢迎咨询MindsLeap的服务与合作",
+    "form": {
+      "name": "姓名",
+      "email": "邮箱",
+      "company": "公司名称",
+      "role": "职位",
+      "interest": "感兴趣的服务",
+      "message": "留言",
+      "submit": "提交咨询",
+      "success": "感谢您的咨询，我们会尽快与您联系！",
+      "error": "发送失败，请稍后重试或直接邮件联系我们。"
+    },
+    "wechat": "微信联系",
+    "wechatDesc": "扫码添加MindsLeap官方微信"
+  },
+  "aiClubHero": {
+    "slide1Title": "企业家AI俱乐部",
+    "slide1Heading": "Upgrade AI Mindsets\nfor Global Success",
+    "slide1Subtitle": "汇聚AI转型企业家，一起学习共同成长",
+    "slide2Title": "硅谷大咖私享会",
+    "slide2Heading": "Learn from Silicon Valley\nAI experts",
+    "slide2Subtitle": "与硅谷前沿认知对齐",
+    "slide3Title": "标杆企业参访",
+    "slide3Heading": "Visit leading companies\nlearn best practice",
+    "slide3Subtitle": "学习领先企业的最佳实践"
+  },
+  "incubationHero": {
+    "slide1Title": "独角兽孵化",
+    "slide1Heading": "Scaling Tomorrow's\nTech Giants",
+    "slide1Subtitle": "联合Founders Space，赋能全球增长",
+    "slide2Title": "Hoffman亲自指导",
+    "slide2Heading": "Becoming a Unicorn",
+    "slide2Subtitle": "加速成长为独角兽"
+  },
+  "trainingHero": {
+    "slide1Title": "AI培训/咨询",
+    "slide1Heading": "Mastering and Implementing\nAI Strategy",
+    "slide1Subtitle": "硅谷大咖与国内专家联合赋能",
+    "slide2Title": "战略咨询",
+    "slide2Heading": "从认知到落地\n定制AI转型方案",
+    "slide2Subtitle": "Hoffman领衔的AI战略咨询服务"
+  },
+  "studyToursHero": {
+    "slide1Title": "定制研学",
+    "slide1Heading": "Global Vision,\nLocal Implementation",
+    "slide1Subtitle": "深度探访硅谷AI前沿生态",
+    "slide2Title": "硅谷深度体验",
+    "slide2Heading": "世界名校斯坦福·伯克利\n万亿科技巨头",
+    "slide2Subtitle": "与全球科技高地深度链接"
+  },
+  "footer": {
+    "description": "连接中国传统企业家与全球AI前沿技术的转型加速器",
+    "services": "业务板块",
+    "contactTitle": "联系我们",
+    "company": "关于",
+    "followUs": "关注我们",
+    "rights": "\u00a9 2026 MindsLeap. All Rights Reserved.",
+    "icp": ""
+  }
+}

@@ -1,0 +1,56 @@
+import { setRequestLocale } from "next-intl/server";
+import HeroSection from "@/components/home/HeroSection";
+import ValueProposition from "@/components/home/ValueProposition";
+import BusinessOverview from "@/components/home/BusinessOverview";
+import EcosystemSection from "@/components/home/EcosystemSection";
+import LatestEvents from "@/components/home/LatestEvents";
+import JsonLd from "@/components/shared/JsonLd";
+import { getAllPosts } from "@/lib/posts";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const latestPosts = getAllPosts(locale).slice(0, 3);
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "MindsLeap",
+    alternateName: "心智悦动",
+    url: "https://mindsleap.com",
+    description:
+      locale === "zh"
+        ? "连接中国传统企业家与全球AI前沿技术的转型加速器"
+        : "AI Transformation Accelerator bridging Chinese enterprises with global AI innovation",
+    foundingDate: "2025",
+    founder: {
+      "@type": "Person",
+      name: "Lincoln",
+      jobTitle: "CEO",
+    },
+    sameAs: [],
+    knowsAbout: [
+      "Artificial Intelligence",
+      "AI Transformation",
+      "Startup Incubation",
+      "Executive Training",
+      "Silicon Valley",
+    ],
+  };
+
+  return (
+    <>
+      <JsonLd data={organizationJsonLd} />
+      <HeroSection />
+      <ValueProposition />
+      <BusinessOverview />
+      <EcosystemSection />
+      <LatestEvents posts={latestPosts} />
+    </>
+  );
+}

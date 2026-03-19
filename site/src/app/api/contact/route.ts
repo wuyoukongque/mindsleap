@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     const interestLabel = INTEREST_LABELS[interest] || interest || "未选择";
 
     const { error } = await resend.emails.send({
-      from: "MindsLeap Contact Form <onboarding@resend.dev>",
+      from: "MindsLeap <contact@mindsleap.ai>",
       to: [process.env.CONTACT_EMAIL || "mindsleap@gmail.com"],
       replyTo: email,
       subject: `[MindsLeap] 新咨询 - ${name} | ${interestLabel}`,

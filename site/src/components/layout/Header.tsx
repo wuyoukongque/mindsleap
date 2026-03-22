@@ -46,7 +46,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <img src="/images/logo.png" alt="MindsLeap" className="h-10 w-auto" />
+            <img src="/images/logo-blue.png" alt="MindsLeap" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Menu */}

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { getSiteUrl } from "@/lib/site";
 
 type Props = {
   children: React.ReactNode;
@@ -17,6 +18,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
+  const siteUrl = getSiteUrl();
 
   return {
     title: {
@@ -24,6 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: `%s | MindsLeap`,
     },
     description: t("description"),
+    metadataBase: new URL(siteUrl),
     openGraph: {
       title: t("title"),
       description: t("description"),
@@ -36,10 +39,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t("description"),
     },
     alternates: {
-      canonical: `https://mindsleap.com/${locale}`,
+      canonical: `${siteUrl}/${locale}`,
       languages: {
-        zh: "https://mindsleap.com/zh",
-        en: "https://mindsleap.com/en",
+        zh: `${siteUrl}/zh`,
+        en: `${siteUrl}/en`,
       },
     },
   };

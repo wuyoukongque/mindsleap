@@ -1,7 +1,10 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { getContactEmail } from "@/lib/site";
 
 const resend = new Resend(process.env.RESEND_API_KEY || "re_placeholder");
+const contactFromEmail =
+  process.env.CONTACT_FROM_EMAIL || "MindsLeap <contact@mindsleap.cn>";
 
 const INTEREST_LABELS: Record<string, string> = {
   "ai-club": "企业家AI俱乐部",
@@ -26,8 +29,8 @@ export async function POST(request: Request) {
     const interestLabel = INTEREST_LABELS[interest] || interest || "未选择";
 
     const { error } = await resend.emails.send({
-      from: "MindsLeap <contact@mindsleap.ai>",
-      to: [process.env.CONTACT_EMAIL || "mindsleap@gmail.com"],
+      from: contactFromEmail,
+      to: [process.env.CONTACT_EMAIL || getContactEmail()],
       replyTo: email,
       subject: `[MindsLeap] 新咨询 - ${name} | ${interestLabel}`,
       html: `

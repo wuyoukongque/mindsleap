@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import ContactContent from "@/components/contact/ContactContent";
 import JsonLd from "@/components/shared/JsonLd";
+import { getContactEmail, getSiteUrl } from "@/lib/site";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -18,6 +19,7 @@ export async function generateMetadata({ params }: Props) {
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const siteUrl = getSiteUrl();
 
   const contactJsonLd = {
     "@context": "https://schema.org",
@@ -26,8 +28,8 @@ export default async function ContactPage({ params }: Props) {
     mainEntity: {
       "@type": "Organization",
       name: "MindsLeap",
-      email: "contact@mindsleap.com",
-      url: "https://mindsleap.com",
+      email: getContactEmail(),
+      url: siteUrl,
     },
   };
 

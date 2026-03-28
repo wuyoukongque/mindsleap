@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { getAllPostSlugs } from "@/lib/posts";
+import { getSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://mindsleap.com";
+  const baseUrl = getSiteUrl();
   const locales = ["zh", "en"];
 
   const staticPages = [

@@ -6,6 +6,7 @@ import EcosystemSection from "@/components/home/EcosystemSection";
 import LatestEvents from "@/components/home/LatestEvents";
 import JsonLd from "@/components/shared/JsonLd";
 import { getAllPosts } from "@/lib/posts";
+import { getSiteUrl } from "@/lib/site";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -14,6 +15,7 @@ type Props = {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const siteUrl = getSiteUrl();
 
   const latestPosts = getAllPosts(locale).slice(0, 3);
 
@@ -22,7 +24,7 @@ export default async function HomePage({ params }: Props) {
     "@type": "Organization",
     name: "MindsLeap",
     alternateName: "心智悦动",
-    url: "https://mindsleap.com",
+    url: siteUrl,
     description:
       locale === "zh"
         ? "连接中国传统企业家与全球AI前沿技术的转型加速器"

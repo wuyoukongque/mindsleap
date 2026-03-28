@@ -4,6 +4,7 @@ import { getPostBySlug, getAllPostSlugs } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import NewsArticleClient from "@/components/news/NewsArticleClient";
 import JsonLd from "@/components/shared/JsonLd";
+import { getSiteUrl } from "@/lib/site";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -38,6 +39,7 @@ export async function generateMetadata({ params }: Props) {
 export default async function NewsArticlePage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
+  const siteUrl = getSiteUrl();
 
   const post = getPostBySlug(slug, locale);
 
@@ -57,7 +59,7 @@ export default async function NewsArticlePage({ params }: Props) {
     publisher: {
       "@type": "Organization",
       name: "MindsLeap",
-      url: "https://mindsleap.com",
+      url: siteUrl,
     },
     description: post.excerpt,
     image: post.image,

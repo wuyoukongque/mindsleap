@@ -24,13 +24,19 @@
 
 新闻与洞察文章统一放在：
 
-- `site/content/news`
+- 中文稿：`site/content/news/zh`
+- 英文稿：`site/content/news/en`
 
 封面图通常放在：
 
 - `site/public/images/news`
 
-文章 URL slug 通常与文件名保持一致。
+文章 URL slug 通常与文件名保持一致。中英文版本使用同一个 slug，分别服务：
+
+- `/zh/news/{slug}`
+- `/en/news/{slug}`
+
+默认发布规范：每篇新闻 / 洞察应同时准备中文与英文版本；若英文版暂未完成，英文站不展示该篇文章。
 
 ## 3. 栏目规则
 
@@ -47,11 +53,21 @@
 
 如果新增文章，需要先判断它属于活动报道还是洞察内容，不要混用。
 
+新闻内容会按当前 locale 读取：
+
+- 中文站只读取 `content/news/zh`
+- 英文站只读取 `content/news/en`
+- sitemap 只生成实际存在的语言版本文章 URL
+
 ## 4. 洞察文章发布规范
 
 洞察文章默认作者信息：
 
 `作者：王林Lincoln | MindsLeap创始人 | Founders Space合伙人 | 企业家AI俱乐部创始人`
+
+英文洞察文章默认作者信息：
+
+`Author: Lincoln Wang | Founder of MindsLeap | Global Partner at Founders Space | Founder of Founders AI Club`
 
 洞察文章默认补充要求：
 

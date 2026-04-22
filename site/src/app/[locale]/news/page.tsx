@@ -5,6 +5,7 @@ import JsonLd from "@/components/shared/JsonLd";
 
 type Props = {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ tab?: string }>;
 };
 
 export async function generateMetadata({ params }: Props) {
@@ -16,11 +17,13 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function NewsPage({ params }: Props) {
+export default async function NewsPage({ params, searchParams }: Props) {
   const { locale } = await params;
+  const { tab } = await searchParams;
   setRequestLocale(locale);
 
   const posts = getAllPosts(locale);
+  const initialFilter = tab === "all" || tab === "events" || tab === "insights" ? tab : "events";
 
   const newsJsonLd = {
     "@context": "https://schema.org",
@@ -36,7 +39,7 @@ export default async function NewsPage({ params }: Props) {
   return (
     <>
       <JsonLd data={newsJsonLd} />
-      <NewsListClient posts={posts} />
+      <NewsListClient posts={posts} initialFilter={initialFilter} />
     </>
   );
 }

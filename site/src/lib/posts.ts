@@ -3,7 +3,9 @@ import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 
-const postsDirectory = path.join(process.cwd(), "content/news");
+const postsRootDirectory = path.join(process.cwd(), "content/news");
+const postLocales = ["zh", "en"] as const;
+type PostLocale = (typeof postLocales)[number];
 
 export type Post = {
   slug: string;
@@ -19,7 +21,28 @@ export type Post = {
   author?: string;
 };
 
+function normalizeLocale(locale: string): PostLocale {
+  return postLocales.includes(locale as PostLocale) ? (locale as PostLocale) : "zh";
+}
+
+function getPostsDirectory(locale: string): string {
+  return path.join(postsRootDirectory, normalizeLocale(locale));
+}
+
+function getPostFilePath(slug: string, locale: string): string | null {
+  const postsDirectory = getPostsDirectory(locale);
+  const mdxPath = path.join(postsDirectory, `${slug}.mdx`);
+  const mdPath = path.join(postsDirectory, `${slug}.md`);
+
+  if (fs.existsSync(mdxPath)) return mdxPath;
+  if (fs.existsSync(mdPath)) return mdPath;
+
+  return null;
+}
+
 export function getAllPosts(locale: string = "zh"): Post[] {
+  const postsDirectory = getPostsDirectory(locale);
+
   if (!fs.existsSync(postsDirectory)) {
     return [];
   }
@@ -39,12 +62,9 @@ export function getAllPosts(locale: string = "zh"): Post[] {
 
 export function getPostBySlug(slug: string, locale: string = "zh"): Post | null {
   try {
-    const mdxPath = path.join(postsDirectory, `${slug}.mdx`);
-    const mdPath = path.join(postsDirectory, `${slug}.md`);
+    const fullPath = getPostFilePath(slug, locale);
 
-    const fullPath = fs.existsSync(mdxPath) ? mdxPath : mdPath;
-
-    if (!fs.existsSync(fullPath)) {
+    if (!fullPath) {
       return null;
     }
 
@@ -60,7 +80,7 @@ export function getPostBySlug(slug: string, locale: string = "zh"): Post | null 
       category: data.category || "news",
       image: data.image || null,
       imagePosition: data.imagePosition || undefined,
-      locale: data.locale || "zh",
+      locale: data.locale || normalizeLocale(locale),
       content,
       readingTime: stats.text,
       author: data.author || "MindsLeap",
@@ -71,6 +91,12 @@ export function getPostBySlug(slug: string, locale: string = "zh"): Post | null 
 }
 
 export function getAllPostSlugs(): string[] {
+  return Array.from(new Set(postLocales.flatMap((locale) => getAllPostSlugsByLocale(locale))));
+}
+
+export function getAllPostSlugsByLocale(locale: string = "zh"): string[] {
+  const postsDirectory = getPostsDirectory(locale);
+
   if (!fs.existsSync(postsDirectory)) {
     return [];
   }
@@ -79,4 +105,10 @@ export function getAllPostSlugs(): string[] {
     .readdirSync(postsDirectory)
     .filter((name) => name.endsWith(".mdx") || name.endsWith(".md"))
     .map((name) => name.replace(/\.mdx?$/, ""));
+}
+
+export function getAllLocalizedPostSlugs(): Array<{ locale: PostLocale; slug: string }> {
+  return postLocales.flatMap((locale) =>
+    getAllPostSlugsByLocale(locale).map((slug) => ({ locale, slug }))
+  );
 }

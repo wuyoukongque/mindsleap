@@ -64,6 +64,7 @@ export default async function HomePage({ params }: Props) {
         translationNamespace="latestInsights"
         emptyText={locale === "zh" ? "暂无洞察，敬请期待" : "No insights yet. Stay tuned."}
         backgroundClassName="bg-white"
+        viewMoreHref="/news?tab=insights"
       />
     </>
   );

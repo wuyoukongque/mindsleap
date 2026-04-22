@@ -10,14 +10,15 @@ import PageHero from "@/components/shared/PageHero";
 
 type Props = {
   posts: Post[];
+  initialFilter?: (typeof categories)[number];
 };
 
 const categories = ["all", "events", "insights"] as const;
 
-export default function NewsListClient({ posts }: Props) {
+export default function NewsListClient({ posts, initialFilter = "events" }: Props) {
   const t = useTranslations("news");
   const h = useTranslations("newsHero");
-  const [filter, setFilter] = useState<string>("events");
+  const [filter, setFilter] = useState<string>(initialFilter);
 
   const filteredPosts = filter === "all" ? posts : posts.filter((p) => p.category === filter);
 
@@ -64,9 +65,7 @@ export default function NewsListClient({ posts }: Props) {
           {filteredPosts.length === 0 ? (
             <div className="text-center py-20">
               <div className="text-6xl mb-4">📝</div>
-              <p className="text-gray-500 text-lg">
-                {t("allPosts")} — 暂无内容，敬请期待
-              </p>
+              <p className="text-gray-500 text-lg">{t("emptyState")}</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -97,7 +96,11 @@ export default function NewsListClient({ posts }: Props) {
                         {/* Category & Date */}
                         <div className="flex items-center gap-3 mb-3">
                           <span className="px-3 py-1 text-xs font-medium text-primary bg-blue-50 rounded-full">
-                            {post.category}
+                            {post.category === "events"
+                              ? t("events")
+                              : post.category === "insights"
+                                ? t("insights")
+                                : post.category}
                           </span>
                           <span className="text-xs text-gray-400">{post.date}</span>
                           <span className="text-xs text-gray-400">{post.readingTime}</span>

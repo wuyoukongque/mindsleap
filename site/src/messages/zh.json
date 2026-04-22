@@ -181,6 +181,7 @@
     "allPosts": "全部",
     "events": "活动",
     "insights": "洞察",
+    "emptyState": "暂无内容，敬请期待",
     "backToList": "返回列表"
   },
   "contact": {
@@ -204,12 +205,15 @@
     "slide1Title": "企业家AI俱乐部",
     "slide1Heading": "Upgrade AI Mindsets\nfor Global Success",
     "slide1Subtitle": "汇聚AI转型企业家，一起学习共同成长",
-    "slide2Title": "硅谷大咖私享会",
-    "slide2Heading": "Learn from Silicon Valley\nAI experts",
-    "slide2Subtitle": "与硅谷前沿认知对齐",
-    "slide3Title": "标杆企业参访",
-    "slide3Heading": "Visit leading companies\nlearn best practice",
-    "slide3Subtitle": "学习领先企业的最佳实践"
+    "slide2Title": "AI工作坊",
+    "slide2Heading": "Applying knowledge\nto practice",
+    "slide2Subtitle": "不止于听课，更要实战",
+    "slide3Title": "硅谷大咖私享会",
+    "slide3Heading": "Learn from Silicon Valley\nAI experts",
+    "slide3Subtitle": "与硅谷前沿认知对齐",
+    "slide4Title": "标杆企业参访",
+    "slide4Heading": "Visit leading companies\nlearn best practice",
+    "slide4Subtitle": "学习领先企业的最佳实践"
   },
   "incubationHero": {
     "slide1Title": "独角兽孵化",

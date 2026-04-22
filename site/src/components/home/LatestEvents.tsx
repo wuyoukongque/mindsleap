@@ -10,6 +10,7 @@ type Props = {
   translationNamespace: "latestEvents" | "latestInsights";
   emptyText: string;
   backgroundClassName?: string;
+  viewMoreHref?: string;
 };
 
 export default function LatestEvents({
@@ -17,6 +18,7 @@ export default function LatestEvents({
   translationNamespace,
   emptyText,
   backgroundClassName = "bg-gray-50",
+  viewMoreHref = "/news",
 }: Props) {
   const t = useTranslations(translationNamespace);
   const newsT = useTranslations("news");
@@ -29,7 +31,7 @@ export default function LatestEvents({
             <h2 className="text-4xl font-bold text-[#1e477c]">{t("title")}</h2>
             <p className="text-gray-500 mt-2">{t("subtitle")}</p>
           </div>
-          <Link href="/news" className="text-blue-500 font-bold hover:underline hidden sm:block">
+          <Link href={viewMoreHref} className="text-blue-500 font-bold hover:underline hidden sm:block">
             {t("viewMore")} &rarr;
           </Link>
         </div>
@@ -84,7 +86,7 @@ export default function LatestEvents({
         )}
 
         <div className="mt-8 text-center sm:hidden">
-          <Link href="/news" className="text-blue-500 font-bold hover:underline">
+          <Link href={viewMoreHref} className="text-blue-500 font-bold hover:underline">
             {t("viewMore")} &rarr;
           </Link>
         </div>

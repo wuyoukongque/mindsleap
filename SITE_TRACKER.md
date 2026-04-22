@@ -41,6 +41,7 @@
 
 | Priority | Item | Area | Status | Next Action | Notes |
 |---|---|---|---|---|---|
+| P0 | AI Club Hero rotator 增加 AI 工作坊照片页 | AI Club | Review | 本地预览 `/zh/services/ai-club`，确认第二张横幅裁切与文字可读性 | 已加入为第二张 slide，使用 2026 年 4 月活动照片 |
 | P0 | 首页增加“最新洞察”模块，展示最新 3 篇 insights | Home | Review | 本地预览首页，确认活动与洞察两组卡片层次与顺序 | 已在“最新活动”下方接入独立洞察模块 |
 | P1 | 首页内容与视觉的下一轮改版规划 | Home | Backlog | 明确是否要调整首页叙事结构与重点模块 | 适合和品牌定位、服务优先级一起看 |
 | P1 | 新闻 / 洞察列表页的下一轮体验优化 | News | Backlog | 结合真实发布节奏复盘筛选、卡片信息密度与浏览效率 | 当前功能可用，但后续可能继续细化 |

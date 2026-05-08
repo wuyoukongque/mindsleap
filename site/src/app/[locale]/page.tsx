@@ -19,7 +19,7 @@ export default async function HomePage({ params }: Props) {
 
   const allPosts = getAllPosts(locale);
   const latestEvents = allPosts.filter((post) => post.category === "events").slice(0, 3);
-  const latestInsights = allPosts.filter((post) => post.category === "insights").slice(0, 3);
+  const latestInsights = allPosts.filter((post) => post.category === "insights" && post.showOnHomepage === true).slice(0, 3);
 
   const organizationJsonLd = {
     "@context": "https://schema.org",

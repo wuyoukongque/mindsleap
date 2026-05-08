@@ -19,6 +19,7 @@ export type Post = {
   content: string;
   readingTime: string;
   author?: string;
+  showOnHomepage?: boolean;
 };
 
 function normalizeLocale(locale: string): PostLocale {
@@ -84,6 +85,7 @@ export function getPostBySlug(slug: string, locale: string = "zh"): Post | null 
       content,
       readingTime: stats.text,
       author: data.author || "MindsLeap",
+      showOnHomepage: data.showOnHomepage === true,
     };
   } catch {
     return null;

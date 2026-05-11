@@ -100,8 +100,14 @@
     "event3Title": "Will We Merge with AI?",
     "event3Desc": "High-impact keynote exploring the fusion of human intelligence and artificial systems."
   },
-  "latestInsights": {
-    "title": "Latest Insights",
+  "latestFoundersTalk": {
+    "title": "Founders Talk",
+    "subtitle": "Conversations with founders, investors, AI builders, and global practitioners.",
+    "viewMore": "View More",
+    "learnMore": "Learn More"
+  },
+  "latestAIInsight": {
+    "title": "AI Insights",
     "subtitle": "Fresh thinking on AI transformation, operating models, and enterprise execution.",
     "viewMore": "View More",
     "learnMore": "Learn More"
@@ -176,11 +182,13 @@
   },
   "news": {
     "title": "Latest News",
-    "subtitle": "Events and Industry Insights",
+    "subtitle": "Events, Founders Talk, and AI Insights",
     "readMore": "Read More",
     "allPosts": "All",
     "events": "Events",
-    "insights": "Insights",
+    "foundersTalk": "Founders Talk",
+    "aiInsight": "AI Insights",
+    "insights": "AI Insights",
     "emptyState": "No content yet. Please check back soon.",
     "backToList": "Back to List"
   },

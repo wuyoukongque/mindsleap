@@ -7,18 +7,21 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import type { Post } from "@/lib/posts";
 import PageHero from "@/components/shared/PageHero";
+import {
+  getNewsCategoryMessageKey,
+  newsFilterCategories,
+  type NewsFilterCategory,
+} from "@/lib/newsCategories";
 
 type Props = {
   posts: Post[];
-  initialFilter?: (typeof categories)[number];
+  initialFilter?: NewsFilterCategory;
 };
-
-const categories = ["all", "events", "insights"] as const;
 
 export default function NewsListClient({ posts, initialFilter = "events" }: Props) {
   const t = useTranslations("news");
   const h = useTranslations("newsHero");
-  const [filter, setFilter] = useState<string>(initialFilter);
+  const [filter, setFilter] = useState<NewsFilterCategory>(initialFilter);
 
   const filteredPosts = filter === "all" ? posts : posts.filter((p) => p.category === filter);
 
@@ -46,7 +49,10 @@ export default function NewsListClient({ posts, initialFilter = "events" }: Prop
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Filter */}
           <div className="flex gap-3 mb-12 justify-center">
-            {categories.map((cat) => (
+            {newsFilterCategories.map((cat) => {
+              const categoryKey = getNewsCategoryMessageKey(cat);
+
+              return (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
@@ -56,9 +62,10 @@ export default function NewsListClient({ posts, initialFilter = "events" }: Prop
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
-                {cat === "all" ? t("allPosts") : cat === "events" ? t("events") : t("insights")}
+                {cat === "all" ? t("allPosts") : categoryKey ? t(categoryKey) : cat}
               </button>
-            ))}
+              );
+            })}
           </div>
 
           {/* Posts Grid */}
@@ -96,11 +103,9 @@ export default function NewsListClient({ posts, initialFilter = "events" }: Prop
                         {/* Category & Date */}
                         <div className="flex items-center gap-3 mb-3">
                           <span className="px-3 py-1 text-xs font-medium text-primary bg-blue-50 rounded-full">
-                            {post.category === "events"
-                              ? t("events")
-                              : post.category === "insights"
-                                ? t("insights")
-                                : post.category}
+                            {getNewsCategoryMessageKey(post.category)
+                              ? t(getNewsCategoryMessageKey(post.category)!)
+                              : post.category}
                           </span>
                           <span className="text-xs text-gray-400">{post.date}</span>
                           <span className="text-xs text-gray-400">{post.readingTime}</span>

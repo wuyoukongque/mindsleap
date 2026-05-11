@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { getAllPosts } from "@/lib/posts";
 import NewsListClient from "@/components/news/NewsListClient";
 import JsonLd from "@/components/shared/JsonLd";
+import { normalizeNewsTab } from "@/lib/newsCategories";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -23,13 +24,16 @@ export default async function NewsPage({ params, searchParams }: Props) {
   setRequestLocale(locale);
 
   const posts = getAllPosts(locale);
-  const initialFilter = tab === "all" || tab === "events" || tab === "insights" ? tab : "events";
+  const initialFilter = normalizeNewsTab(tab);
 
   const newsJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: locale === "zh" ? "最新动态" : "Latest News",
-    description: locale === "zh" ? "MindsLeap活动资讯与行业洞察" : "MindsLeap events and industry insights",
+    description:
+      locale === "zh"
+        ? "MindsLeap活动资讯、Founders Talk 与 AI Insights"
+        : "MindsLeap events, Founders Talk, and AI Insights",
     publisher: {
       "@type": "Organization",
       name: "MindsLeap",

@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
+import { normalizePostCategory, type NewsContentCategory } from "@/lib/newsCategories";
 
 const postsRootDirectory = path.join(process.cwd(), "content/news");
 const postLocales = ["zh", "en"] as const;
@@ -12,7 +13,7 @@ export type Post = {
   title: string;
   date: string;
   excerpt: string;
-  category: "events" | "insights" | "news";
+  category: NewsContentCategory;
   image?: string;
   imagePosition?: string;
   locale: string;
@@ -73,12 +74,15 @@ export function getPostBySlug(slug: string, locale: string = "zh"): Post | null 
     const { data, content } = matter(fileContents);
     const stats = readingTime(content);
 
+    const title = data.title || slug;
+    const excerpt = data.excerpt || content.slice(0, 160) + "...";
+
     return {
       slug,
-      title: data.title || slug,
+      title,
       date: data.date ? new Date(data.date).toISOString().split("T")[0] : "",
-      excerpt: data.excerpt || content.slice(0, 160) + "...",
-      category: data.category || "news",
+      excerpt,
+      category: normalizePostCategory(data.category, title, excerpt),
       image: data.image || null,
       imagePosition: data.imagePosition || undefined,
       locale: data.locale || normalizeLocale(locale),

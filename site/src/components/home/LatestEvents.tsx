@@ -4,10 +4,11 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import type { Post } from "@/lib/posts";
+import { getNewsCategoryMessageKey } from "@/lib/newsCategories";
 
 type Props = {
   posts: Post[];
-  translationNamespace: "latestEvents" | "latestInsights";
+  translationNamespace: "latestEvents" | "latestFoundersTalk" | "latestAIInsight";
   emptyText: string;
   backgroundClassName?: string;
   viewMoreHref?: string;
@@ -61,11 +62,9 @@ export default function LatestEvents({
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-2">
                       <p className="text-xs font-bold text-blue-500 uppercase tracking-widest">
-                        {post.category === "events"
-                          ? newsT("events")
-                          : post.category === "insights"
-                            ? newsT("insights")
-                            : post.category}
+                        {getNewsCategoryMessageKey(post.category)
+                          ? newsT(getNewsCategoryMessageKey(post.category)!)
+                          : post.category}
                       </p>
                       <span className="text-xs text-gray-400">{post.date}</span>
                     </div>

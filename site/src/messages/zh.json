@@ -100,8 +100,14 @@
     "event3Title": "我们将与AI融合吗？",
     "event3Desc": "高影响力演讲，探索人类智能与人工智能的融合。"
   },
-  "latestInsights": {
-    "title": "最新洞察",
+  "latestFoundersTalk": {
+    "title": "Founders Talk",
+    "subtitle": "与创业者、投资人、AI 实践者展开一线对话",
+    "viewMore": "查看更多",
+    "learnMore": "了解详情"
+  },
+  "latestAIInsight": {
+    "title": "AI Insights",
     "subtitle": "聚焦 AI 转型、方法论与企业实践的最新思考",
     "viewMore": "查看更多",
     "learnMore": "了解详情"
@@ -176,11 +182,13 @@
   },
   "news": {
     "title": "最新动态",
-    "subtitle": "活动资讯与行业洞察",
+    "subtitle": "活动资讯、Founders Talk 与 AI Insights",
     "readMore": "阅读全文",
     "allPosts": "全部",
     "events": "活动",
-    "insights": "洞察",
+    "foundersTalk": "Founders Talk",
+    "aiInsight": "AI Insights",
+    "insights": "AI Insights",
     "emptyState": "暂无内容，敬请期待",
     "backToList": "返回列表"
   },

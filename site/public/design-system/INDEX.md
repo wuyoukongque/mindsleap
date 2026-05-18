@@ -19,7 +19,7 @@ A design system for **MindsLeap (心智悦动)** — colors, type, components, a
 
 ```bash
 # open the visual index (no dev server needed)
-open site/design-system/index.html
+open site/public/design-system/index.html
 
 # or via the Next.js dev server
 cd site && npm run dev

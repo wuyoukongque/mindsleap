@@ -14,7 +14,7 @@ Read the `README.md` file within this skill, and explore the other available fil
 - `preview/` — small specimen HTML files showing each token / component in isolation
 - `deck-template/` — 1920×1080 HTML deck template; URL params `?theme=light|brand|dark|magazine`, `?heading=brand|inter|noto`, `?density=spacious|standard|compact` control initial state; Tweaks panel allows live editing
 
-**Visual browsing** — `index.html` is the human-friendly entry. It links to three category pages (`brand.html`, `deck.html`, `ui.html`), each embedding every preview inline and starting with a "Quick start" panel showing exact token names and copy-paste snippets. Open `http://127.0.0.1:3000/design-system/` with the Next.js dev server running, or `open site/design-system/index.html` offline.
+**Visual browsing** — `index.html` is the human-friendly entry. It links to three category pages (`brand.html`, `deck.html`, `ui.html`), each embedding every preview inline and starting with a "Quick start" panel showing exact token names and copy-paste snippets. Open `http://127.0.0.1:3000/design-system/` with the Next.js dev server running, or `open site/public/design-system/index.html` offline.
 
 If creating visual artifacts (slides, mocks, throwaway prototypes, etc.), copy assets out of this folder and create static HTML files for the user to view. Default to bilingual EN + ZH where the surface is customer-facing — the brand is Chinese-first with English parity. If working on production code, you can copy assets and read the rules in the README to become an expert in designing with this brand.
 

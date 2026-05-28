@@ -36,7 +36,9 @@ const pillars = [
     href: "/services/global-growth",
     icon: (
       <svg className="w-8 h-8 text-[#1e477c] group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h1.5a2.5 2.5 0 012.5 2.5V17m-5 1h1.5a1.5 1.5 0 011.5 1.5v1.5m-6 0h.5a1.5 1.5 0 001.5-1.5V19a2 2 0 00-2-2h-1" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+        <circle cx="12" cy="12" r="9" strokeWidth="2" />
+        <path d="M3.5 12h17M12 3c2.3 2.4 3.5 5.4 3.5 9s-1.2 6.6-3.5 9M12 3c-2.3 2.4-3.5 5.4-3.5 9s1.2 6.6 3.5 9" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+        <path d="M7 16.5c2.8-3.9 5.8-6.3 10-7.5M17 9l-.8 4.1M17 9l-4.1-.8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
       </svg>
     ),
   },

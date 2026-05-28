@@ -165,7 +165,9 @@
   "about": {
     "title": "About MindsLeap",
     "mission": "Our Mission",
-    "missionText": "Accompany traditional enterprises in AI transformation, and help AI-native enterprises grow faster",
+    "missionBrand": "MindsLeap 心智悦动",
+    "missionText": "Upgrade AI Mindsets for Global Success",
+    "missionSubText": "陪伴传统企业AI转型，助力AI原生企业更快成长",
     "vision": "Our Vision",
     "story": "Our Story",
     "storyText": "MindsLeap is an industrial accelerator for AI-native enterprises, connecting traditional entrepreneurs, AI-native founders, industry scenarios, investors, and global innovation networks.",

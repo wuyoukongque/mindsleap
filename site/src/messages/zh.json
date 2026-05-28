@@ -165,7 +165,9 @@
   "about": {
     "title": "关于MindsLeap",
     "mission": "品牌使命",
-    "missionText": "陪伴传统企业AI转型，助力AI原生企业更快成长",
+    "missionBrand": "MindsLeap 心智悦动",
+    "missionText": "Upgrade AI Mindsets for Global Success",
+    "missionSubText": "陪伴传统企业AI转型，助力AI原生企业更快成长",
     "vision": "品牌愿景",
     "story": "品牌故事",
     "storyText": "MindsLeap（心智悦动）是「AI原生企业的产业加速平台」。我们连接企业家、AI原生创业者、产业场景、资本与全球资源，帮助传统企业从AI认知走向业务落地，也帮助OPC、AI原生企业与科技独角兽从真实场景走向全球市场。",

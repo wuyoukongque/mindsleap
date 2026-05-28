@@ -165,9 +165,9 @@
   "about": {
     "title": "About MindsLeap",
     "mission": "Our Mission",
-    "missionBrand": "MindsLeap 心智悦动",
+    "missionBrand": "MindsLeap",
     "missionText": "Upgrade AI Mindsets for Global Success",
-    "missionSubText": "陪伴传统企业AI转型，助力AI原生企业更快成长",
+    "missionSubText": "",
     "vision": "Our Vision",
     "story": "Our Story",
     "storyText": "MindsLeap is an industrial accelerator for AI-native enterprises, connecting traditional entrepreneurs, AI-native founders, industry scenarios, investors, and global innovation networks.",
@@ -270,7 +270,7 @@
     "slide1Heading": "Global Vision,\nLocal Implementation",
     "slide1Subtitle": "Industry visits, overseas GTM, and global talent services",
     "slide2Title": "Global Growth Path",
-    "slide2Heading": "GTC · Stanford · Google\nTop AI Enterprise Visits",
+    "slide2Heading": "Connecting Global Resource",
     "slide2Subtitle": "From industry visits to GTM and global team setup"
   },
   "footer": {

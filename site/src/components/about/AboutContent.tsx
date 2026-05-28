@@ -9,6 +9,10 @@ import PageHero from "@/components/shared/PageHero";
 export default function AboutContent() {
   const t = useTranslations("about");
   const h = useTranslations("aboutHero");
+  const acceleratorItems = t.raw("acceleratorItems") as Array<{
+    title: string;
+    description: string;
+  }>;
 
   const heroSlides = [
     {
@@ -73,8 +77,32 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Founders */}
       <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionTitle title={t("acceleratorTitle")} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {acceleratorItems.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
+              >
+                <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary font-bold">
+                  {index + 1}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founders */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle title={t("founders")} />
 

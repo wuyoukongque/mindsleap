@@ -126,6 +126,29 @@
       font-size: 20px;
       line-height: 1.7;
     }
+    .brief-panel { display: none; }
+    .brief-panel .kicker {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 30px;
+    }
+    .brief-panel strong {
+      display: block;
+      font-family: "MindsLeap Brand", Inter, "Noto Sans SC", system-ui, sans-serif;
+      font-size: 42px;
+      line-height: 1;
+      letter-spacing: 0;
+      margin-bottom: 24px;
+    }
+    .brief-panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
     main {
       max-width: none;
       margin: 0;
@@ -326,7 +349,6 @@
     .footer img {
       width: 220px;
       max-width: 100%;
-      filter: brightness(0) invert(1);
       opacity: .98;
     }
     .footer .quote {
@@ -362,28 +384,20 @@
     @media (max-width: 980px) {
       .nav-links a:not(.active),
       .nav-links .cta { display: none; }
-      .reports-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .footer-inner {
-        grid-template-columns: 1fr;
-      }
+      .reports-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .nav-inner {
         height: 68px;
         padding: 0 18px;
       }
-      .logo img {
-        height: 34px;
-      }
+      .logo img { height: 34px; }
       .nav-links {
         gap: 0;
         font-size: 13px;
       }
-      .hero {
-        min-height: 430px;
-      }
+      .hero { min-height: 430px; }
       .hero-inner {
         min-height: 430px;
         padding: 58px 20px;
@@ -396,15 +410,9 @@
         font-size: 16px;
         line-height: 1.65;
       }
-      .reports-section {
-        padding: 52px 20px 72px;
-      }
-      .section-head {
-        display: block;
-      }
-      .section-head h2 {
-        font-size: 30px;
-      }
+      .reports-section { padding: 52px 20px 72px; }
+      .section-head { display: block; }
+      .section-head h2 { font-size: 30px; }
       .view-all {
         display: inline-block;
         margin-top: 16px;
@@ -431,9 +439,7 @@
         right: 26px;
         width: 88px;
       }
-      .footer {
-        padding: 46px 20px 30px;
-      }
+      .footer { padding: 46px 20px 30px; }
     }
   </style>
 </head>
@@ -441,7 +447,7 @@
   <nav class="site-nav">
     <div class="nav-inner">
       <a class="logo" href="https://www.mindsleap.ai/zh" aria-label="MindsLeap home">
-        <img src="https://www.mindsleap.ai/images/logo-blue.png" alt="MindsLeap" />
+        <img src="/images/joint-logo-blue.svg" alt="MindsLeap" />
       </a>
       <div class="nav-links" aria-label="Primary navigation">
         <a href="https://www.mindsleap.ai/zh/services/ai-club">AI俱乐部</a>
@@ -461,6 +467,11 @@
         <h1>Research for the <span>AI Native</span> Enterprise.</h1>
         <p class="hero-copy">我们把 AI 原生企业、FDE、产业商业模式与硅谷趋势整理成可阅读、可分享、可复用的研究报告，帮助企业从认知升级走向业务落地。</p>
       </div>
+      <aside class="brief-panel" aria-label="Research positioning">
+        <div class="kicker">Research System</div>
+        <strong>From insight<br/>to operating playbook.</strong>
+        <p>每份报告都同时服务于三种场景：高管快速阅读、团队内部共识、业务推进中的方案复盘。</p>
+      </aside>
     </div>
   </header>
 

@@ -47,11 +47,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <img src="/images/logo-blue.png" alt="MindsLeap" className="h-10 w-auto" />
+            <img
+              src="/images/joint-logo-blue.svg"
+              alt="MindsLeap x Founders Space"
+              className="h-10 w-[200px] object-contain object-left sm:w-[240px]"
+            />
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6 lg:space-x-8 items-center">
+          <div className="hidden md:flex space-x-5 lg:space-x-7 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -69,7 +73,7 @@ export default function Header() {
             </button>
             <Link
               href="/contact"
-              className="bg-[#1e477c] text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-blue-800 transition shadow-lg"
+              className="bg-[#1e477c] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-800 transition shadow-lg"
             >
               {locale === "zh" ? "加入俱乐部" : "Join the Club"}
             </Link>

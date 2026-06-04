@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="80" viewBox="0 0 400 80" role="img" aria-label="MindsLeap x Founders Space">
+  <defs>
+    <filter id="mindsleap-blue" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0 0 0 0 0.117647 0 0 0 0 0.278431 0 0 0 0 0.486275 0 0 0 1 0"/>
+    </filter>
+  </defs>
+  <image href="/images/joint-logo.png" width="400" height="80" preserveAspectRatio="xMidYMid meet" filter="url(#mindsleap-blue)"/>
+</svg>

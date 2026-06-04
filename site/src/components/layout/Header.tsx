@@ -32,10 +32,10 @@ export default function Header() {
   const navLinks = [
     { href: "/services/ai-club", label: t("aiClub") },
     { href: "/services/ai-transformation", label: t("training") },
-    { href: "/research", label: "Research" },
     { href: "/services/accelerator", label: t("incubation") },
     { href: "/services/global-growth", label: t("studyTours") },
     { href: "/news", label: t("news") },
+    { href: "/research", label: t("research") },
     { href: "/about", label: t("about") },
   ];
 
@@ -48,9 +48,9 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <img
-              src="/images/joint-logo-blue.svg"
-              alt="MindsLeap x Founders Space"
-              className="h-10 w-[200px] object-contain object-left sm:w-[240px]"
+              src="/images/logo-blue.png"
+              alt="MindsLeap"
+              className="h-10 w-auto"
             />
           </Link>
 

@@ -449,7 +449,7 @@ export default async function TrainingPage({ params }: Props) {
                 <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-primary text-white font-bold">
                   {index + 1}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}

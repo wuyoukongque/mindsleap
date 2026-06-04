@@ -100,8 +100,9 @@
       .slide.statement .frame { padding: 0; border: 0; }
       .slide.statement .stmt { font-size: clamp(34px, 10vw, 48px); line-height: 1.14; letter-spacing: 0; }
       .slide.statement .stmt-en { font-size: 16px; line-height: 1.55; }
-      .slide.compare .pair, .slide.features .grid, .slide.kpi .grid, .slide.bullets .body-row, .body-row, .matrix-grid, .sop-grid, .offer-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 28px; }
-      .slide.compare .panel, .slide.features .col, .slide.kpi .cell, .market-card, .sop-step, .offer { min-height: 0; padding: 24px 20px; }
+      .slide.compare .pair, .slide.features .grid, .slide.kpi .grid, .slide.bullets .body-row, .body-row, .matrix-grid, .sop-grid, .offer-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; margin-top: 28px; }
+      .slide.compare .pair { flex: none; width: 100%; min-width: 0; min-height: 0; }
+      .slide.compare .panel, .slide.features .col, .slide.kpi .cell, .market-card, .sop-step, .offer { min-width: 0; min-height: 0; padding: 24px 20px; overflow-wrap: anywhere; }
       .slide.compare .panel h3, .slide.features .col h3, .market-card h3, .sop-step h3, .offer h3 { font-size: 26px; line-height: 1.18; margin-top: 0; }
       .slide.compare .panel li, .slide.features .col p, .market-card p, .market-card li, .sop-step p, .offer p, .b-desc { font-size: 16px !important; line-height: 1.55 !important; }
       .slide.features .col footer, .market-foot, .sop-result, .offer footer { font-size: 11px; line-height: 1.25; letter-spacing: .16em; }

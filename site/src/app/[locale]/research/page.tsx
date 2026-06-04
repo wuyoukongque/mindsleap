@@ -100,17 +100,19 @@ export default async function ResearchPage({ params }: Props) {
             href="/research/fde-industry-report"
             className="group flex min-h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-[#1e477c]/40 hover:shadow-2xl hover:shadow-[#1e477c]/15"
           >
-            <div className="relative aspect-[16/9] overflow-hidden bg-[#1e477c] p-7 text-white">
+            <div className="relative flex aspect-[4/3] min-h-[300px] flex-col justify-between overflow-hidden bg-[#1e477c] p-7 text-white">
               <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,.18)_1px,transparent_1px)] [background-size:16px_16px] opacity-45" />
-              <div className="relative text-[10px] font-extrabold uppercase tracking-[0.18em] text-white/75">
-                Research Brief · 01
+              <div className="relative">
+                <div className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-white/75">
+                  Research Brief · 01
+                </div>
+                <div className="mt-6 max-w-[310px] text-3xl font-extrabold leading-tight tracking-normal md:text-4xl">
+                  FDE<span className="text-blue-200">.</span>
+                  <br />
+                  {isZh ? "产业商业模式研究" : "Industry Business Model Research"}
+                </div>
               </div>
-              <div className="relative mt-6 max-w-[310px] text-4xl font-extrabold leading-tight tracking-normal">
-                FDE<span className="text-blue-200">.</span>
-                <br />
-                {isZh ? "产业商业模式研究" : "Industry Business Model Research"}
-              </div>
-              <div className="absolute bottom-7 left-7 right-7 max-w-[270px] text-xs leading-5 text-white/80">
+              <div className="relative mt-8 max-w-[300px] text-xs leading-5 text-white/80">
                 {isZh
                   ? "Forward Deployed Engineering 如何成为企业 AI 从演示走向生产的关键交付形态。"
                   : "How Forward Deployed Engineering helps enterprise AI move from demo to production."}
@@ -141,12 +143,14 @@ export default async function ResearchPage({ params }: Props) {
 
           {upcomingReports.map((report) => (
             <article key={report.title} className="flex min-h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white opacity-70 shadow-sm">
-              <div className="relative aspect-[16/9] overflow-hidden bg-gray-50 p-7 text-gray-600">
-                <div className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-gray-500">Upcoming</div>
-                <div className="mt-6 max-w-[300px] text-4xl font-extrabold leading-tight tracking-normal text-gray-600">
-                  {report.title}
+              <div className="relative flex aspect-[4/3] min-h-[300px] flex-col justify-between overflow-hidden bg-gray-50 p-7 text-gray-600">
+                <div>
+                  <div className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-gray-500">Upcoming</div>
+                  <div className="mt-6 max-w-[300px] text-3xl font-extrabold leading-tight tracking-normal text-gray-600 md:text-4xl">
+                    {report.title}
+                  </div>
                 </div>
-                <div className="absolute bottom-7 left-7 right-7 max-w-[270px] text-xs leading-5 text-gray-500">
+                <div className="mt-8 max-w-[300px] text-xs leading-5 text-gray-500">
                   {isZh ? report.summaryZh : report.summaryEn}
                 </div>
               </div>

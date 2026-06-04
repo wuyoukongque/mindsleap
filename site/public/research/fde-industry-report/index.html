@@ -7,21 +7,13 @@
   <link rel="stylesheet" href="https://www.mindsleap.ai/design-system/deck-template/colors_and_type.css" />
   <link rel="stylesheet" href="https://www.mindsleap.ai/design-system/deck-template/deck.css" />
   <style>
-    html,
-    body {
-      width: 100%;
-      min-height: 100%;
-      height: auto;
-      margin: 0;
-      overflow-x: hidden;
-      background: #0a0a0a;
-    }
+    html, body { width: 100%; min-height: 100%; height: auto; margin: 0; overflow-x: hidden; background: #0a0a0a; }
     body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
     deck-stage.report-stage { display: block; min-height: 100vh; padding: 28px 0 44px; background: radial-gradient(circle at 50% 0, rgba(255,255,255,.08), transparent 42%), #0a0a0a; }
     .slide-frame { position: relative; margin: 0 auto 32px; overflow: hidden; background: var(--bg); box-shadow: 0 22px 70px rgba(0,0,0,.48); }
     .slide-frame > .slide { position: absolute; left: 0; top: 0; transform-origin: top left; }
     @media (min-width: 760px) { .slide-frame:last-child { margin-bottom: 0; } }
-    html[data-theme="magazine"] { --logo-img: url("/images/joint-logo.png"); }
+    html[data-theme="magazine"] { --logo-img: url("/images/joint-logo-blue.svg"); }
     .slide .accent { color: var(--accent); }
     .slide .muted { color: var(--ink-muted); }
     .slide:not(.no-chrome)::after { content: attr(data-page); }
@@ -139,10 +131,7 @@
 </head>
 <body>
 <deck-stage class="report-stage" width="1920" height="1080">
-  <section class="slide cover no-chrome" data-label="封面 Cover">
-    <div class="col-text"><div><div class="logo"></div><div class="cover-eyebrow">Industry Report · 2026</div><h1 class="cover-title">FDE<span class="lf">.</span></h1><h2 class="cover-title zh">产业商业模式研究</h2><p class="cover-tagline">Forward Deployed Engineering 如何成为企业 AI 从演示走向生产的关键交付形态。</p></div><div class="cover-meta"><div><b>主题 · TOPIC</b>FDE 商业化路径</div><div><b>形式 · FORMAT</b>HTML Report Deck</div><div><b>日期 · DATE</b>2026-06-04</div></div></div>
-    <aside class="cover-aside" aria-label="Research report index"><div class="issue">Research Brief · 01</div><div class="big">From Demo<br/>to Production</div><ul><li><span>01</span>海外收费模式</li><li><span>02</span>FDE 人才画像</li><li><span>03</span>中国商业化路径</li></ul></aside>
-  </section>
+  <section class="slide cover no-chrome" data-label="封面 Cover"><div class="col-text"><div><div class="logo"></div><div class="cover-eyebrow">Industry Report · 2026</div><h1 class="cover-title">FDE<span class="lf">.</span></h1><h2 class="cover-title zh">产业商业模式研究</h2><p class="cover-tagline">Forward Deployed Engineering 如何成为企业 AI 从演示走向生产的关键交付形态。</p></div><div class="cover-meta"><div><b>主题 · TOPIC</b>FDE 商业化路径</div><div><b>形式 · FORMAT</b>HTML Report Deck</div><div><b>日期 · DATE</b>2026-06-04</div></div></div><aside class="cover-aside" aria-label="Research report index"><div class="issue">Research Brief · 01</div><div class="big">From Demo<br/>to Production</div><ul><li><span>01</span>海外收费模式</li><li><span>02</span>FDE 人才画像</li><li><span>03</span>中国商业化路径</li></ul></aside></section>
   <section class="slide body agenda" data-label="目录 Agenda" data-page="02"><div class="eyebrow">Agenda <span class="dot">·</span> 目录</div><h1 class="slide-title">这份报告回答六个问题<span class="en">Six questions behind the FDE opportunity.</span></h1><span class="slide-bar"></span><div class="agenda-grid"><div class="ag-row"><div class="ag-num">01</div><div><div class="ag-title">FDE 是什么</div><div class="ag-en">Definition</div></div></div><div class="ag-row"><div class="ag-num">04</div><div><div class="ag-title">国内市场机会</div><div class="ag-en">China market</div></div></div><div class="ag-row"><div class="ag-num">02</div><div><div class="ag-title">海外怎么赚钱</div><div class="ag-en">Commercial models</div></div></div><div class="ag-row"><div class="ag-num">05</div><div><div class="ag-title">如何推进项目</div><div class="ag-en">Delivery SOP</div></div></div><div class="ag-row"><div class="ag-num">03</div><div><div class="ag-title">谁能胜任 FDE</div><div class="ag-en">Talent profile</div></div></div><div class="ag-row"><div class="ag-num">06</div><div><div class="ag-title">创业如何切入</div><div class="ag-en">Go-to-market</div></div></div></div></section>
   <section class="slide divider no-chrome" data-label="章节 · Definition"><div><div class="num">01</div></div><div><span class="label">Definition</span><h2>FDE 是什么<span class="en">Not outsourcing. Not pre-sales. A production loop embedded inside the customer environment.</span></h2><p class="desc">FDE 把资深工程师放到客户现场，负责从需求识别、系统设计、代码实现、集成、评估、上线到知识转移的完整闭环。</p></div></section>
   <section class="slide body statement" data-label="核心判断" data-page="04"><div class="frame"><div class="eyebrow">Core Thesis <span class="dot">·</span> 核心判断</div><h1 class="stmt">企业 AI 的瓶颈不再只是模型能力，<br/>而是把模型嵌入真实业务的 <em>现场工程能力</em>。</h1><p class="stmt-en">FDE is the bridge from "the demo works" to "the workflow is live, governed, adopted, and improving every sprint."</p></div></section>
@@ -156,37 +145,6 @@
   <section class="slide body" data-label="创业商业包" data-page="12"><div class="eyebrow">Go-to-market <span class="dot">·</span> 创业建议</div><h1 class="slide-title">中国版 FDE 公司不宜从泛 AI 咨询开始<span class="en">Start from one painful vertical and package repeatable delivery units.</span></h1><span class="slide-bar"></span><div class="offer-grid"><div class="offer"><div><div class="fee">3-10万</div><h3>2 周 AI 落地诊断</h3><p>输出流程图、系统清单、用例优先级、ROI 假设、技术架构和一期范围。</p></div><footer>Diagnose</footer></div><div class="offer"><div><div class="fee">30-150万</div><h3>8-12 周生产项目</h3><p>2-4 人小队，交付一个真实上线的 Agent/RAG/Workflow 系统。</p></div><footer>Ship</footer></div><div class="offer"><div><div class="fee">10-50万/月</div><h3>6-12 个月嵌入合作</h3><p>持续迭代、多场景扩展、指标复盘和知识转移。</p></div><footer>Scale</footer></div><div class="offer"><div><div class="fee">3-20万/月</div><h3>年度运维 Retainer</h3><p>覆盖模型、知识库、审计、稳定性、提示词/评估优化和新流程接入。</p></div><footer>Operate</footer></div></div></section>
   <section class="slide contact no-chrome" data-label="结尾 Thank You"><div class="col-l"><div class="logo"></div><div class="spacer"></div><div class="eyebrow">Next Step <span class="dot">·</span> 后续研究</div><h1 class="ty">Thank <em>You</em></h1><div class="ty-en">把行业判断变成可销售、可交付、可复盘的业务系统。</div><p class="invite">建议下一步形成：3 个行业商业模型、标准 FDE 项目 SOP、岗位 JD、报价模板、ROI 计算器和销售话术。</p></div><div class="channels"><div class="channel"><div class="lbl">Research</div><div class="val">Palantir / OpenAI / Anthropic / Scale AI / Harvey / Clay</div></div><div class="channel"><div class="lbl">China Jobs</div><div class="val">字节、联想、百度、阿里、华为、智谱、第四范式</div></div><div class="channel"><div class="lbl">Commercial</div><div class="val">部署费、项目制、驻场人月、运维费、效果分成</div></div></div></section>
 </deck-stage>
-<script>
-(() => {
-  const DESIGN_W = 1920, DESIGN_H = 1080, MOBILE_BREAKPOINT = 760;
-  const stage = document.querySelector('deck-stage.report-stage');
-  if (!stage) return;
-  Array.from(stage.querySelectorAll(':scope > .slide')).forEach((slide, index) => {
-    const frame = document.createElement('div');
-    frame.className = 'slide-frame';
-    frame.setAttribute('aria-label', slide.getAttribute('data-label') || `Slide ${index + 1}`);
-    stage.insertBefore(frame, slide);
-    frame.appendChild(slide);
-  });
-  const fitSlides = () => {
-    const isMobile = window.innerWidth < MOBILE_BREAKPOINT;
-    const frames = Array.from(stage.querySelectorAll('.slide-frame'));
-    if (isMobile) {
-      frames.forEach(frame => { frame.style.width = ''; frame.style.height = ''; const slide = frame.querySelector('.slide'); if (slide) slide.style.transform = ''; });
-      return;
-    }
-    const maxWidth = Math.min(window.innerWidth - 48, 1560);
-    const maxHeight = Math.max(window.innerHeight - 56, 420);
-    const scale = Math.min(maxWidth / DESIGN_W, maxHeight / DESIGN_H);
-    const width = Math.round(DESIGN_W * scale);
-    const height = Math.round(DESIGN_H * scale);
-    frames.forEach(frame => { frame.style.width = `${width}px`; frame.style.height = `${height}px`; const slide = frame.querySelector('.slide'); if (slide) slide.style.transform = `scale(${scale})`; });
-  };
-  window.addEventListener('resize', fitSlides, { passive: true });
-  window.addEventListener('orientationchange', fitSlides);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitSlides).catch(fitSlides);
-  fitSlides();
-})();
-</script>
+<script>(()=>{const DESIGN_W=1920,DESIGN_H=1080,MOBILE_BREAKPOINT=760;const stage=document.querySelector('deck-stage.report-stage');if(!stage)return;Array.from(stage.querySelectorAll(':scope > .slide')).forEach((slide,index)=>{const frame=document.createElement('div');frame.className='slide-frame';frame.setAttribute('aria-label',slide.getAttribute('data-label')||`Slide ${index+1}`);stage.insertBefore(frame,slide);frame.appendChild(slide);});const fitSlides=()=>{const isMobile=window.innerWidth<MOBILE_BREAKPOINT;const frames=Array.from(stage.querySelectorAll('.slide-frame'));if(isMobile){frames.forEach(frame=>{frame.style.width='';frame.style.height='';const slide=frame.querySelector('.slide');if(slide)slide.style.transform='';});return;}const maxWidth=Math.min(window.innerWidth-48,1560);const maxHeight=Math.max(window.innerHeight-56,420);const scale=Math.min(maxWidth/DESIGN_W,maxHeight/DESIGN_H);const width=Math.round(DESIGN_W*scale);const height=Math.round(DESIGN_H*scale);frames.forEach(frame=>{frame.style.width=`${width}px`;frame.style.height=`${height}px`;const slide=frame.querySelector('.slide');if(slide)slide.style.transform=`scale(${scale})`;});};window.addEventListener('resize',fitSlides,{passive:true});window.addEventListener('orientationchange',fitSlides);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitSlides).catch(fitSlides);fitSlides();})();</script>
 </body>
 </html>

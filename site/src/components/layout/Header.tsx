@@ -32,6 +32,7 @@ export default function Header() {
   const navLinks = [
     { href: "/services/ai-club", label: t("aiClub") },
     { href: "/services/ai-transformation", label: t("training") },
+    { href: "/research", label: "Research" },
     { href: "/services/accelerator", label: t("incubation") },
     { href: "/services/global-growth", label: t("studyTours") },
     { href: "/news", label: t("news") },
@@ -50,7 +51,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="hidden md:flex space-x-6 lg:space-x-8 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

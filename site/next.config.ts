@@ -51,6 +51,14 @@ const nextConfig: NextConfig = {
         { source: "/decks/Lincoln", destination: "/decks/Lincoln/index.html" },
         { source: "/decks/Lincoln/", destination: "/decks/Lincoln/index.html" },
         {
+          source: "/decks/Lincoln/ai-native-enterprise-conference-lincoln-talk",
+          destination: "/decks/Lincoln/ai-native-enterprise-conference-lincoln-talk/index.html",
+        },
+        {
+          source: "/decks/Lincoln/ai-native-enterprise-conference-lincoln-talk/",
+          destination: "/decks/Lincoln/ai-native-enterprise-conference-lincoln-talk/index.html",
+        },
+        {
           source: "/decks/Lincoln/ceibs-ai-agent-marketing-training",
           destination: "/decks/Lincoln/ceibs-ai-agent-marketing-training/index.html",
         },

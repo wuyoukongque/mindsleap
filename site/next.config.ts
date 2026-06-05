@@ -46,6 +46,8 @@ const nextConfig: NextConfig = {
       beforeFiles: [
         { source: "/design-system", destination: "/design-system/index.html" },
         { source: "/design-system/", destination: "/design-system/index.html" },
+        { source: "/decks", destination: "/decks/index.html" },
+        { source: "/decks/", destination: "/decks/index.html" },
         { source: "/decks/Lincoln", destination: "/decks/Lincoln/index.html" },
         { source: "/decks/Lincoln/", destination: "/decks/Lincoln/index.html" },
         {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lincoln Decks · MindsLeap</title>
+  <title>MindsLeap Decks · 心智悦动公开课件</title>
   <style>
     :root {
       --blue: #1e477c;
@@ -12,6 +12,7 @@
       --muted: #4b5563;
       --subtle: #9ca3af;
       --rule: #e5e7eb;
+      --bg: #ffffff;
       --bg-alt: #f9fafb;
     }
     * { box-sizing: border-box; }
@@ -19,7 +20,7 @@
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "Noto Sans SC", "PingFang SC", sans-serif;
       color: var(--ink);
-      background: #fff;
+      background: var(--bg);
       letter-spacing: -0.01em;
     }
     header {
@@ -34,7 +35,7 @@
     .logo {
       width: 260px;
       height: 52px;
-      background: url("../shared/mindsleap-template/mindsleap-foundersspace-joint-logo-blue.svg") left center / contain no-repeat;
+      background: url("./shared/mindsleap-template/mindsleap-foundersspace-joint-logo-blue.svg") left center / contain no-repeat;
     }
     nav {
       display: flex;
@@ -44,19 +45,15 @@
     }
     a { color: inherit; text-decoration: none; }
     nav a { color: var(--blue); }
-    main {
+    main { overflow: hidden; }
+    .hero {
+      padding: 92px 56px 84px;
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--rule);
+    }
+    .inner {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 80px 56px 100px;
-    }
-    .back {
-      display: inline-flex;
-      margin-bottom: 42px;
-      color: var(--blue);
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: .12em;
-      text-transform: uppercase;
     }
     .eyebrow {
       color: #3b82f6;
@@ -67,25 +64,40 @@
       margin-bottom: 22px;
     }
     h1 {
-      max-width: 760px;
+      max-width: 900px;
       margin: 0;
       color: var(--blue);
-      font-size: clamp(44px, 7vw, 76px);
+      font-size: clamp(44px, 7vw, 82px);
       line-height: 1.02;
       letter-spacing: -.035em;
     }
     .lead {
-      max-width: 720px;
-      margin: 26px 0 0;
+      max-width: 760px;
+      margin: 28px 0 0;
       color: var(--muted);
-      font-size: 20px;
+      font-size: 21px;
       line-height: 1.62;
+    }
+    .section {
+      padding: 72px 56px 96px;
+    }
+    .section h2 {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 36px;
+      line-height: 1.2;
+    }
+    .section p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
     }
     .deck-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 28px;
-      margin-top: 54px;
+      margin-top: 40px;
     }
     .deck-card {
       display: flex;
@@ -94,7 +106,8 @@
       justify-content: space-between;
       padding: 34px;
       border: 1px solid var(--rule);
-      background: var(--bg-alt);
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
       transition: box-shadow .25s ease, transform .25s ease;
     }
     .deck-card:hover {
@@ -112,19 +125,13 @@
       letter-spacing: .12em;
       text-transform: uppercase;
     }
-    .deck-card h2 {
+    .deck-card h3 {
       margin: 26px 0 14px;
       color: var(--blue);
       font-size: 30px;
       line-height: 1.18;
     }
-    .deck-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    .meta {
+    .deck-card .meta {
       margin-top: 24px;
       padding-top: 18px;
       border-top: 1px solid var(--rule);
@@ -134,11 +141,34 @@
       letter-spacing: .12em;
       text-transform: uppercase;
     }
+    .author-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 36px;
+    }
+    .author-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border: 1px solid var(--blue);
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 800;
+    }
+    footer {
+      padding: 42px 56px;
+      border-top: 1px solid var(--rule);
+      color: var(--subtle);
+      font-size: 14px;
+    }
     @media (max-width: 720px) {
       header { height: auto; align-items: flex-start; flex-direction: column; gap: 18px; padding: 24px; }
       .logo { width: 230px; }
       nav { flex-wrap: wrap; }
-      main { padding: 56px 24px 80px; }
+      .hero, .section, footer { padding-left: 24px; padding-right: 24px; }
       .deck-card { min-height: 0; }
     }
   </style>
@@ -148,25 +178,40 @@
     <a class="logo" href="/" aria-label="MindsLeap"></a>
     <nav>
       <a href="/zh">首页</a>
-      <a href="/decks">Decks</a>
+      <a href="/zh/research">研究</a>
       <a href="/zh/contact">联系</a>
     </nav>
   </header>
   <main>
-    <a class="back" href="../">← Back to Decks</a>
-    <div class="eyebrow">Lincoln Decks</div>
-    <h1>Lincoln 的培训与演讲课件</h1>
-    <p class="lead">这里收录 Lincoln 面向客户培训、企业家社群、研究分享和公开演讲的 HTML deck。</p>
-    <div class="deck-grid">
-      <a class="deck-card" href="./ceibs-ai-agent-marketing-training/">
-        <div>
-          <span class="tag">Training</span>
-          <h2>中欧商学院市场团队 AI Agent 工作流培训</h2>
-          <p>用 Spec、Skill、Workflow 和 Agentic Marketing Team 方法，帮助市场团队把高频工作沉淀为可复用 AI 工作流。</p>
+    <section class="hero">
+      <div class="inner">
+        <div class="eyebrow">MindsLeap Deck Archive</div>
+        <h1>公开课件与培训材料</h1>
+        <p class="lead">这里集中存放 MindsLeap 对外培训、客户工作坊、研究报告和公开演讲 deck。每份 deck 都尽量保留可演示、可复用、可迭代的 HTML 版本。</p>
+        <div class="author-row">
+          <a class="author-link" href="./Lincoln/">Lincoln Decks</a>
         </div>
-        <div class="meta">CEIBS · AI Agent · Marketing · 31 slides</div>
-      </a>
-    </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="inner">
+        <h2>最新 Decks</h2>
+        <p>当前公开列表会随着新的培训和研究材料持续更新。</p>
+        <div class="deck-grid">
+          <a class="deck-card" href="./Lincoln/ceibs-ai-agent-marketing-training/">
+            <div>
+              <span class="tag">Training</span>
+              <h3>中欧商学院市场团队 AI Agent 工作流培训</h3>
+              <p>围绕品牌内容资产库、官网 AI 优化、市场监测、内容 / 视频创作四大场景，训练市场团队从 Prompt 试错升级为 Agentic Workflow。</p>
+            </div>
+            <div class="meta">Lincoln · CEIBS · 31 slides</div>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer>
+    <div class="inner">© MindsLeap · Upgrade AI Mindsets for Global Success</div>
+  </footer>
 </body>
 </html>

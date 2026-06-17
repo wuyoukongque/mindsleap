@@ -66,6 +66,14 @@ const nextConfig: NextConfig = {
           source: "/decks/Lincoln/ceibs-ai-agent-marketing-training/",
           destination: "/decks/Lincoln/ceibs-ai-agent-marketing-training/index.html",
         },
+        {
+          source: "/decks/Lincoln/xiyouji-ai-agent-kickoff-training",
+          destination: "/decks/Lincoln/xiyouji-ai-agent-kickoff-training/index.html",
+        },
+        {
+          source: "/decks/Lincoln/xiyouji-ai-agent-kickoff-training/",
+          destination: "/decks/Lincoln/xiyouji-ai-agent-kickoff-training/index.html",
+        },
       ],
       afterFiles: [],
       fallback: [],

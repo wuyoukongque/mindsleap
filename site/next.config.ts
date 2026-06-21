@@ -46,6 +46,46 @@ const nextConfig: NextConfig = {
       beforeFiles: [
         { source: "/design-system", destination: "/design-system/index.html" },
         { source: "/design-system/", destination: "/design-system/index.html" },
+        { source: "/product", destination: "/product/index.html" },
+        { source: "/product/", destination: "/product/index.html" },
+        { source: "/proposal", destination: "/proposal/index.html" },
+        { source: "/proposal/", destination: "/proposal/index.html" },
+        {
+          source: "/proposal/ENTERPRISE-AI-GROWTH-ACCELERATOR",
+          destination: "/proposal/ENTERPRISE-AI-GROWTH-ACCELERATOR/index.html",
+        },
+        {
+          source: "/proposal/ENTERPRISE-AI-GROWTH-ACCELERATOR/",
+          destination: "/proposal/ENTERPRISE-AI-GROWTH-ACCELERATOR/index.html",
+        },
+        {
+          source: "/proposal/client-full",
+          destination: "/proposal/ENTERPRISE-AI-GROWTH-ACCELERATOR/index.html",
+        },
+        {
+          source: "/proposal/client-full/",
+          destination: "/proposal/ENTERPRISE-AI-GROWTH-ACCELERATOR/index.html",
+        },
+        {
+          source: "/proposal/client-full/:path*",
+          destination: "/proposal/ENTERPRISE-AI-GROWTH-ACCELERATOR/:path*",
+        },
+        {
+          source: "/proposal/ai-fde-investor-bp",
+          destination: "/proposal/ai-fde-investor-bp/index.html",
+        },
+        {
+          source: "/proposal/ai-fde-investor-bp/",
+          destination: "/proposal/ai-fde-investor-bp/index.html",
+        },
+        {
+          source: "/proposal/university-ai-capability-proposal",
+          destination: "/proposal/university-ai-capability-proposal/index.html",
+        },
+        {
+          source: "/proposal/university-ai-capability-proposal/",
+          destination: "/proposal/university-ai-capability-proposal/index.html",
+        },
         { source: "/decks", destination: "/decks/index.html" },
         { source: "/decks/", destination: "/decks/index.html" },
         { source: "/decks/Lincoln", destination: "/decks/Lincoln/index.html" },

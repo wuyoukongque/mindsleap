@@ -164,6 +164,14 @@ const nextConfig: NextConfig = {
           source: "/decks/Lincoln/xiyouji-ai-agent-kickoff-training/",
           destination: "/decks/Lincoln/xiyouji-ai-agent-kickoff-training/index.html",
         },
+        {
+          source: "/decks/Yusi/ai-practice-training-deck",
+          destination: "/decks/Yusi/ai-practice-training-deck/index.html",
+        },
+        {
+          source: "/decks/Yusi/ai-practice-training-deck/",
+          destination: "/decks/Yusi/ai-practice-training-deck/index.html",
+        },
       ],
       afterFiles: [],
       fallback: [],

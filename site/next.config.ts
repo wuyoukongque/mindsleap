@@ -165,6 +165,22 @@ const nextConfig: NextConfig = {
           destination: "/decks/Lincoln/xiyouji-ai-agent-kickoff-training/index.html",
         },
         {
+          source: "/decks/Lincoln/opc-chongqing-10min",
+          destination: "/decks/Lincoln/opc-chongqing-10min/index.html",
+        },
+        {
+          source: "/decks/Lincoln/opc-chongqing-10min/",
+          destination: "/decks/Lincoln/opc-chongqing-10min/index.html",
+        },
+        {
+          source: "/decks/Lincoln/pudong-ecommerce-ai-native-enterprise",
+          destination: "/decks/Lincoln/pudong-ecommerce-ai-native-enterprise/index.html",
+        },
+        {
+          source: "/decks/Lincoln/pudong-ecommerce-ai-native-enterprise/",
+          destination: "/decks/Lincoln/pudong-ecommerce-ai-native-enterprise/index.html",
+        },
+        {
           source: "/decks/Yusi/ai-practice-training-deck",
           destination: "/decks/Yusi/ai-practice-training-deck/index.html",
         },

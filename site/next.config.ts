@@ -136,6 +136,14 @@ const nextConfig: NextConfig = {
           source: "/proposal/university-ai-capability-proposal/",
           destination: "/proposal/university-ai-capability-proposal/index.html",
         },
+        {
+          source: "/proposal/mindsleap-fde-bp-v2",
+          destination: "/proposal/mindsleap-fde-bp-v2/index.html",
+        },
+        {
+          source: "/proposal/mindsleap-fde-bp-v2/",
+          destination: "/proposal/mindsleap-fde-bp-v2/index.html",
+        },
         { source: "/decks", destination: "/decks/index.html" },
         { source: "/decks/", destination: "/decks/index.html" },
         { source: "/decks/Lincoln", destination: "/decks/Lincoln/index.html" },

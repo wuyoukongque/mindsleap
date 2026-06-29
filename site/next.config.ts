@@ -138,6 +138,8 @@ const nextConfig: NextConfig = {
         },
         { source: "/decks", destination: "/decks/index.html" },
         { source: "/decks/", destination: "/decks/index.html" },
+        { source: "/case-login", destination: "/case-login/index.html" },
+        { source: "/case-login/", destination: "/case-login/index.html" },
         { source: "/case", destination: "/case/index.html" },
         { source: "/case/", destination: "/case/index.html" },
         {

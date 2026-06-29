@@ -1,8 +1,35 @@
 import createMiddleware from "next-intl/middleware";
+import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
 
-export default createMiddleware(routing);
+const intlMiddleware = createMiddleware(routing);
+const CASE_ACCESS_COOKIE = "mindsleap_case_access";
+const CASE_ACCESS_VALUE = "mindsleapcase";
+
+export default function middleware(request: NextRequest) {
+  const { pathname, search } = request.nextUrl;
+  const isCasePath = pathname === "/case" || pathname.startsWith("/case/");
+
+  if (isCasePath) {
+    const hasAccess = request.cookies.get(CASE_ACCESS_COOKIE)?.value === CASE_ACCESS_VALUE;
+
+    if (hasAccess) {
+      return NextResponse.next();
+    }
+
+    const loginUrl = request.nextUrl.clone();
+    loginUrl.pathname = "/case-login";
+    loginUrl.search = "";
+    loginUrl.searchParams.set("next", `${pathname}${search}`);
+    return NextResponse.redirect(loginUrl);
+  }
+
+  return intlMiddleware(request);
+}
 
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|design-system|decks|case|product|proposal|poster|.*\\..*).*)"],
+  matcher: [
+    "/case/:path*",
+    "/((?!api|_next|_vercel|design-system|decks|case-login|product|proposal|poster|.*\\..*).*)",
+  ],
 };

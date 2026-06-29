@@ -149,6 +149,14 @@ const nextConfig: NextConfig = {
           destination: "/case/zhidu-brand-strategy/index.html",
         },
         {
+          source: "/case/fushanji-brand-strategy",
+          destination: "/case/fushanji-brand-strategy/index.html",
+        },
+        {
+          source: "/case/fushanji-brand-strategy/",
+          destination: "/case/fushanji-brand-strategy/index.html",
+        },
+        {
           source: "/case/zhidu-brand-strategy/report",
           destination: "/case/zhidu-brand-strategy/report/index.html",
         },

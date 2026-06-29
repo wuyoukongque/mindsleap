@@ -1,586 +1,176 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex,nofollow" />
-  <title>杨铭宇菜单屏 Agent · MindsLeap Case</title>
-  <style>
-    :root {
-      --blue: #1e477c;
-      --blue-dark: #102745;
-      --ink: #111827;
-      --muted: #4b5563;
-      --subtle: #8a94a6;
-      --rule: #e5e7eb;
-      --bg: #ffffff;
-      --cream: #fff7ec;
-      --yellow: #f6c940;
-      --red: #d9232e;
-      --green: #1f8a70;
-      --shadow: 0 24px 80px rgba(16, 39, 69, .16);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Agent Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="control-panel" aria-label="菜单屏生成控制台">
+        <section class="brand-block">
+          <p class="eyebrow">AI Menu Screen Agent</p>
+          <h1>连锁门店菜单屏生成器</h1>
+          <p class="subcopy">把总部菜单数据、门店场景和品牌风格转成可直接投屏的菜单画面。</p>
+        </section>
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "Noto Sans SC", "PingFang SC", sans-serif;
-      letter-spacing: -0.01em;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
+        <section class="panel-section">
+          <div class="section-title">
+            <span>门店场景</span>
+            <button class="icon-button" id="randomizeBtn" type="button" title="重新生成布局" aria-label="重新生成布局">↻</button>
+          </div>
+          <div class="grid-2">
+            <label>
+              屏幕母版
+              <select id="screenRatio">
+                <option value="landscape">杨铭宇黄焖鸡横屏母版</option>
+              </select>
+            </label>
+            <label>
+              时段
+              <select id="daypart">
+                <option value="lunch">午餐高峰</option>
+                <option value="breakfast">早餐时段</option>
+                <option value="dinner">晚餐主推</option>
+                <option value="summer">夏季新品</option>
+              </select>
+            </label>
+          </div>
+          <div class="grid-2">
+            <label>
+              主品牌色
+              <input id="primaryColor" type="color" value="#d9232e" />
+            </label>
+            <label>
+              辅助色
+              <input id="accentColor" type="color" value="#f7b731" />
+            </label>
+          </div>
+        </section>
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-      padding: 0 56px;
-      border-bottom: 1px solid rgba(229, 231, 235, .88);
-      background: rgba(255, 255, 255, .94);
-      backdrop-filter: blur(18px);
-    }
-    .logo {
-      width: 260px;
-      height: 50px;
-      background: url("/decks/shared/mindsleap-template/mindsleap-foundersspace-joint-logo-blue.svg") left center / contain no-repeat;
-    }
-    nav {
-      display: flex;
-      gap: 26px;
-      color: var(--blue);
-      font-size: 14px;
-      font-weight: 800;
-    }
+        <section class="panel-section">
+          <div class="section-title">
+            <span>区块组合策略</span>
+          </div>
+          <div class="segmented" role="group" aria-label="模板策略">
+            <button class="segment active" type="button" data-template="hero">按门店生成</button>
+            <button class="segment" type="button" data-template="combo">隐藏新品</button>
+            <button class="segment" type="button" data-template="catalog">完整配置</button>
+          </div>
+          <div class="toggles">
+            <label class="toggle">
+              <input id="autoPriority" type="checkbox" checked />
+              <span>自动放大热销菜</span>
+            </label>
+            <label class="toggle">
+              <input id="qualityCheck" type="checkbox" checked />
+              <span>生成后自动质检</span>
+            </label>
+          </div>
+        </section>
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 92px 56px 74px;
-      background:
-        radial-gradient(circle at 86% 8%, rgba(246, 201, 64, .3), transparent 28%),
-        linear-gradient(135deg, #fff7ec 0%, #ffffff 46%, #eef6ff 100%);
-      border-bottom: 1px solid var(--rule);
-    }
-    .inner {
-      width: min(1180px, calc(100% - 24px));
-      margin: 0 auto;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, .9fr) minmax(420px, 1.1fr);
-      gap: 48px;
-      align-items: center;
-    }
-    .eyebrow {
-      margin: 0 0 18px;
-      color: var(--red);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-    h1 {
-      margin: 0;
-      color: var(--blue);
-      font-size: clamp(42px, 6vw, 76px);
-      line-height: 1.04;
-      letter-spacing: -.035em;
-    }
-    .lead {
-      margin: 26px 0 0;
-      color: var(--muted);
-      font-size: 20px;
-      line-height: 1.68;
-    }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 32px;
-    }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 0 18px;
-      border-radius: 8px;
-      font-weight: 900;
-    }
-    .button.primary { color: white; background: var(--blue); }
-    .button.secondary { color: var(--blue); background: white; border: 1px solid var(--rule); }
-    .hero-visual {
-      padding: 14px;
-      border: 1px solid rgba(30, 71, 124, .12);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, .72);
-      box-shadow: var(--shadow);
-    }
-    .hero-visual img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0,0,0,.08);
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 42px;
-    }
-    .stat {
-      min-height: 116px;
-      padding: 22px;
-      border: 1px solid var(--rule);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, .78);
-    }
-    .stat b {
-      display: block;
-      color: var(--blue);
-      font-size: 30px;
-      line-height: 1;
-    }
-    .stat span {
-      display: block;
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.45;
-    }
-
-    .section {
-      padding: 82px 56px;
-    }
-    .section.alt { background: #f9fafb; }
-    .section.dark {
-      color: white;
-      background:
-        linear-gradient(135deg, rgba(16, 39, 69, .96), rgba(30, 71, 124, .94)),
-        url("assets/menu-background.jpg") center / cover no-repeat;
-    }
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(0, .9fr) minmax(320px, .7fr);
-      gap: 42px;
-      align-items: end;
-      margin-bottom: 38px;
-    }
-    .kicker {
-      margin: 0 0 12px;
-      color: var(--red);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-    .section.dark .kicker { color: var(--yellow); }
-    h2 {
-      margin: 0;
-      color: var(--blue);
-      font-size: clamp(30px, 4vw, 50px);
-      line-height: 1.14;
-      letter-spacing: -.02em;
-    }
-    .section.dark h2 { color: white; }
-    .section-copy {
-      margin: 0;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.72;
-    }
-    .section.dark .section-copy { color: rgba(255,255,255,.74); }
-
-    .problem-grid,
-    .system-grid,
-    .eval-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .card {
-      min-height: 240px;
-      padding: 28px;
-      border: 1px solid var(--rule);
-      border-radius: 12px;
-      background: white;
-      box-shadow: 0 1px 2px rgba(0,0,0,.03);
-    }
-    .section.dark .card {
-      border-color: rgba(255,255,255,.14);
-      background: rgba(255,255,255,.08);
-      backdrop-filter: blur(14px);
-    }
-    .card-number {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 22px;
-      border-radius: 50%;
-      color: white;
-      background: var(--red);
-      font-weight: 900;
-    }
-    .card h3 {
-      margin: 0 0 12px;
-      color: var(--blue);
-      font-size: 23px;
-      line-height: 1.25;
-    }
-    .section.dark .card h3 { color: white; }
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.72;
-    }
-    .section.dark .card p { color: rgba(255,255,255,.74); }
-
-    .workflow {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .workflow-step {
-      min-height: 170px;
-      padding: 22px;
-      border: 1px solid var(--rule);
-      border-radius: 12px;
-      background: white;
-    }
-    .workflow-step b {
-      display: block;
-      color: var(--blue);
-      font-size: 18px;
-      line-height: 1.3;
-    }
-    .workflow-step span {
-      display: block;
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-    .image-stage {
-      padding: 20px;
-      border: 1px solid var(--rule);
-      border-radius: 18px;
-      background: white;
-      box-shadow: var(--shadow);
-    }
-    .image-stage img { border-radius: 10px; }
-    .caption {
-      margin: 14px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .deliverables {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-    .deliverable-list {
-      display: grid;
-      gap: 12px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .deliverable-list li {
-      padding: 18px 20px;
-      border: 1px solid var(--rule);
-      border-radius: 10px;
-      background: white;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-    .deliverable-list b { color: var(--blue); }
-
-    .timeline {
-      display: grid;
-      gap: 12px;
-      padding: 24px;
-      border-radius: 14px;
-      background: var(--blue);
-      color: white;
-    }
-    .timeline-row {
-      display: grid;
-      grid-template-columns: 96px 1fr;
-      gap: 14px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid rgba(255,255,255,.18);
-    }
-    .timeline-row:last-child { border-bottom: 0; padding-bottom: 0; }
-    .timeline-row b { color: var(--yellow); }
-    .timeline-row span { color: rgba(255,255,255,.78); line-height: 1.6; }
-
-    footer {
-      padding: 42px 56px;
-      border-top: 1px solid var(--rule);
-      color: var(--subtle);
-      font-size: 14px;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .section-head,
-      .deliverables {
-        grid-template-columns: 1fr;
-      }
-      .stats,
-      .problem-grid,
-      .system-grid,
-      .eval-grid,
-      .workflow {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-    @media (max-width: 720px) {
-      .topbar { height: auto; align-items: flex-start; flex-direction: column; padding: 24px; }
-      nav { flex-wrap: wrap; }
-      .logo { width: 230px; }
-      .hero, .section, footer { padding-left: 24px; padding-right: 24px; }
-      .inner { width: 100%; }
-      .stats,
-      .problem-grid,
-      .system-grid,
-      .eval-grid,
-      .workflow {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header class="topbar">
-    <a class="logo" href="https://www.mindsleap.ai/zh" aria-label="MindsLeap"></a>
-    <nav>
-      <a href="/case/">案例集</a>
-      <a href="https://www.mindsleap.ai/zh/services/ai-transformation">AI 转型</a>
-      <a href="https://www.mindsleap.ai/zh/contact">联系</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="inner">
-        <div class="hero-grid">
-          <div>
-            <p class="eyebrow">MindsLeap Case · Restaurant AI Workflow</p>
-            <h1>杨铭宇菜单屏 Agent：把全国门店菜单制作变成可复制的 AI 工作流</h1>
-            <p class="lead">
-              面对连锁餐饮门店菜单屏制作高度依赖人工、设计标准难以统一、门店组合频繁变化的问题，MindsLeap 将菜单母版、菜品图库、品牌规范、版式规则和质检逻辑整合成一个可交互 Demo，为后续批量生成与门店自动化运营打样。
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="assets/menu-screen-export.png">查看导出菜单屏</a>
-              <a class="button secondary" href="/case/">返回案例集</a>
+        <section class="panel-section asset-section">
+          <div class="section-title">
+            <span>公司 UI Asset 库</span>
+            <span class="asset-badge" id="brandScore">已锁定</span>
+          </div>
+          <div class="logo-standard">
+            <div class="logo-tile" id="logoTile" aria-label="标准 Logo"></div>
+            <div>
+              <strong id="brandName">YMY Kitchen</strong>
+              <p>Logo 安全区、最小尺寸、禁用变形和错误用色。</p>
             </div>
           </div>
-          <div class="hero-visual">
-            <img src="assets/menu-screen-export.png" alt="杨铭宇菜单屏 Agent 导出效果" />
+          <div class="logo-rules" id="logoRules"></div>
+          <div class="asset-group">
+            <h3>用色标准</h3>
+            <div class="color-library" id="colorLibrary"></div>
           </div>
-        </div>
-        <div class="stats">
-          <div class="stat"><b>4000×2251</b><span>横屏菜单屏导出规格，面向门店投屏与运营物料复用。</span></div>
-          <div class="stat"><b>4 区块</b><span>黄焖系列、小炒系列、当季新品、配菜，按母版空间拆解。</span></div>
-          <div class="stat"><b>36 张</b><span>首批标准菜品图库，覆盖黄焖、小炒、新品与配菜素材。</span></div>
-          <div class="stat"><b>1 套规则</b><span>品牌字体、图片区、文字描边、容量和质检规则统一沉淀。</span></div>
-        </div>
-      </div>
-    </section>
+          <div class="asset-group">
+            <h3>字体标准</h3>
+            <div class="font-library" id="fontLibrary"></div>
+          </div>
+        </section>
 
-    <section class="section">
-      <div class="inner">
-        <div class="section-head">
+        <section class="panel-section library-section">
+          <div class="section-title">
+            <span>标准菜品图库</span>
+            <span class="library-count" id="libraryCount">0 张</span>
+          </div>
+          <div class="library-metrics">
+            <span>1:1 标准图</span>
+            <span>透明底</span>
+            <span>已质检</span>
+          </div>
+          <div class="image-library" id="imageLibrary" aria-label="标准菜品图片库"></div>
+        </section>
+
+        <section class="panel-section data-section">
+          <div class="section-title">
+            <span>菜单数据</span>
+            <button class="small-button" id="loadSampleBtn" type="button">样例</button>
+          </div>
+          <p class="field-hint">每行格式：区块, 菜名, 价格, 标签, 优先级。区块支持黄焖系列、小炒系列、当季新品、配菜。</p>
+          <textarea id="menuInput" spellcheck="false"></textarea>
+          <div class="actions">
+            <button id="generateBtn" class="primary-button" type="button">生成菜单屏</button>
+            <button id="exportBtn" class="secondary-button" type="button">导出 PNG</button>
+          </div>
+        </section>
+      </aside>
+
+      <section class="workspace" aria-label="菜单屏预览">
+        <header class="workspace-header">
           <div>
-            <p class="kicker">Business Pain</p>
-            <h2>菜单屏不是一张图，而是全国门店每天都在变化的运营界面。</h2>
+            <p class="eyebrow">Live Preview</p>
+            <h2>总部标准屏</h2>
           </div>
-          <p class="section-copy">
-            对连锁餐饮来说，菜单屏需要同时响应总部品牌规范、门店 SKU、价格、促销、库存和季节新品。传统方式依赖设计师逐屏制作，成本高、速度慢，也很难形成稳定的可复用流程。
-          </p>
-        </div>
-        <div class="problem-grid">
-          <div class="card">
-            <div class="card-number">1</div>
-            <h3>人工制作成本高</h3>
-            <p>全国门店数量越多，菜单屏尺寸、菜品组合、价格变动和活动更新越频繁，设计团队越容易被重复劳动占满。</p>
+          <div class="status-strip">
+            <span id="itemCount">0 个菜品</span>
+            <span id="screenLabel">1920 x 1080</span>
+            <span id="qaLabel">等待生成</span>
           </div>
-          <div class="card">
-            <div class="card-number">2</div>
-            <h3>品牌标准难统一</h3>
-            <p>Logo、安全区、字体、描边、菜品图比例和栏目空间如果没有规则化，很容易出现不同门店视觉质量参差不齐。</p>
-          </div>
-          <div class="card">
-            <div class="card-number">3</div>
-            <h3>运营反馈难闭环</h3>
-            <p>菜单屏本质上是销售转化界面，但传统制作流程很难把门店销售、库存、时段和 SKU 优先级反馈进下一版画面。</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        </header>
 
-    <section class="section dark">
-      <div class="inner">
-        <div class="section-head">
+        <div class="preview-frame" id="previewFrame">
+          <article class="menu-screen landscape" id="menuScreen">
+            <div class="template-bg"></div>
+            <section class="template-zone zone-braised" aria-label="黄焖系列">
+              <div class="zone-items braised-items" id="braisedItems"></div>
+            </section>
+            <section class="template-zone zone-stir" aria-label="小炒系列">
+              <div class="zone-items stir-items" id="stirItems"></div>
+            </section>
+            <section class="template-zone zone-seasonal" aria-label="当季新品">
+              <div class="zone-items seasonal-items" id="seasonalItems"></div>
+            </section>
+            <section class="template-zone zone-side" aria-label="配菜">
+              <div class="zone-items side-items" id="sideItems"></div>
+            </section>
+          </article>
+        </div>
+
+        <section class="export-panel" id="exportPanel" hidden>
           <div>
-            <p class="kicker">Agent System</p>
-            <h2>我们把“设计一张菜单屏”拆成一个 AI 原生生产系统。</h2>
+            <strong id="exportStatus">导出完成</strong>
+            <p id="exportFilePath" class="export-path"></p>
+            <a id="exportOpenLink" class="export-link" href="#" target="_blank" rel="noopener" download="yangmingyu-menu-screen.png">打开 PNG</a>
           </div>
-          <p class="section-copy">
-            Demo 阶段先验证最关键的闭环：总部母版固定、右侧内容区可重组、菜品图标准化、文本信息自动排版、生成后自动质检，并能导出可复用 PNG。
-          </p>
-        </div>
-        <div class="system-grid">
-          <div class="card">
-            <div class="card-number">A</div>
-            <h3>品牌资产 Agent</h3>
-            <p>管理 Logo、色板、HarmonyOS Sans 字体、描边规则和禁用项，保证每次生成都不偏离总部视觉规范。</p>
-          </div>
-          <div class="card">
-            <div class="card-number">B</div>
-            <h3>菜品图库 Agent</h3>
-            <p>将黄焖、小炒、新品、配菜素材标准化，控制透明底、比例、清晰度和可投屏状态，避免门店临时找图。</p>
-          </div>
-          <div class="card">
-            <div class="card-number">C</div>
-            <h3>菜单排版 Agent</h3>
-            <p>根据区块容量和优先级自动组合菜品：黄焖固定 4 个，小炒 1-3 个，新品可为空，配菜 3-6 个。</p>
-          </div>
-          <div class="card">
-            <div class="card-number">D</div>
-            <h3>质检 Eval Agent</h3>
-            <p>检查价格缺失、图库匹配、菜品数量、图片拉伸、文字截断、品牌区域遮挡和版面拥挤度。</p>
-          </div>
-          <div class="card">
-            <div class="card-number">E</div>
-            <h3>门店配置 Agent</h3>
-            <p>未来接入门店 SKU、区域价格、库存、时段和活动信息，自动输出每家店可用的菜单屏版本。</p>
-          </div>
-          <div class="card">
-            <div class="card-number">F</div>
-            <h3>导出与分发 Agent</h3>
-            <p>将最终画面导出为标准 PNG，并为后续批量生成、审批、门店下载和投屏系统对接预留接口。</p>
-          </div>
-        </div>
-      </div>
-    </section>
+          <img id="exportPreview" alt="导出的菜单屏 PNG 预览" />
+        </section>
 
-    <section class="section alt">
-      <div class="inner">
-        <div class="section-head">
+        <section class="qa-panel" id="qaPanel">
           <div>
-            <p class="kicker">Production Workflow</p>
-            <h2>从菜单数据到投屏图片，形成一条可以规模化的生产线。</h2>
+            <strong>质检结果</strong>
+            <p>生成后会检查菜品数量、价格字段、热销标签和版面拥挤度。</p>
           </div>
-          <p class="section-copy">
-            这个 Demo 不是单页美术稿，而是一套“输入、匹配、排版、质检、导出”的工作流雏形，未来可以连接 Excel、门店后台或 POS 数据。
-          </p>
-        </div>
-        <div class="workflow">
-          <div class="workflow-step"><b>1. 输入菜单数据</b><span>区块、菜名、价格、标签、优先级统一为结构化格式。</span></div>
-          <div class="workflow-step"><b>2. 匹配标准图库</b><span>按菜名和类别查找真实菜品图，缺失项进入素材补齐流程。</span></div>
-          <div class="workflow-step"><b>3. 套用母版区块</b><span>左侧主视觉固定，右侧按黄焖、小炒、新品、配菜区域填充。</span></div>
-          <div class="workflow-step"><b>4. 自动质检</b><span>检查数量、价格、图片、品牌规范和版面拥挤度。</span></div>
-          <div class="workflow-step"><b>5. 导出投屏 PNG</b><span>生成 `4000 x 2251` 横屏图片，供门店和提案场景使用。</span></div>
-        </div>
-      </div>
-    </section>
+          <ul id="qaList"></ul>
+        </section>
+      </section>
+    </main>
 
-    <section class="section">
-      <div class="inner">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Prototype Output</p>
-            <h2>首版 Demo 交付了一个可运行、可展示、可继续工程化的样机。</h2>
-          </div>
-          <p class="section-copy">
-            现阶段重点不是一次性解决所有门店场景，而是把高频菜单屏生产问题拆成可复用组件，让客户能看见 AI Agent 进入真实运营流程的方式。
-          </p>
-        </div>
-        <div class="image-stage">
-          <img src="assets/menu-screen-export.png" alt="杨铭宇菜单屏 Agent 输出画面" />
-          <p class="caption">当前导出画面：左侧品牌主视觉固定，右侧自动组合黄焖系列、小炒系列、当季新品和配菜；菜名、价格、图片和区块容量由规则控制。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="inner">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Eval System</p>
-            <h2>真正可复制的价值，不是生成，而是每次生成都能被评估和改进。</h2>
-          </div>
-          <p class="section-copy">
-            餐饮门店菜单屏的 Eval 不只看“好不好看”，还要看是否符合品牌规范、是否可读、是否完整、是否匹配门店经营目标。
-          </p>
-        </div>
-        <div class="eval-grid">
-          <div class="card">
-            <div class="card-number">01</div>
-            <h3>版式完整性</h3>
-            <p>检查菜品数量是否符合区块容量，菜名和价格是否单行完整显示，图片是否拉伸或裁切。</p>
-          </div>
-          <div class="card">
-            <div class="card-number">02</div>
-            <h3>品牌一致性</h3>
-            <p>检查母版是否被覆盖，字体、描边、颜色、Logo 安全区和栏目标题是否保持总部标准。</p>
-          </div>
-          <div class="card">
-            <div class="card-number">03</div>
-            <h3>运营有效性</h3>
-            <p>未来可叠加门店销量、库存、时段和活动转化数据，把菜单屏从静态物料变成可优化的销售界面。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="inner">
-        <div class="section-head">
-          <div>
-            <p class="kicker">What Comes Next</p>
-            <h2>从菜单屏 Agent，扩展为连锁餐饮门店内容生产底座。</h2>
-          </div>
-          <p class="section-copy">
-            杨铭宇菜单屏 Demo 可以继续向三个方向演进：批量门店生成、门店运营数据联动、多渠道物料自动适配。
-          </p>
-        </div>
-        <div class="deliverables">
-          <ul class="deliverable-list">
-            <li><b>批量生成：</b>接入 Excel / CSV 或门店后台，一次生成不同城市、门店、价格和 SKU 组合。</li>
-            <li><b>素材治理：</b>建立菜品图命名、抠图、清晰度、比例和版本管理规则。</li>
-            <li><b>运营联动：</b>将销量、库存、时段、天气和活动信息反馈到菜品排序和曝光策略。</li>
-            <li><b>多渠道适配：</b>从菜单屏扩展到外卖头图、团购页、门店海报、短视频封面和小红书素材。</li>
-          </ul>
-          <div class="timeline">
-            <div class="timeline-row"><b>0-2 周</b><span>沉淀品牌规范、菜品图库和菜单屏母版规则。</span></div>
-            <div class="timeline-row"><b>3-6 周</b><span>接入真实门店菜单数据，跑通 10-20 家门店批量生成。</span></div>
-            <div class="timeline-row"><b>7-10 周</b><span>建立 Eval 看板，记录生成质量、人工修改原因和门店反馈。</span></div>
-            <div class="timeline-row"><b>11-12 周</b><span>形成行业案例包，作为餐饮连锁 AI 原生运营标杆对外展示。</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="inner">© MindsLeap · Case Archive · Yangmingyu Menu Screen Agent</div>
-  </footer>
-</body>
+    <script src="./vendor/html2canvas.min.js"></script>
+    <script src="./app.js?v=20260526-hires-dom-export"></script>
+  </body>
 </html>

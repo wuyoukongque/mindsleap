@@ -24,6 +24,12 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect(loginUrl);
   }
 
+  if (pathname === "/event/ai-employee" || pathname.startsWith("/event/ai-employee/")) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/zh${pathname}`;
+    return NextResponse.rewrite(url);
+  }
+
   return intlMiddleware(request);
 }
 

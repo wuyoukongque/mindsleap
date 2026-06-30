@@ -73,40 +73,14 @@
         align-items: center;
         gap: 12px;
         color: var(--cream-100);
-        min-width: 220px;
+        min-width: 190px;
       }
 
-      .brand-seal {
-        width: 38px;
-        height: 38px;
-        display: grid;
-        place-items: center;
-        border: 1px solid rgba(245, 240, 232, 0.68);
-        border-radius: 50%;
-        color: var(--cream-100);
-        font-family: var(--font-title);
-        font-size: 20px;
-        font-weight: 900;
-        line-height: 1;
-      }
-
-      .brand-name {
-        display: grid;
-        gap: 1px;
-      }
-
-      .brand-name b {
-        font-family: var(--font-title);
-        font-size: 18px;
-        line-height: 1.1;
-        letter-spacing: 0.08em;
-      }
-
-      .brand-name span {
-        color: rgba(247, 241, 232, 0.58);
-        font-size: 11px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
+      .brand-logo {
+        display: block;
+        width: 168px;
+        height: 48px;
+        object-fit: contain;
       }
 
       .brand-nav ul {
@@ -854,6 +828,11 @@
           gap: 12px 18px;
         }
 
+        .brand-logo {
+          width: 152px;
+          height: 44px;
+        }
+
         .hero-grid,
         .section-head,
         .story-layout,
@@ -929,11 +908,7 @@
   <body>
     <nav class="brand-nav" aria-label="福山季品牌战略导航">
       <a class="brand-mark" href="#top">
-        <span class="brand-seal">福</span>
-        <span class="brand-name">
-          <b>福山季</b>
-          <span>Brand Strategy</span>
-        </span>
+        <img class="brand-logo" src="/case/fushanji-brand-strategy/assets/fushanji-logo-horizontal-white.svg" alt="福山季" />
       </a>
       <ul>
         <li><a href="#story">品牌故事</a></li>

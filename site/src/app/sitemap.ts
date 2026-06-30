@@ -32,6 +32,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
+  const eventEntries = [
+    {
+      url: `${baseUrl}/event/ai-employee`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/event/ai-employee/gallery`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
+    },
+  ];
+
   const postEntries = getAllLocalizedPostSlugs().map(({ locale, slug }) => ({
     url: `${baseUrl}/${locale}/news/${slug}`,
     lastModified: new Date(),
@@ -57,5 +72,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticEntries, ...topicEntries, ...peopleEntries, ...postEntries];
+  return [...staticEntries, ...eventEntries, ...topicEntries, ...peopleEntries, ...postEntries];
 }

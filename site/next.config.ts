@@ -136,6 +136,14 @@ const nextConfig: NextConfig = {
           source: "/proposal/university-ai-capability-proposal/",
           destination: "/proposal/university-ai-capability-proposal/index.html",
         },
+        {
+          source: "/proposal/enterprise-ai-growth-light-consulting",
+          destination: "/proposal/enterprise-ai-growth-light-consulting/index.html",
+        },
+        {
+          source: "/proposal/enterprise-ai-growth-light-consulting/",
+          destination: "/proposal/enterprise-ai-growth-light-consulting/index.html",
+        },
         { source: "/decks", destination: "/decks/index.html" },
         { source: "/decks/", destination: "/decks/index.html" },
         { source: "/case-login", destination: "/case-login/index.html" },

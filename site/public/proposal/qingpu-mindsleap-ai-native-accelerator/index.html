@@ -768,6 +768,24 @@
       color: #1e477c;
       font: 700 22px/1.16 var(--font-heading);
     }
+    .operating-budget-table {
+      margin-top: 24px;
+    }
+    .operating-budget-table .tcell {
+      padding: 11px 18px;
+      min-height: 56px;
+      font-size: 16px;
+      line-height: 1.22;
+    }
+    .operating-budget-table .tcell.head {
+      min-height: 44px;
+      font-size: 17px;
+    }
+    .operating-budget-table .tcell.topic,
+    .operating-budget-table .tcell.strong {
+      font-size: 19px;
+      line-height: 1.12;
+    }
     .budget-total {
       margin-top: 10px;
       display: grid;
@@ -1129,6 +1147,79 @@
       font: 400 20px/1.38 var(--font-body);
     }
     .seat-card.dark p { color: rgba(255,255,255,0.78); }
+    .people-cost-layout {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 28px;
+      margin-top: 40px;
+      flex: 0 0 auto;
+    }
+    .people-cost-total {
+      border-radius: 8px;
+      background: #1e477c;
+      color: #fff;
+      padding: 38px 36px;
+      min-height: 520px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .people-cost-total .label {
+      color: #b8d7ff;
+      font: 700 20px/1 var(--font-body);
+      margin-bottom: 28px;
+    }
+    .people-cost-total .num {
+      color: #fff;
+      font: 700 70px/0.98 var(--font-heading);
+      margin-bottom: 28px;
+    }
+    .people-cost-total p {
+      margin: 0 0 18px;
+      color: rgba(255,255,255,0.78);
+      font: 400 24px/1.42 var(--font-body);
+    }
+    .people-cost-total p:last-child { margin-bottom: 0; }
+    .people-cost-table {
+      display: grid;
+      grid-template-columns: 0.82fr 0.45fr 1.28fr 0.5fr;
+      border: 1px solid #dfe6ef;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .people-cell {
+      padding: 13px 16px;
+      min-height: 68px;
+      border-right: 1px solid #dfe6ef;
+      border-bottom: 1px solid #dfe6ef;
+      box-sizing: border-box;
+      color: #526174;
+      font: 400 16px/1.28 var(--font-body);
+    }
+    .people-cell:nth-child(4n) { border-right: 0; }
+    .people-cell:nth-last-child(-n+4) { border-bottom: 0; }
+    .people-cell.head {
+      min-height: 50px;
+      background: #1e477c;
+      color: #fff;
+      font: 700 17px/1.16 var(--font-heading);
+    }
+    .people-cell.topic {
+      background: #f6f8fb;
+      color: #1e477c;
+      font: 700 20px/1.14 var(--font-heading);
+    }
+    .people-cell.strong {
+      color: #1e477c;
+      font: 700 22px/1.1 var(--font-heading);
+    }
+    .people-cell.total {
+      background: #eef4fb;
+      color: #1e477c;
+      font-weight: 700;
+    }
     .metric-table {
       display: grid;
       grid-template-columns: 0.72fr repeat(3, 0.92fr) 1.22fr;
@@ -1790,10 +1881,10 @@
     </div>
   </section>
 
-  <section class="slide body role-slide" data-label="13 合作分工">
-    <div class="eyebrow">合作分工 <span class="dot">·</span> 明确职责与资源配置</div>
-    <h1 class="slide-title">先明确政府支持事项，再推进空间建设与年度运营
-      <span class="en">青浦科创重点支持空间载体、硅谷风格装修和年度运营经费，MindsLeap 负责生态运营、项目招募与市场化自筹。</span>
+  <section class="slide body role-slide" data-label="13 投入结构">
+    <div class="eyebrow">投入结构 <span class="dot">·</span> 明确双方资源配置</div>
+    <h1 class="slide-title">青浦科创提供空间与启动支持，MindsLeap 投入团队和生态运营能力
+      <span class="en">先拆清楚空间载体、空间装修和人员投入，再测算年度运营活动及双方共同承担的经费结构。</span>
     </h1>
     <span class="slide-bar"></span>
     <div class="responsibility-grid">
@@ -1802,18 +1893,18 @@
         <div class="responsibility-list">
           <div class="responsibility-item"><div class="num">01</div><div><b>空间载体</b><span>提供一层空间作为项目一期固定物理载体，承载开放办公、内容录制、展示接待与社群运营。</span></div></div>
           <div class="responsibility-item"><div class="num">02</div><div><b>空间装修</b><span>支持按照硅谷创业社区风格完成空间设计、装修和基础设施配置。</span></div></div>
-          <div class="responsibility-item"><div class="num">03</div><div><b>启动支持</b><span>协调交付期启动资源、注册服务和首批项目导入，保障项目尽快进入日常运营。</span></div></div>
-          <div class="responsibility-item"><div class="num">04</div><div><b>运营支持</b><span>提供每年 100 万元运营支持，保障核心活动、项目筛选和生态建设稳定推进。</span></div></div>
-          <div class="responsibility-item"><div class="num">05</div><div><b>政策资源</b><span>整合注册、办公、人才、算力、基金、场景开放等政策资源包，支持入驻企业发展。</span></div></div>
+          <div class="responsibility-item"><div class="num">03</div><div><b>年度运营支持</b><span>提供每年 130 万元运营支持，用于活动、项目筛选、招商接待和年度成果呈现。</span></div></div>
+          <div class="responsibility-item"><div class="num">04</div><div><b>政策资源</b><span>整合注册、办公、人才、算力、基金、场景开放等政策资源包，支持入驻企业发展。</span></div></div>
+          <div class="responsibility-item"><div class="num">05</div><div><b>产业协同</b><span>协调区内企业需求、招商服务和重大接待，推动入驻项目进入真实产业场景。</span></div></div>
         </div>
       </div>
       <div class="responsibility dark">
         <header><div class="label">MindsLeap</div><h3>MindsLeap 投入</h3></header>
         <div class="responsibility-list">
           <div class="responsibility-item"><div class="num">01</div><div><b>项目招募与筛选</b><span>面向本地、长三角及海外创新网络，触达 AI 原生企业、OPC、FDE 团队和传统软件转型企业。</span></div></div>
-          <div class="responsibility-item"><div class="num">02</div><div><b>活动与内容运营</b><span>策划并执行年度大会、AI 工作坊、项目路演日、硅谷专家分享，并持续运营创始人访谈内容栏目。</span></div></div>
-          <div class="responsibility-item"><div class="num">03</div><div><b>内容传播与品牌建设</b><span>通过媒体矩阵、人物访谈、案例文章与短视频，持续放大青浦 AI 生态影响力。</span></div></div>
-          <div class="responsibility-item"><div class="num">04</div><div><b>硅谷资源链接</b><span>引入 Founders Space、硅谷导师、AI 创业方法论、资本与全球增长资源。</span></div></div>
+          <div class="responsibility-item"><div class="num">02</div><div><b>人员投入</b><span>配置项目统筹、BD、市场活动、新媒体内容和项目服务团队，年度人员成本约 200 万元。</span></div></div>
+          <div class="responsibility-item"><div class="num">03</div><div><b>市场化自筹</b><span>年度运营预算中通过会员、服务、赞助及市场化合作等方式自筹约 150 万元。</span></div></div>
+          <div class="responsibility-item"><div class="num">04</div><div><b>硅谷资源与内容传播</b><span>引入 Founders Space、硅谷导师、AI 创业方法论，并持续运营访谈、案例和媒体内容。</span></div></div>
           <div class="responsibility-item"><div class="num">05</div><div><b>孵化与 FDE 转化</b><span>推动企业 AI 需求转化为培训、咨询、FDE 落地和 AI 原生企业成长机会。</span></div></div>
         </div>
       </div>
@@ -1861,13 +1952,38 @@
     </div>
   </section>
 
-  <section class="slide body dense-slide" data-label="16 年度运营预算">
-    <div class="eyebrow">运营经费 <span class="dot">·</span> 按年度最高档测算</div>
-    <h1 class="slide-title">年度运营预算按 280 万元测算，资金来源由两部分组成
-      <span class="en">预算对应核心活动、访谈内容、项目筛选、招商接待和年度报告，不包含固定空间租金、装修投入和企业政策补贴。</span>
+  <section class="slide body dense-slide" data-label="16 MindsLeap 人员投入">
+    <div class="eyebrow">MindsLeap 投入 <span class="dot">·</span> 年度人员成本测算</div>
+    <h1 class="slide-title">MindsLeap 以常态化团队投入保障社区运营，年度人员成本约 200 万元
+      <span class="en">该部分为 MindsLeap 自有团队投入，覆盖总体规划统筹、项目招募、市场活动、新媒体内容和项目服务等日常运营能力。</span>
     </h1>
     <span class="slide-bar"></span>
-    <div class="table-4">
+    <div class="people-cost-layout">
+      <div class="people-cost-total">
+        <div class="label">年度人员投入测算</div>
+        <div class="num">约200万元/年</div>
+        <p>按 16.6 万元/月 × 12 个月测算，年度约 199.2 万元。</p>
+        <p>该投入用于维持长期项目运营团队，不计入后续年度活动预算。</p>
+      </div>
+      <div class="people-cost-table">
+        <div class="people-cell head">人员模块</div><div class="people-cell head">月度预算</div><div class="people-cell head">主要职责</div><div class="people-cell head">年度预算</div>
+        <div class="people-cell topic">总体规划统筹人员</div><div class="people-cell strong">10.0万/月</div><div class="people-cell">项目总控、政府沟通、硅谷资源、战略伙伴、重大活动和年度成果统筹。</div><div class="people-cell strong">120.0万</div>
+        <div class="people-cell topic">BD / 招商对接</div><div class="people-cell strong">2.0万/月</div><div class="people-cell">入驻项目招募、产业客户对接、资本伙伴沟通和招商线索跟进。</div><div class="people-cell strong">24.0万</div>
+        <div class="people-cell topic">市场活动运营</div><div class="people-cell strong">1.6万/月</div><div class="people-cell">AI 工作坊、专家分享、路演 / Hackathon、年度大会和现场执行。</div><div class="people-cell strong">19.2万</div>
+        <div class="people-cell topic">新媒体内容运营</div><div class="people-cell strong">1.5万/月</div><div class="people-cell">Founders Talk、短视频、图文案例、公众号内容和招商传播素材。</div><div class="people-cell strong">18.0万</div>
+        <div class="people-cell topic">项目服务与社群运营</div><div class="people-cell strong">1.5万/月</div><div class="people-cell">入驻服务、导师协调、报名接待、项目资料跟进和社区日常运营。</div><div class="people-cell strong">18.0万</div>
+        <div class="people-cell topic total">合计</div><div class="people-cell strong total">16.6万/月</div><div class="people-cell total">总体统筹 10.0 万/月 + 执行团队 6.6 万/月。</div><div class="people-cell strong total">199.2万</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide body dense-slide" data-label="17 年度运营预算">
+    <div class="eyebrow">运营经费 <span class="dot">·</span> 按年度最高档测算</div>
+    <h1 class="slide-title">年度运营活动按 280 万元测算，由青浦科创和 MindsLeap 共同承担
+      <span class="en">预算对应核心活动、访谈内容、项目筛选、招商接待和年度报告，不包含固定空间租金、装修投入、MindsLeap 常驻人员成本和企业政策补贴。</span>
+    </h1>
+    <span class="slide-bar"></span>
+    <div class="table-4 operating-budget-table">
       <div class="tcell head">模块</div><div class="tcell head">测算依据</div><div class="tcell head">年度数量</div><div class="tcell head">年度预算</div>
       <div class="tcell topic">AI 工作坊 / 技术沙龙</div><div class="tcell">约 5万元/场</div><div class="tcell">6-10场/年</div><div class="tcell strong">50万元</div>
       <div class="tcell topic">硅谷 AI 专家分享 / 闭门交流</div><div class="tcell">约 15万元/场</div><div class="tcell">2-4场/年</div><div class="tcell strong">60万元</div>
@@ -1880,19 +1996,19 @@
       <b>年度运营预算合计：280万元/年</b>
       <div class="budget-source">
         <div class="label">资金来源</div>
-        <div class="chips"><span class="chip">政府支持</span><span class="plus">+</span><span class="chip">MindsLeap 市场化自筹</span></div>
+        <div class="chips"><span class="chip">青浦科创支持</span><span class="plus">+</span><span class="chip">MindsLeap 市场化自筹</span></div>
       </div>
     </div>
   </section>
 
-  <section class="slide body dense-slide" data-label="17 需要政府支持">
-    <div class="eyebrow">启动与运营支持 <span class="dot">·</span> 政府支持事项</div>
-    <h1 class="slide-title">政府支持聚焦三项基础条件，年度经费由双方共同承担
-      <span class="en">空间载体、空间装修和年度运营支持共同构成启动条件；年度运营预算按 280 万元/年测算，其中政府支持 100 万元/年。</span>
+  <section class="slide body dense-slide" data-label="18 资金承担结构">
+    <div class="eyebrow">资金承担 <span class="dot">·</span> 青浦科创与 MindsLeap</div>
+    <h1 class="slide-title">青浦科创承担空间、装修和 130 万元年度运营支持
+      <span class="en">空间载体和空间装修由青浦科创先行支持；年度运营预算按 280 万元/年测算，其中青浦科创支持 130 万元/年，MindsLeap 市场化自筹 150 万元/年。</span>
     </h1>
     <span class="slide-bar"></span>
     <div class="support-layout">
-      <div class="support-section-label">政府支持事项</div>
+      <div class="support-section-label">青浦科创支持事项</div>
       <div class="support-cards">
         <div class="funding-card">
           <h3>空间载体支持</h3>
@@ -1904,7 +2020,7 @@
         </div>
         <div class="funding-card">
           <h3>年度运营支持</h3>
-          <p>提供年度运营经费支持，用于核心活动、项目筛选、招商接待和年度成果呈现，保障公共平台持续运行。</p>
+          <p>提供 130 万元/年运营经费支持，用于核心活动、项目筛选、招商接待和年度成果呈现，保障公共平台持续运行。</p>
         </div>
       </div>
       <div class="support-section-label budget-label">年度运营预算结构</div>
@@ -1912,23 +2028,23 @@
         <div class="budget-overview">
           <span>年度运营预算</span>
           <b>280万元/年</b>
-          <p>按最高档测算，不含固定空间租金、装修投入和企业政策补贴。</p>
+          <p>按最高档测算，不含固定空间租金、装修投入、MindsLeap 常驻人员成本和企业政策补贴。</p>
         </div>
         <div class="budget-split-card">
-          <span>政府年度运营支持</span>
-          <b>100万元/年</b>
+          <span>青浦科创年度运营支持</span>
+          <b>130万元/年</b>
           <p>用于核心活动、项目筛选、招商接待和年度成果呈现。</p>
         </div>
         <div class="budget-split-card self">
           <span>MindsLeap 市场化自筹</span>
-          <b>约180万元/年</b>
+          <b>150万元/年</b>
           <p>通过会员、服务、赞助及市场化合作等方式承担年度运营预算其余部分。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="slide body dense-slide" data-label="18 交付一 活动">
+  <section class="slide body dense-slide" data-label="19 交付一 活动">
     <div class="eyebrow">交付一 <span class="dot">·</span> 每年可执行的活动</div>
     <h1 class="slide-title">交付一：每年可执行的活动
       <span class="en">活动数量采用区间表达，便于根据政府工作节奏、项目成熟度和嘉宾资源进行动态调整。</span>
@@ -1945,7 +2061,7 @@
     </div>
   </section>
 
-  <section class="slide body dense-slide target-slide" data-label="19 交付二 入驻企业和人才">
+  <section class="slide body dense-slide target-slide" data-label="20 交付二 入驻企业和人才">
     <div class="eyebrow">交付二 <span class="dot">·</span> 入驻企业和人才</div>
     <h1 class="slide-title">交付二：入驻企业和人才
       <span class="en">先以项目筛选形成来源，再承接空间入驻、企业主体沉淀和高端人才政策服务。</span>
@@ -1960,7 +2076,7 @@
     </div>
   </section>
 
-  <section class="slide body dense-slide target-slide" data-label="20 交付三 项目成长目标">
+  <section class="slide body dense-slide target-slide" data-label="21 交付三 项目成长目标">
     <div class="eyebrow">交付三 <span class="dot">·</span> 项目成长目标</div>
     <h1 class="slide-title">交付三：项目成长目标
       <span class="en">围绕产业/FDE 对接、资本生态伙伴、标杆项目规模和税收贡献，形成中长期回报指标。</span>
@@ -1976,7 +2092,7 @@
     </div>
   </section>
 
-  <section class="slide body dense-slide" data-label="21 硅谷落地机制">
+  <section class="slide body dense-slide" data-label="22 硅谷落地机制">
     <div class="eyebrow">硅谷资源与 AI 项目 <span class="dot">·</span> 面向青浦落地转化</div>
     <h1 class="slide-title">建设硅谷 AI 项目和技术人才来青浦创业的落地通道
       <span class="en">依托 MindsLeap / Founders Space 硅谷网络，持续触达 AI 创业者、技术人才和早期项目，并在政策条件具备时推动来青浦设立企业主体。</span>
@@ -1997,7 +2113,7 @@
     </div>
   </section>
 
-  <section class="slide body dense-slide fill-slide" data-label="22 对青浦回报">
+  <section class="slide body dense-slide fill-slide" data-label="23 对青浦回报">
     <div class="eyebrow">青浦侧价值 <span class="dot">·</span> 项目价值与长期收益</div>
     <h1 class="slide-title">该项目有望为青浦形成从招商线索、区域品牌到产业生态资产的递进式价值
       <span class="en">短期形成招商与声量，中期形成区域品牌，长期形成可持续的 AI 产业生态资产。</span>
@@ -2011,7 +2127,7 @@
     </div>
   </section>
 
-  <section class="slide body dense-slide fill-slide" data-label="23 政策资源包">
+  <section class="slide body dense-slide fill-slide" data-label="24 政策资源包">
     <div class="eyebrow">政策资源包 <span class="dot">·</span> 政府侧招商服务工具</div>
     <h1 class="slide-title">形成具有竞争力的政策组合，吸引优质 AI 原生企业入驻
       <span class="en">用注册、办公、人才、算力、基金和监管支持，降低 AI 原生企业落地青浦的综合成本。</span>
@@ -2027,7 +2143,7 @@
     </div>
   </section>
 
-  <section class="slide body dense-slide fill-slide" data-label="24 治理与合作边界">
+  <section class="slide body dense-slide fill-slide" data-label="25 治理与合作边界">
     <div class="eyebrow">治理与边界 <span class="dot">·</span> 长期可持续合作关系</div>
     <h1 class="slide-title">建立清晰合作机制，保障项目长期生态共建
       <span class="en">评价体系应重点衡量生态质量、项目成长、场景转化和区域品牌，不以入驻数量作为单一指标。</span>
@@ -2040,7 +2156,7 @@
     </div>
   </section>
 
-  <section class="slide body fill-slide" data-label="25 里程碑">
+  <section class="slide body fill-slide" data-label="26 里程碑">
     <div class="eyebrow">阶段里程碑 <span class="dot">·</span> 2026-2027 初步路线图</div>
     <h1 class="slide-title">分阶段建设运营场域、服务闭环和生态品牌
       <span class="en">从场域启动，到 FDE 样板验证，再到运营收入和区域品牌形成，分阶段推进。</span>
@@ -2055,7 +2171,7 @@
     </div>
   </section>
 
-  <section class="slide final no-chrome" data-label="26 结尾">
+  <section class="slide final no-chrome" data-label="27 结尾">
     <div>
       <div class="logo-mark"></div>
       <h1>让青浦成为 AI 原生企业的产业加速平台。</h1>

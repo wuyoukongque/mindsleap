@@ -100,6 +100,57 @@
       margin: 30px 0 40px;
       border-radius: 999px;
     }
+    .yusi-intro .slide-title {
+      font-size: 76px;
+      line-height: 1.02;
+    }
+    .yusi-role {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .yusi-intro-grid {
+      display: grid;
+      grid-template-columns: 1.06fr .94fr;
+      gap: 48px;
+      align-items: start;
+      margin-top: 4px;
+    }
+    .yusi-bio-list {
+      border-top: 1px solid var(--rule);
+    }
+    .yusi-bio-list div {
+      min-height: 86px;
+      padding: 20px 0 18px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 25px;
+      line-height: 1.38;
+    }
+    .yusi-bio-list b {
+      color: var(--ink);
+      font-weight: 900;
+    }
+    .yusi-photo {
+      height: 590px;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      background: #fff;
+      display: grid;
+      place-items: end center;
+      overflow: hidden;
+    }
+    .yusi-photo img {
+      width: auto !important;
+      max-width: 100%;
+      height: 588px !important;
+      max-height: 588px;
+      object-fit: contain;
+      object-position: center bottom;
+      display: block;
+    }
     .source-line {
       position: absolute;
       left: 112px;
@@ -4163,7 +4214,27 @@
     <aside class="speaker-notes">今天接在 Lincoln 老师之后讲。Lincoln 会讲如何用 AI 打造“一人”市场团队，我这一小时把视角往上提一层：企业家自己如何先成为超级个体，并把自己的判断、业务上下文和 AI 工作方式沉淀下来，成为后面数字员工和组织 AI 化的底座。</aside>
   </section>
 
-<section class="slide body" data-label="分享主轴" data-page="2">
+<section class="slide body yusi-intro" data-label="雨丝介绍" data-page="2">
+    <div class="eyebrow">Instructor · 主讲人介绍</div>
+    <h1 class="slide-title">雨丝</h1>
+    <p class="yusi-role">MindsLeap 联合创始人 &amp; CPO</p>
+    <span class="slide-bar"></span>
+    <div class="yusi-intro-grid">
+      <div class="yusi-bio-list">
+        <div><b>当前角色：</b>MindsLeap 联合创始人 &amp; CPO，Founders Space 中国合伙人，企业家 AI 俱乐部联合发起人。</div>
+        <div><b>教育产品一线：</b>曾担任全球排名第一教育科技公司 32 亿美元独角兽 Emeritus 中国区产品负责人。复旦大学本科。</div>
+        <div><b>少儿教育与出海：</b>前纳斯达克上市教育公司少儿产品线负责人，字节跳动教育出海业务资深产品经理。</div>
+        <div><b>产品从 0 到 1：</b>主导十余款教育产品从 0 到 1 的构建，服务用户超百万。</div>
+        <div><b>AI 教育与母亲视角：</b>长期关注 AI 对学习方式、创造力培养与个性化教育的影响；作为 7 个月孩子的妈妈，也更关心技术变化背后“人如何成长”的问题。</div>
+      </div>
+      <div class="yusi-photo">
+        <img src="assets/yusi.png" alt="雨丝主讲人照片" />
+      </div>
+    </div>
+    <aside class="speaker-notes">这里简短介绍自己，不需要逐条念完。重点让大家知道我的背景一方面在教育产品、少儿教育和出海，另一方面现在在 MindsLeap 做企业 AI 和数字员工相关的事情。所以今天讲第二大脑，不是单纯从工具角度讲，而是从产品、教育、组织和人的成长几个视角一起看。</aside>
+  </section>
+
+<section class="slide body" data-label="分享主轴" data-page="3">
     <div class="eyebrow">今天的路线 · 从 AI 拐点到组织杠杆</div>
     <h1 class="slide-title">分享主轴</h1>
     <span class="slide-bar"></span>
@@ -4184,7 +4255,7 @@
     <aside class="speaker-notes">这页先给大家一张地图。第一部分看见拐点：AI 在数字世界已经过了临界点，本地智能体开始进入真实工作现场。第二部分解释第二大脑的必要性，以及为什么 AI 是一把手工程。第三部分讲怎样提升智能体输出质量。第四部分讲怎么手搓自己的第二大脑。第五部分讲从超级个体到超级团队：创始人先有体感，再把这套工作方式复制到组织里。</aside>
   </section>
 
-<section class="slide part-divider" data-label="Part 1 看见拐点" data-page="3">
+<section class="slide part-divider" data-label="Part 1 看见拐点" data-page="4">
     <div class="part-num">01</div>
     <div>
       <div class="part-kicker">Part One · 看见拐点</div>
@@ -4194,7 +4265,7 @@
     <aside class="speaker-notes">第一部分先讲现实情况。这里不急着讲方法，先让大家意识到：AI 的变化在数字世界已经过了临界点。很多人的体感滞后，是因为他们还在用聊天框体验 AI。</aside>
   </section>
 
-<section class="slide body" data-label="临界点" data-page="4">
+<section class="slide body" data-label="临界点" data-page="5">
     <div class="eyebrow">阶段判断 · 数字世界与具身世界正在分化</div>
     <h1 class="slide-title">数字世界的 AI 已经过了临界点</h1>
     <span class="slide-bar"></span>
@@ -4227,7 +4298,7 @@
     <aside class="speaker-notes">这里要避免笼统说 AI 已经超过人类。更准确的说法是，在可数字化、可复制、可校验的任务里，AI 已经跨过企业可用临界点。写代码、做研究、处理文档、搭网页、做流程自动化，这些任务已经进入规模化使用阶段。具身世界，特别是开放家庭任务和真实机器人操作，还没有同样成熟。</aside>
   </section>
 
-<section class="slide body" data-label="感知滞后" data-page="5">
+<section class="slide body" data-label="感知滞后" data-page="6">
     <div class="eyebrow">为什么很多人还没感到变化</div>
     <h1 class="slide-title">大多数人的 AI 体验，还停在聊天框</h1>
     <p class="slide-subtitle">真正的变化：读文件、调工具、连续执行、交付结果、<span class="nowrap">接受复盘。</span></p>
@@ -4278,7 +4349,7 @@
     <aside class="speaker-notes">很多企业家的 AI 体验来自几次聊天：写一段文案，问一个方案，做一个总结。这种体验会有用，但它和本地智能体的差别要一一对应来看。第一是记忆沉淀：聊天框的经验留在聊天记录里，本地智能体可以把偏好、复盘和有效做法写回本地。第二是资料权限：聊天框靠复制粘贴，本地智能体能看项目目录和历史文件。第三是行动能力：聊天框主要给答案，本地智能体能读写文件、调用工具、跑检查，把任务推进到交付。第四是规则对齐：聊天框的角色设定会被长对话稀释，本地智能体可以通过 AGENTS.md、instructions.md 固化边界、标准和优先级。这里可以讲“育儿问答”的例子：同样问一个问题，聊天框只能基于这一轮输入回答；本地智能体如果长期沉淀孩子年龄、性格、家庭原则、过去尝试过的方法和有效反馈，回答就会更像一个了解家庭上下文的助手。</aside>
   </section>
 
-<section class="slide quote gibson-quote no-chrome" data-label="未来已来" data-page="6">
+<section class="slide quote gibson-quote no-chrome" data-label="未来已来" data-page="7">
     <div class="quote-mark">OPENING QUOTE · WILLIAM GIBSON</div>
     <div class="big-quote">“</div>
     <h1>The future is already here.<br />It’s just not evenly distributed.</h1>
@@ -4293,7 +4364,7 @@
     <aside class="speaker-notes">这句话常被归给 William Gibson。这里要把上一页的感知滞后接到“未来已来，只是分布不均”：同一个模型，有人只拿来聊天，有人已经让它参与产品、投研、内容、销售、运营和内部系统建设。右下角可以顺带讲 Codex 的最新信号：OpenAI 在 2026 年 6 月披露，Codex 周活超过 500 万，非开发者 10%+，并且增长速度超过开发者 3 倍。这个数据说明 Agent 工作方式正在从程序员扩散到更广的知识工作者。</aside>
   </section>
 
-<section class="slide body" data-label="工具类比" data-page="7">
+<section class="slide body" data-label="工具类比" data-page="8">
     <div class="eyebrow">工具类比 · 从本地智能体到具体选择</div>
     <h1 class="slide-title">三个本地智能体工具，可以理解成三种 AI 人才市场</h1>
     <p class="slide-subtitle">按任务难度、人才等级和成本结构分层调用。</p>
@@ -4342,7 +4413,7 @@
     <aside class="speaker-notes">这一页不展开工具教程，只建立直觉。WorkBuddy 可以讲成国内优质人才市场，很多人才像中国 985、211 本科生，适合中文业务语境、高频执行和快速响应。Codex 可以讲成海外名校人才市场，像汇聚了很多常春藤博士生，高等人才密度很高，而且因为产品定价，相当于一个高等人才优惠包。Hermes 可以讲成综合性人才融合市场，按需付费，各类人才都有；顶尖人才成本高，但可以让顶尖人才负责判断、拆解和管理，再配合高性价比人才执行。</aside>
   </section>
 
-<section class="slide body" data-label="永不离职的人才" data-page="8">
+<section class="slide body" data-label="永不离职的人才" data-page="9">
     <div class="eyebrow">数字人才 · 为什么值得认真训练</div>
     <h1 class="slide-title">数字人才，是企业里永不离职的人才</h1>
     <p class="slide-subtitle">训练成果会留在公司，越用越懂业务，越用越能独立承担任务。</p>
@@ -4384,7 +4455,7 @@
     <aside class="speaker-notes">这一页解释为什么要认真训练数字人才。数字人才和外包工具最大的差别，是训练成果可以留在公司。它们学习极快，不会像传统岗位一样固化，也不会为了部门边界和职位安全争地盘。更重要的是，数字人才每次完成任务、接受复盘、改掉错误，都能把经验写回系统。它们的起点可能是老板，但经过真实业务持续碰撞后，会在某些领域变得比老板更强。对领导者来说，这是一件好事，因为组织本来就应该让下属在专业领域超过自己。</aside>
   </section>
 
-<section class="slide part-divider" data-label="Part 2 第二大脑必要性" data-page="9">
+<section class="slide part-divider" data-label="Part 2 第二大脑必要性" data-page="10">
     <div class="part-num">02</div>
     <div>
       <div class="part-kicker">Part Two · 第二大脑必要性</div>
@@ -4394,7 +4465,7 @@
     <aside class="speaker-notes">第二部分解释为什么企业家需要建立自己的第二大脑。我们已经能从 AI 人才市场雇到很强的人，但强能力不等于懂公司。第二大脑的任务，就是把老板的判断、业务上下文和验收标准沉淀下来，让 AI 员工更快进入状态。</aside>
   </section>
 
-<section class="slide body" data-label="入职培训" data-page="10">
+<section class="slide body" data-label="入职培训" data-page="11">
     <div class="eyebrow">高端人才 · 能力强不等于马上懂公司</div>
     <h1 class="slide-title">再高端的人才，也要磨合后才用得顺手</h1>
     <p class="slide-subtitle">人才市场解决能力供给，第二大脑解决上下文和默契。</p>
@@ -4442,7 +4513,7 @@
     <aside class="speaker-notes">这里承接上一页的人才市场类比。即使雇到了非常聪明的人，也需要磨合。入职培训能很快讲清楚流程、工具和权限，但真正决定交付质量的是判断、口味和边界。AI 高端人才也是一样。第二大脑的价值，是把老板和公司长期磨出来的判断沉淀成 Context 包。这样主 Agent 拆任务时，可以把同一套上下文分发给调研、执行、QA 等 SubAgent；它们做完以后，结果、错误和复盘再写回第二大脑，下一次协作就更顺。</aside>
   </section>
 
-<section class="slide body" data-label="脑机接口" data-page="11">
+<section class="slide body" data-label="脑机接口" data-page="12">
     <div class="eyebrow">企业家第二大脑 · 连接老板判断与高端 AI 人才</div>
     <h1 class="slide-title">第二大脑，是企业家和高端 AI 人才之间的脑机接口</h1>
     <p class="slide-subtitle">它把人的隐性判断，转成 AI 能高速检索、复盘、调用的长期 Context。</p>
@@ -4492,7 +4563,7 @@
     <aside class="speaker-notes">这里正式提出企业家第二大脑的概念。它相当于企业家和高端 AI 人才之间的脑机接口。这页用一条转译链路说清楚：第一步，企业家的隐性判断进入系统，比如客户能不能接、产品怎么取舍、文案像不像你、什么钱不能赚；第二步，第二大脑把这些长期磨合沉淀成 AI 可调用的 Context；第三步，高端 AI 人才拿到上下文、边界和 Eval 后，就能快速进入高质量协作。速率对比只是解释为什么这件事有意义：人和人之间靠语言传递信息，语言思考大约是每秒十几个比特量级；AI 之间通过向量、参数和高维空间进行计算、检索、迭代，可以达到每秒上亿比特量级。第二大脑就是把你的隐性判断转成 AI 可以高速调用的上下文。参考：AI 教育老师场 deck 的人脑与 AI 速率类比。</aside>
   </section>
 
-<section class="slide body" data-label="本地第二大脑" data-page="12">
+<section class="slide body" data-label="本地第二大脑" data-page="13">
     <div class="eyebrow">第二大脑 · 归你所有</div>
     <h1 class="slide-title">第二大脑放在本地，换工具才不掉一层肉</h1>
     <p class="slide-subtitle">工具只是接口，长期 Context 必须留在你自己的本地系统里。</p>
@@ -4538,7 +4609,7 @@
     <aside class="speaker-notes">这一页强调所有权。企业家的第二大脑要沉淀在本地，避免锁在任何一个第三方工具里。很多人现在使用第三方平台，每迁移一次都会掉一层肉：资料导不全，格式变了，历史过程丢了，团队还要重新适应。但如果你的第二大脑是本地的一套 AI 易读、易索引的知识系统，工具切换成本就会低很多。今天接 Codex，后面想换 Hermes，或者未来 Claude Code 对中国重新开放、又出现更强工具，都可以读取同一套上下文。你可以把它理解成：一个 AI 员工离职了，另一个 AI 员工来接班，只要本地第二大脑还在，就能非常快地完成交接。</aside>
   </section>
 
-<section class="slide future-workforce no-chrome" data-label="未来组织" data-page="13">
+<section class="slide future-workforce no-chrome" data-label="未来组织" data-page="14">
     <div>
       <div class="future-label">组织预演 · Welcome to the future</div>
       <h1>未来组织，会由大量数字员工和少量人类员工协作</h1>
@@ -4553,7 +4624,7 @@
     <aside class="speaker-notes">这一页把第二大脑的意义放到未来组织里看。未来的组织里，一定会有大量数字员工，加上少量人类员工互相协作。现在是训练数字员工、让数字员工在公司入职的大好机会。因为技术已经成熟，真正稀缺的是让这些数字员工更懂你、更懂公司、更懂业务。数字员工不会离职，也不会把经验带走；它们可以不断进化。起点可能是老板，但经过真实业务的碰撞之后，它们会成长为在各自领域都比老板更强的数字员工。对领导者来说，这是一件好事：一个好的领导，本来就应该让下属比自己更强，然后把这些更强的下属组织好。</aside>
   </section>
 
-<section class="slide part-divider" data-label="Part 3 提升输出质量" data-page="14">
+<section class="slide part-divider" data-label="Part 3 提升输出质量" data-page="15">
     <div class="part-num">03</div>
     <div>
       <div class="part-kicker">Part Three · 提升输出质量</div>
@@ -4563,7 +4634,7 @@
     <aside class="speaker-notes">这里画风一转。前面讲为什么企业家需要第二大脑，现在先补一个基础：要真正构建第二大脑，需要先理解 AI 的输出质量从哪里来。企业家不用把技术细节学得很深，但要知道 AI 是怎样使用上下文、为什么会幻觉、哪些约束只是语义提醒、哪些约束可以变成系统里的硬规则。懂了这些，第二大脑就会落到一个很具体的管理问题上。</aside>
   </section>
 
-<section class="slide body" data-label="工作流设计" data-page="15">
+<section class="slide body" data-label="工作流设计" data-page="16">
     <div class="eyebrow">Context Engineering 的实际动作</div>
     <h1 class="slide-title">输出质量，要靠工作流设计</h1>
     <p class="slide-subtitle">把高质量上下文、真实资料、工具权限、硬边界和反馈循环组合起来，模型才会稳定变好。</p>
@@ -4578,7 +4649,7 @@
     <aside class="speaker-notes">这一页先给 Part 3 的结论：不要指望一句 prompt 解决所有问题。提高输出质量靠工作流设计，动作包括：把任务定义清楚，把上下文清理干净，把真实资料接进去，把高风险规则做成硬约束，把错误写回系统。后面几页再拆开解释为什么这些动作有效：模型怎么使用上下文，上下文里到底包含什么，为什么会失控，以及哪些规则只是软约束、哪些规则可以变硬。</aside>
   </section>
 
-<section class="slide body" data-label="LLM 原理" data-page="16">
+<section class="slide body" data-label="LLM 原理" data-page="17">
     <div class="eyebrow">LLM 原理 · 上下文决定输出质量</div>
     <h1 class="slide-title">大模型运行原理：在上下文判断下一步</h1>
     <p class="slide-subtitle">Context Engineering，也就是上下文管理：让 AI 在正确背景下工作，输出质量会立刻上一个台阶。</p>
@@ -4609,7 +4680,7 @@
     <aside class="speaker-notes">这一页讲 LLM 大语言模型的核心原理，不讲成技术课，只讲到足够支撑后面的上下文工程。模型做事时，会在上下文里寻找相关信号；不同位置、不同内容、不同清晰度，会影响注意力分配的权重；最后，模型会基于这些信号判断下一步最可能是什么。下一步可能是一段文字，也可能是一次工具调用，或者一个行动建议。所以我们要得出的核心结论非常简单：上下文决定输出质量。Context Engineering，也就是上下文管理，就是让 AI 在更正确、更清晰、更有权重的背景里工作。企业家学会这一点，可以很大程度提升 AI 的交付质量。</aside>
   </section>
 
-<section class="slide body" data-label="上下文组成" data-page="17">
+<section class="slide body" data-label="上下文组成" data-page="18">
     <div class="eyebrow">Context Window · AI 的短期工作台</div>
     <h1 class="slide-title">上下文包含不止那一句话</h1>
     <p class="slide-subtitle">本地智能体看到的是一整套工作现场：任务、规则、文件、工具结果、检索材料、权限边界和执行记录。</p>
@@ -4645,7 +4716,7 @@
     <aside class="speaker-notes">这一页讲清楚本地智能体的上下文到底包含什么。它不只看到你刚刚输入的一句话，还会看到当前任务、长期规则、AGENTS.md 链、被选中的 Skill、本地文件、当前 diff、检索结果、终端输出、浏览器状态、外部 API、工具 schema、当前工作目录、文件树、运行环境、沙箱权限、审批边界、历史摘要、任务计划和用户最新反馈。所谓工作区，指的是它当前所在的项目目录、能看到的文件结构、运行环境和已有改动；所谓权限，指的是它能读写哪些文件、能不能联网、哪些命令需要用户确认。这里要让大家形成一个直觉：本地智能体的上下文是一个工作现场，管理上下文就是管理这个现场里哪些信息更靠前、更清楚、更可信。</aside>
   </section>
 
-<section class="slide body" data-label="上下文失控" data-page="18">
+<section class="slide body" data-label="上下文失控" data-page="19">
     <div class="eyebrow">输出质量 · 上下文管理失败</div>
     <h1 class="slide-title">输出不稳，常常是上下文没管好</h1>
     <p class="slide-subtitle">模型会基于窗口里的信息工作；当背景、重点和规则没有被组织好，能力再强也容易跑偏。</p>
@@ -4660,7 +4731,7 @@
     <aside class="speaker-notes">这一页把输出质量不高讲成上下文管理问题。第一，关键信息缺席：背景、目标、限制、验收标准和真实资料没有进入窗口时，模型只能按通用经验处理，结果就会显得空、泛、偏。第二，长上下文特别容易稀释重点：对话越长、主题越杂，早期要求、关键事实、角色设定和验收标准越容易被埋掉。Lost in the Middle 这篇研究也指出，模型对长上下文中间的信息利用并不稳定。第三，超窗口之后系统会摘要、压缩和检索，重要信息可能丢掉或变形。这里可以口头带一下睡眠和上下文压缩：人做梦、睡眠也在压缩一天的信息，但人类长期记忆的重组能力目前仍有独特优势。第四，软约束会失效。Prompt、MD、Skill 都很有用，但它们本质上仍是语义约束；当任务复杂、上下文冲突、工具结果和口头要求互相打架时，模型仍可能不执行。</aside>
   </section>
 
-<section class="slide body" data-label="契约分层" data-page="19">
+<section class="slide body" data-label="契约分层" data-page="20">
     <div class="eyebrow">机器契约 · 软硬分层</div>
     <h1 class="slide-title">写给 AI 的规则，约束力并不一样</h1>
     <p class="slide-subtitle">有些规则只是提醒它“尽量这样做”，有些规则可以让系统在关键节点直接拦截、验证或拒绝执行。</p>
@@ -4692,7 +4763,7 @@
     <aside class="speaker-notes">这里来自我们之前那篇闪念：预测大脑与机器契约。原文里把机器契约从强到弱分成几层：平台硬边界、外部硬门禁、Hook、脚本，后面才是 Skill、系统级 MD、项目级 MD 和当前 Prompt。平台硬边界包括 Sandbox、Permission、Tool Schema；外部硬门禁可以包括 Branch Protection、Pre-Commit Gate、CI Validator；Hook 是第三层，脚本是第四层。右边的神经系统契约是语义约束，存在不执行的概率；在这组软契约里，Skill 权重最高，其次是系统级 MD，再到项目级 MD，当前 Prompt 最灵活，也最容易被稀释。这里要强调：如果某条规则必须稳定执行，就不要只写在 Prompt 或 MD 里，要放进更硬的契约。</aside>
   </section>
 
-<section class="slide body" data-label="Agent 概念" data-page="20">
+<section class="slide body" data-label="Agent 概念" data-page="21">
     <div class="eyebrow">上下文管理工具 · 先分清层级</div>
     <h1 class="slide-title">先分清：谁收口，谁干活，哪里开新现场</h1>
     <p class="slide-subtitle">Agent、Sub-agent、Branch、Worktree 是四个不同层级，不要混成同一种“员工”。</p>
@@ -4723,7 +4794,7 @@
     <aside class="speaker-notes">这里要把上一版纠正过来：Sub-agent 不是带队负责人。更准确的类比是，Agent 是主线负责人，承接用户目标，拆任务、调工具、整合结果，最后对交付负责。Sub-agent 是被派出去干具体子任务的人，它在自己的上下文里查资料、跑流程、做审计，最后把摘要交回来。Branch 是方案分叉，用来保留不同方向、不同版本和不同实验路径。Worktree 是独立施工现场，同一个项目可以开出独立目录，让不同线程并行修改文件，减少互相踩现场。四个概念不要混成一种“员工”。</aside>
   </section>
 
-<section class="slide body" data-label="多 Agent 使用场景" data-page="21">
+<section class="slide body" data-label="多 Agent 使用场景" data-page="22">
     <div class="eyebrow">AI 员工边界 · 逆向原则</div>
     <h1 class="slide-title">新开一个 Agent，先看四个考量</h1>
     <p class="slide-subtitle">数字员工的边界，主要看上下文是否该分开、任务能否并发、结果是否要审计、算力怎样分层。</p>
@@ -4750,7 +4821,7 @@
     <aside class="speaker-notes">这一页讲什么时候值得新开一个 Agent。不要把它讲复杂，就看四个考量。第一是隔离上下文：长资料、日志、访谈、竞品扫描、权限差异，会把主线程搞脏，就让一个新 Agent 单独读，最后只交结论、证据和风险。第二是并发推进：调研、方案、测试可以同时跑，一个方向一个 Agent，最后由主 Agent 收口。第三是独立审计：事实、代码、安全和高风险交付，适合让另一个 Agent 检查，尤其可以跨模型审计，比如 Claude Code 产出，Codex 再审。第四是算力优化，把原来的成本分层和数据安全放在一起：强模型负责目标、判断和验收，低成本模型处理扫描整理，本地模型处理敏感一线数据。</aside>
   </section>
 
-<section class="slide performance-slide no-chrome" data-label="AI 表演" data-page="22">
+<section class="slide performance-slide no-chrome" data-label="AI 表演" data-page="23">
     <div class="performance-content">
       <div class="performance-kicker">AI 表演 · 人造奇观</div>
       <h1>拒绝 AI 表演</h1>
@@ -4766,7 +4837,7 @@
     <aside class="speaker-notes">这一页讲“AI 表演”。网上会有很多看起来很炫的形式，比如把产品调研 Agent、市场 Agent、用户研究 Agent 丢进一个群里互相 @，甚至像电影情节一样吵架。这种形式有演示价值，也能帮助人理解过程。但企业家要看清本质：一个 Agent 已经能完成的功能，就没有必要为了好看而拆成一堆角色。这里顺带补一句：人类员工按岗位、职级和能力分工；AI 数字员工更适合按上下文、并发、审计和算力边界分工。真正需要多 Agent 的时候，是你需要上下文隔离、并发推进、互相审计，或者做算力分层。否则它很可能只是人造奇观。</aside>
   </section>
 
-<section class="slide part-divider" data-label="Part 4 手搓第二大脑方法论" data-page="23">
+<section class="slide part-divider" data-label="Part 4 手搓第二大脑方法论" data-page="24">
     <div class="part-num">04</div>
     <div>
       <div class="part-kicker">Part Four · 手搓第二大脑方法论</div>
@@ -4776,7 +4847,7 @@
     <aside class="speaker-notes">第四部分进入手搓第二大脑方法论。这里不讲完整企业数据库，也不讲复杂平台建设。先从企业家自己能动起来的三步开始：输入，把过去和现在的判断放进来；加工，让这些内容变成 AI 易读、易检索、可调用的资产；Loop，让错误、反馈和真实数据改变下一次执行路径。</aside>
   </section>
 
-<section class="slide method-divider no-chrome" data-label="4.1 输入" data-page="24">
+<section class="slide method-divider no-chrome" data-label="4.1 输入" data-page="25">
     <div class="method-num">4.1</div>
     <div class="method-inner">
       <div class="method-kicker">Part Four · 第一件事</div>
@@ -4787,7 +4858,7 @@
     <aside class="speaker-notes">输入分三层。第一层是旧数据，把过去散落在第三方平台里的材料搬回来，献祭给第二大脑。第二层是新数据，让未来产生的信息自动进入系统，尽量减少人工搬运。第三层是善用 AI 输入法这类新工具，增加信息源和输入带宽。最后再强调保存形态：尽量让数据一开始就以 AI 易读的形式留下来。</aside>
   </section>
 
-<section class="slide body" data-label="旧数据" data-page="25">
+<section class="slide body" data-label="旧数据" data-page="26">
     <div class="eyebrow">输入 · 把过去搬回来</div>
     <h1 class="slide-title">旧数据：历史数据，尽可能都“献祭”给第二大脑</h1>
     <p class="slide-subtitle">这一页只讲输入：先把散落在第三方平台里的材料牵引回来，让第二大脑先接住。</p>
@@ -4818,7 +4889,7 @@
     <aside class="speaker-notes">这里讲旧数据，只讲输入，不提前讲结构化和索引。企业家的很多关键判断，其实散落在微信聊天、客户对话、会议录音、旧方案、印象笔记、飞书文档、Notion 页面、网盘、邮件和业务表格里。第一步是先牵引回来，先献祭给第二大脑。这个阶段不追求马上整理成完美格式，重点是不要继续让旧平台垄断你的长期上下文。后面存储部分再讲怎么变成 AI 易读格式、怎么做索引、怎么召回。</aside>
   </section>
 
-<section class="slide body" data-label="新数据自动沉淀" data-page="26">
+<section class="slide body" data-label="新数据自动沉淀" data-page="27">
     <div class="eyebrow">输入 · 新数据产生</div>
     <h1 class="slide-title">新数据：减少甚至杜绝人工搬运</h1>
     <p class="slide-subtitle">每天新产生的数据仍会留在第三方平台里，关键是让它自动回流到第二大脑。</p>
@@ -4832,7 +4903,7 @@
     <aside class="speaker-notes">这一页讲新数据。我们每天都在产生大量数据，很多仍然会先存在第三方平台里，比如会议系统、协作文档、CRM、订单、客服记录和内容平台。如果这些平台还要继续使用，就要把“每天复制粘贴”改造成“自动沉淀到第二大脑”。先查有没有 API；没有 API，就看有没有 CLI、批量导出或 Webhook；再不行，就在权限和合规边界内，用定时脚本、网页抓取或浏览器自动化把数据拉回来。目标是尽量 No human in the loop。只要靠人搬运，一是浪费人力，二是人一觉得麻烦，重要信息就会消失。</aside>
   </section>
 
-<section class="slide body" data-label="AI 输入法" data-page="27">
+<section class="slide body" data-label="AI 输入法" data-page="28">
     <div class="eyebrow">输入 · 增加信息源</div>
     <h1 class="slide-title">新数据：借助 AI 的力量，放大信息源</h1>
     <p class="slide-subtitle">AI 输入法把原本流失的念头、判断、场景和素材，变成可沉淀的数据。</p>
@@ -4860,7 +4931,7 @@
     <aside class="speaker-notes">这里重点讲信息输入方式的变化，不展开工具测评。AI 输入法会带来两个乘数：输入速度提高四到五倍，输入场景扩展两到三倍，乘起来就是十倍以上的信息输入带宽。免费工具可以先用豆包和微信输入法，付费工具可以看 Typeless 和 Whisper Flow。重点放在信息源：能不能把大量原本流失在路上、车上、会议间隙、临睡前的念头、判断、场景和素材放进第二大脑。</aside>
   </section>
 
-<section class="slide body" data-label="AI 输入法与思考" data-page="28">
+<section class="slide body" data-label="AI 输入法与思考" data-page="29">
     <div class="eyebrow">输入 · 思维也会被改造</div>
     <h1 class="slide-title">AI 输入法的附赠好处——打断思维反刍，将思维客体化</h1>
     <p class="slide-subtitle">语音输入会把内在循环变成外部对象，AI 才能追问、整理、保存和复用。</p>
@@ -4879,7 +4950,7 @@
     <aside class="speaker-notes">这一页讲 AI 输入法对思考方式的附赠好处。重点是打断思维反刍：很多念头一旦被说出来，就从脑内循环变成外部对象，不再反复消耗注意力。接着讲三件事：第一，思维客体化，把“我在想什么”变成一段可以看、可以改、可以被 AI 追问的文本。第二，情绪客体化，情绪被命名之后，和“我”拉开距离，更容易被处理。第三，认知卸载，把未成形的判断先放到外部系统，降低大脑缓存压力。</aside>
   </section>
 
-<section class="slide body" data-label="AI 原生数据" data-page="29">
+<section class="slide body" data-label="AI 原生数据" data-page="30">
     <div class="eyebrow">输入 · 数据保存形态</div>
     <h1 class="slide-title">新数据：尽量用 AI 原生的方式生成</h1>
     <p class="slide-subtitle">每多一个封闭平台、复杂格式和人工搬运环节，AI 的调用成本都会升高。</p>
@@ -4912,7 +4983,7 @@
     <aside class="speaker-notes">这一页回到保存形态。第三方平台和传统办公文件当然还会存在，但它们不适合作为长期 Context 的唯一形态。Word、PDF、Excel、PPT、视频、截图都需要 AI 再解析一遍。数量少的时候问题不大，数量一大就会影响效率。新数据最好一开始就以 Markdown、HTML、CSV、JSON 这类 AI 易读形态留下来。比如同样做一份 PPT，用 HTML 交付，结构、样式、文本、版本差异都更容易被 AI 复用。</aside>
   </section>
 
-<section class="slide software-quote no-chrome" data-label="第三方软件已死" data-page="30">
+<section class="slide software-quote no-chrome" data-label="第三方软件已死" data-page="31">
     <div class="quote-wrap">
       <div class="kicker">长期资产不要住在第三方工具里</div>
       <h1>第三方软件已死</h1>
@@ -4921,7 +4992,7 @@
     <aside class="speaker-notes">这句是为了让大家记住一个使用习惯。未来软件会越来越像即用即抛的能力界面，今天用这个，明天换那个。真正要长期沉淀的是你的第二大脑。第三方软件可能在三个地方变成阻碍：第一，数据产生过程不透明，AI 不容易接管；第二，保存格式封闭，AI 每次都要额外解析；第三，数据获取困难，API、CLI 或批量导出不开放。能在本地、Markdown、HTML、CSV、JSON 里完成的，就尽量在本地完成。第三方软件可以用，但不要把长期记忆交给它。</aside>
   </section>
 
-<section class="slide method-divider no-chrome" data-label="4.2 加工" data-page="31">
+<section class="slide method-divider no-chrome" data-label="4.2 加工" data-page="32">
     <div class="method-num">4.2</div>
     <div class="method-inner">
       <div class="method-kicker">Part Four · 第二件事</div>
@@ -4932,7 +5003,7 @@
     <aside class="speaker-notes">输入解决“怎么进来”，加工解决“进来以后怎么变成可用资产”。这里不只是把资料存起来，而是把资料转成 AI 易读格式，再生成说明书和索引，让它能被搜索、引用、复用和持续更新。对第二大脑来说，朴素、稳定、可搜索、可 diff、可迁移，比短期界面好看更重要。</aside>
   </section>
 
-<section class="slide body" data-label="AI 易读加工" data-page="32">
+<section class="slide body" data-label="AI 易读加工" data-page="33">
     <div class="eyebrow">加工 · 第一步处理</div>
     <h1 class="slide-title">第一步：先把资料变成 AI 能读的格式</h1>
     <p class="slide-subtitle">原始材料继续保留，同时生成一份 AI 易读副本，让资料可以被搜索、引用和复用。</p>
@@ -4945,7 +5016,7 @@
     <aside class="speaker-notes">这里讲历史数据和新数据进入第二大脑后的第一步处理：格式清洗。不要把原始材料覆盖掉，原始材料要继续保留，作为事实源头。然后再生成一份 AI 易读副本。文本类资料，比如闪念、会议、访谈、复盘、文章摘要和判断记录，优先转成 Markdown，因为它可读、可搜索、可引用。数据类资料，比如客户、订单、指标、任务状态和元数据，可以转成 CSV 或 JSON。第一步先不追求完美知识库，先让资料变成 AI 能稳定读取和处理的形态。</aside>
   </section>
 
-<section class="slide body" data-label="索引系统" data-page="33">
+<section class="slide body" data-label="索引系统" data-page="34">
     <div class="eyebrow">加工 · 第二步处理</div>
     <h1 class="slide-title">第二步：让 AI 生成说明书和索引</h1>
     <p class="slide-subtitle">资料进来后，不要靠人手工规划完整架构；先让 AI 读一遍，给出第一版入口和地图。</p>
@@ -4968,7 +5039,7 @@
     <aside class="speaker-notes">第二步处理是制作说明书和索引。给 AI 的说明书是开工手册，写清这个第二大脑怎么用、哪些目录重要、有什么规则、哪些东西不能乱动、输出格式和验收标准是什么。AI 的索引是给资料做地图，比如项目索引、人物索引、会议索引、素材索引、复盘索引和主题 MOC。这里不用靠人一开始想清楚完整架构，重点是先交给 AI 出一版：让 AI 先读现有资料，提出第一版说明书和索引方案，人确认后再写回系统。重点是让 AI 接到问题时，知道先读哪份说明书，再沿哪个索引找材料。</aside>
   </section>
 
-<section class="slide body" data-label="概念补充" data-page="34">
+<section class="slide body" data-label="概念补充" data-page="35">
     <div class="eyebrow">加工 · 概念补充</div>
     <h1 class="slide-title">另外一些有用的概念</h1>
     <p class="slide-subtitle">现阶段不用深入展开，先知道它们分别解决什么问题。</p>
@@ -4991,7 +5062,7 @@
     <aside class="speaker-notes">这一页讲另外一些有用的概念。现在构建第二大脑，不需要一开始就把 Obsidian、脚本索引和向量索引全部想透。先知道它们分别解决什么问题就够了。Obsidian 主要是给自己看的本地 Markdown 工作台，价值是让人能浏览、编辑、链接和长期维护第二大脑。等资料多到几百、几千篇 Markdown，可以加脚本索引，让 AI 或脚本自动生成项目索引、会议索引、人物索引和主题索引。向量索引的判断信号很具体：你经常记得某个内容好像写过，但用关键词和目录找不到。更准确地说，当资料切成几千到几万段文本 chunk 后，向量索引才开始有明显价值。它适合找语义相近的内容，但召回之后仍然要回到原文确认事实。</aside>
   </section>
 
-<section class="slide method-divider no-chrome" data-label="4.3 Loop" data-page="35">
+<section class="slide method-divider no-chrome" data-label="4.3 Loop" data-page="36">
     <div class="method-num">4.3</div>
     <div class="method-inner">
       <div class="method-kicker">Part Four · 第三件事</div>
@@ -5002,7 +5073,7 @@
     <aside class="speaker-notes">第三件事我想改叫 Loop，而不是普通的迭代。Loop 的意思是让第二大脑和具体项目不断经历：目标、执行、反馈、抽象、写回、压缩、下一轮。这样第二大脑不是静态资料库，而是一个会吸收经验、修正规则、更新索引、越来越懂你的系统。接下来分两层讲：系统层 Loop，让整个第二大脑每天变聪明；项目层 Loop，让具体业务通过并行试错和数据回流变强。</aside>
   </section>
 
-<section class="slide body" data-label="系统层 Loop" data-page="36">
+<section class="slide body" data-label="系统层 Loop" data-page="37">
     <div class="eyebrow">Loop · 系统层</div>
     <h1 class="slide-title">系统层 Loop：第二大脑每天变聪明</h1>
     <p class="slide-subtitle">每天沉淀，按周压缩，把经验写回 Skill、agent.md、索引和 Memory。</p>
@@ -5017,7 +5088,7 @@
     <aside class="speaker-notes">这一页讲系统层 Loop。可以写定时脚本，每天把所有任务里值得优化的地方、犯错原因、价值判断偏差、可以做得更好的地方都复盘出来。每天都要有沉淀，但沉淀会越来越多，最后会变成一个巨长无比、无法阅读的上下文，所以每周还要做抽象和压缩。有些内容写进 Skill，有些写进 agent.md，有些写进 MOC、脚本、检查项或 Memory。系统层 Loop 关注的是整个第二大脑：哪些资料要沉淀，怎么索引，哪些规则要更新。它的效果是第二大脑越来越聪明，越来越懂你。</aside>
   </section>
 
-<section class="slide body" data-label="项目层 Loop" data-page="37">
+<section class="slide body" data-label="项目层 Loop" data-page="38">
     <div class="eyebrow">Loop · 项目层</div>
     <h1 class="slide-title">项目层 Loop：人定目标，AI 跑策略</h1>
     <p class="slide-subtitle">Mission、Vision、Value 由人把关，执行路径让 AI 并行赛马，用真实数据收口。</p>
@@ -5039,7 +5110,7 @@
     <aside class="speaker-notes">这一页讲项目层 Loop。项目层最好由人定义 Mission、Vision 和 Value，目标是什么，成功画面是什么，哪些价值判断不能碰。至于中间怎么跑，方法可以交给 AI。它可以并行赛马，让很多线程跑同一个目标，但策略不一样。最后必须用数据收口，比如短视频看曝光、点击、完播、转发、私信和成交；量化交易看收益、回撤、胜率和稳定性。每个策略根据结果继续进化，数据不断反哺给 AI，项目系统就会越来越强。</aside>
   </section>
 
-<section class="slide body" data-label="吞吐量 Loop" data-page="38">
+<section class="slide body" data-label="吞吐量 Loop" data-page="39">
     <div class="eyebrow">Loop · 吞吐量和数据回流</div>
     <h1 class="slide-title">70% × 10 = 700%：AI 先赢在吞吐量</h1>
     <p class="slide-subtitle">一开始单条未必超过专家，但更高频的真实反馈，会让系统进化得更快。</p>
@@ -5062,7 +5133,7 @@
     <aside class="speaker-notes">这一页用短视频做例子讲吞吐量。假设人深度参与，一个上午做一条，质量是一百分。把 Human in the Loop 的参与大幅减少，让 AI 从头到尾生成，单条可能只有七十分。但同样一个上午，它可以生成十条，总实验量就是七十分乘以十，变成七百分。这里不是说人完全不判断，而是尽量把自己从生产过程里摘出来，只在目标、价值边界、关键判断和验收上参与。更重要的是，十条内容会带来十倍左右的数据回流：哪些选题有效，哪些封面有效，哪些 hook 有效，哪些评论和私信会转化。数据不断反哺给 AI，系统就会自进化。它一开始是在蒸馏你的能力，未必单条超过你，但 Loop 跑久以后，单条质量可能会逼近甚至超过你现在的百分百。</aside>
   </section>
 
-<section class="slide body" data-label="放权给数字人才" data-page="39">
+<section class="slide body" data-label="放权给数字人才" data-page="40">
     <div class="eyebrow">第二大脑建好后 · 工作习惯</div>
     <h1 class="slide-title">AI 时代老板的新工作习惯</h1>
     <p class="slide-subtitle">像领导公司一样放权：你负责方向、边界和验收，AI 先跑出第一版。</p>
@@ -5088,7 +5159,7 @@
     <aside class="speaker-notes">这一页作为第四部分的收束：第二大脑建好以后，最重要的是养成 AI 时代老板的新工作习惯。它和领导一家公司很像，一个好的领导不会把所有事情都抓在自己手里，而是建立 AI First 工作动线。调研、写作、整理、比较、复盘、生成方案，都先交给 AI 跑一遍。你负责方向、价值边界、审美判断、关键取舍和最终验收。慢慢你会发现，下面的 AI 人才在某些单点能力上可能比你强，这是好事，说明这个组织的人才密度变高了，只不过这种人才密度可以以数字人才的形式存在。</aside>
   </section>
 
-<section class="slide part-divider" data-label="Part 5 从超级个体到超级团队" data-page="40">
+<section class="slide part-divider" data-label="Part 5 从超级个体到超级团队" data-page="41">
     <div class="part-num">05</div>
     <div>
       <div class="part-kicker">Part Five · 从超级个体到超级团队</div>
@@ -5098,7 +5169,7 @@
     <aside class="speaker-notes">最后一部分从个人系统转向组织复制。前面讲第二大脑，核心是让 AI 越来越懂你；这里再往组织层面推一步：创始人为什么必须先亲自下场，形成体感，然后把自己的 AI 工作方式、判断标准和数字员工组织方式扩散到团队里。</aside>
   </section>
 
-<section class="slide body" data-label="超级个体特征" data-page="41">
+<section class="slide body" data-label="超级个体特征" data-page="42">
     <div class="eyebrow">从超级个体到超级团队 · 先定义超级个体</div>
     <h1 class="slide-title">超级个体的四个结构性特征</h1>
     <p class="slide-subtitle">借助 AI，一个人达到过去小团队才能达到的产出规模和影响半径。</p>
@@ -5113,7 +5184,7 @@
     <aside class="speaker-notes">这一页只定义超级个体，不讲老板。腾讯研究院报告把超级个体定义为：借助 AI，一个人达到过去需要小团队才能达到的产出规模和影响半径。拆开来看有四个结构性特征，而且四个缺一不可。第一是 AI First 工作动线，AI 是默认起点，不是遇到困难才问一下。第二是能力边界的量级跃迁，不只是快一点，而是产出规模和跨领域完整链路都被放大。第三是主动性极强，超级个体主动寻找 AI 能力极限，在行动中扩展能力圈。第四是影响力溢出，高效个体只让自己变快，超级个体会让周围的人和团队也变快。</aside>
   </section>
 
-<section class="slide statement no-chrome" data-label="超级个体金句" data-page="42">
+<section class="slide statement no-chrome" data-label="超级个体金句" data-page="43">
     <div>
       <h1>吃到 AI 红利的公司，<br />创始人几乎都是超级个体<span class="blue-dot">.</span></h1>
       <p>他不必天天泡在工具里，但必须被 AI 惊艳到过，知道边界，才推得动组织变革。</p>
@@ -5121,7 +5192,7 @@
     <aside class="speaker-notes">这里用一句话把前面超级个体的定义落到创始人身上。现在能真正拿到结果、吃到 AI 红利的公司，几乎都有一个共同点：创始人本人先被 AI 改变过。他不必每天花很多时间和 AI 深度交互，但他一定被 AI 惊艳到过，知道 AI 的能力和边界在哪里。只有这样，他才知道组织里该筛什么样的人，该训练什么能力，该用什么标准判断效果。</aside>
   </section>
 
-<section class="slide body" data-label="超级团队涌现路径" data-page="43">
+<section class="slide body" data-label="超级团队涌现路径" data-page="44">
     <div class="eyebrow">超级团队涌现 · 四条路径</div>
     <h1 class="slide-title">最可控的入口，是创始人先成为超级个体</h1>
     <p class="slide-subtitle">A、B、C 都需要高密度人才或成熟机制；创始人没有体感，就很难筛选、培养和复制。</p>
@@ -5175,7 +5246,7 @@
     <aside class="speaker-notes">这一页讲超级团队怎么长出来。腾讯研究院报告里提到四种涌现路径。路径 A 是自下而上自发涌现，超级个体互相看见、自然聚合，但这要求组织里本来就有非常高的人才密度。路径 B 是组织筛选培育，筛选、集中训练、再放回团队，但前提是你知道该筛什么、训什么。路径 C 是氛围营造浸泡，比如午餐会、每日分享、Demo day，它有价值，但比较慢，而且需要长期可见性。路径 D 是创始人驱动示范，这是目前最可控的入口。创始人先有体感，知道 AI 的能力和边界在哪里，才知道应该建立什么样的筛选机制、培养机制和工作方式。否则公司里可能会出现 AI 影子：有人私下用 AI 变快，但组织没有看到，也没有升级。</aside>
   </section>
 
-<section class="slide body" data-label="组织变化总览" data-page="44">
+<section class="slide body" data-label="组织变化总览" data-page="45">
     <div class="eyebrow">从超级个体到超级团队 · 组织会往哪里变</div>
     <h1 class="slide-title">组织会变，创始人必须先有体感</h1>
     <p class="slide-subtitle">AI 不只是提效工具，它会重排人才、改写分工，并把数字员工带进组织协作。</p>
@@ -5213,7 +5284,7 @@
     <aside class="speaker-notes">这一页把前面几页趋势压成一页。腾讯研究院报告里有几个关键判断。第一，AI 在重排序列和拉大方差，旧的人才标尺会部分失灵，学习速度、判断力、系统思维和 AI 驾驭力变得更重要。第二，超级个体会从不同位置觉醒，开发者、产品、运营、创始人都可能被 AI 放大，岗位边界会变薄。第三，分工协作会从职能分工转向能力放大，不再只问一个人属于哪个部门，而是看这个人加上 AI 能覆盖哪条业务链。第四，协作主体会变化，未来不是纯粹的人类员工协作，而是人类员工、数字员工、数据和工具共同交付，所以权限、上下文、Eval 和复盘会成为新的管理底座。核心结论是：创始人必须先有体感，再设计组织。如果创始人没有体感，公司里觉醒的超级个体要么变成 AI 影子，私下用 AI 变快但不让组织看见；要么会流向更能放大他的组织。企业家的第二大脑，就是获得体感、沉淀标准、复制能力的起点。</aside>
   </section>
 
-<section class="slide statement no-chrome closing-statement" data-label="收束" data-page="45">
+<section class="slide statement no-chrome closing-statement" data-label="收束" data-page="46">
     <div>
       <h1>第二大脑，<br />让 AI 越来越懂你<span class="blue-dot">.</span></h1>
       <p>先让 AI 懂你，组织才知道往哪里变</p>

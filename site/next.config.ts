@@ -52,6 +52,8 @@ const nextConfig: NextConfig = {
         { source: "/proposal/", destination: "/proposal/index.html" },
         { source: "/poster", destination: "/poster/index.html" },
         { source: "/poster/", destination: "/poster/index.html" },
+        { source: "/manuals", destination: "/manuals/index.html" },
+        { source: "/manuals/", destination: "/manuals/index.html" },
         {
           source: "/poster/ai-hermes-workshop",
           destination: "/poster/ai-hermes-workshop/index.html",

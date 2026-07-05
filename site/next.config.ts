@@ -52,6 +52,8 @@ const nextConfig: NextConfig = {
         { source: "/proposal/", destination: "/proposal/index.html" },
         { source: "/poster", destination: "/poster/index.html" },
         { source: "/poster/", destination: "/poster/index.html" },
+        { source: "/manuals", destination: "/manuals/index.html" },
+        { source: "/manuals/", destination: "/manuals/index.html" },
         {
           source: "/poster/ai-hermes-workshop",
           destination: "/poster/ai-hermes-workshop/index.html",
@@ -136,6 +138,38 @@ const nextConfig: NextConfig = {
           source: "/proposal/university-ai-capability-proposal/",
           destination: "/proposal/university-ai-capability-proposal/index.html",
         },
+        {
+          source: "/proposal/qingpu-mindsleap-ai-native-accelerator",
+          destination: "/proposal/qingpu-mindsleap-ai-native-accelerator/index.html",
+        },
+        {
+          source: "/proposal/qingpu-mindsleap-ai-native-accelerator/",
+          destination: "/proposal/qingpu-mindsleap-ai-native-accelerator/index.html",
+        },
+        {
+          source: "/proposal/mindsleap-fde-bp-v2",
+          destination: "/proposal/mindsleap-fde-bp-v2/index.html",
+        },
+        {
+          source: "/proposal/mindsleap-fde-bp-v2/",
+          destination: "/proposal/mindsleap-fde-bp-v2/index.html",
+        },
+        {
+          source: "/proposal/enterprise-ai-growth-light-consulting",
+          destination: "/proposal/enterprise-ai-growth-light-consulting/index.html",
+        },
+        {
+          source: "/proposal/enterprise-ai-growth-light-consulting/",
+          destination: "/proposal/enterprise-ai-growth-light-consulting/index.html",
+        },
+        {
+          source: "/proposal/mindsleap-fde-bp",
+          destination: "/proposal/mindsleap-fde-bp/index.html",
+        },
+        {
+          source: "/proposal/mindsleap-fde-bp/",
+          destination: "/proposal/mindsleap-fde-bp/index.html",
+        },
         { source: "/decks", destination: "/decks/index.html" },
         { source: "/decks/", destination: "/decks/index.html" },
         { source: "/case-login", destination: "/case-login/index.html" },
@@ -168,6 +202,8 @@ const nextConfig: NextConfig = {
         },
         { source: "/decks/Lincoln", destination: "/decks/Lincoln/index.html" },
         { source: "/decks/Lincoln/", destination: "/decks/Lincoln/index.html" },
+        { source: "/decks/Yusi", destination: "/decks/Yusi/index.html" },
+        { source: "/decks/Yusi/", destination: "/decks/Yusi/index.html" },
         {
           source: "/decks/Lincoln/ai-native-enterprise-conference-lincoln-talk",
           destination: "/decks/Lincoln/ai-native-enterprise-conference-lincoln-talk/index.html",
@@ -193,6 +229,22 @@ const nextConfig: NextConfig = {
           destination: "/decks/Lincoln/xiyouji-ai-agent-kickoff-training/index.html",
         },
         {
+          source: "/decks/Lincoln/yangmingyu-regional-brand-asset-training",
+          destination: "/decks/Lincoln/yangmingyu-regional-brand-asset-training/index.html",
+        },
+        {
+          source: "/decks/Lincoln/yangmingyu-regional-brand-asset-training/",
+          destination: "/decks/Lincoln/yangmingyu-regional-brand-asset-training/index.html",
+        },
+        {
+          source: "/decks/Lincoln/zhidu-ai-native-growth-plan",
+          destination: "/decks/Lincoln/zhidu-ai-native-growth-plan/index.html",
+        },
+        {
+          source: "/decks/Lincoln/zhidu-ai-native-growth-plan/",
+          destination: "/decks/Lincoln/zhidu-ai-native-growth-plan/index.html",
+        },
+        {
           source: "/decks/Lincoln/opc-chongqing-10min",
           destination: "/decks/Lincoln/opc-chongqing-10min/index.html",
         },
@@ -207,6 +259,14 @@ const nextConfig: NextConfig = {
         {
           source: "/decks/Lincoln/pudong-ecommerce-ai-native-enterprise/",
           destination: "/decks/Lincoln/pudong-ecommerce-ai-native-enterprise/index.html",
+        },
+        {
+          source: "/decks/Yusi/ai-education-teachers-deck",
+          destination: "/decks/Yusi/ai-education-teachers-deck/index.html",
+        },
+        {
+          source: "/decks/Yusi/ai-education-teachers-deck/",
+          destination: "/decks/Yusi/ai-education-teachers-deck/index.html",
         },
         {
           source: "/decks/Yusi/ai-practice-training-deck",

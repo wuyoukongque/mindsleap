@@ -14,6 +14,7 @@ type Props = {
 
 export default function NewsArticleClient({ post, children }: Props) {
   const t = useTranslations("news");
+  const imageMatchesArticleWidth = post.imageLayout === "article";
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
@@ -56,7 +57,7 @@ export default function NewsArticleClient({ post, children }: Props) {
 
       {/* Featured Image */}
       {post.image && (
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className={`${imageMatchesArticleWidth ? "max-w-4xl" : "max-w-3xl"} mx-auto px-4 sm:px-6 lg:px-8 py-6`}>
           <div className="relative h-48 md:h-72 rounded-2xl overflow-hidden shadow-lg">
             <Image
               src={post.image}
@@ -64,7 +65,7 @@ export default function NewsArticleClient({ post, children }: Props) {
               fill
               className="object-cover"
               style={{ objectPosition: post.imagePosition ?? "center" }}
-              sizes="(max-width: 768px) 100vw, 768px"
+              sizes={imageMatchesArticleWidth ? "(max-width: 1024px) 100vw, 896px" : "(max-width: 768px) 100vw, 768px"}
               priority
             />
           </div>

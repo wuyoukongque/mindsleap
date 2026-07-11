@@ -48,10 +48,44 @@ const nextConfig: NextConfig = {
         { source: "/design-system/", destination: "/design-system/index.html" },
         { source: "/product", destination: "/product/index.html" },
         { source: "/product/", destination: "/product/index.html" },
+        {
+          source: "/product/ai-club",
+          destination: "/product/ai-club/index.html",
+        },
+        {
+          source: "/product/ai-club/",
+          destination: "/product/ai-club/index.html",
+        },
+        {
+          source: "/product/member-directory",
+          destination: "/product/member-directory/index.html",
+        },
+        {
+          source: "/product/member-directory/",
+          destination: "/product/member-directory/index.html",
+        },
+        {
+          source: "/product/enterprise-ai-growth-suite",
+          destination: "/product/enterprise-ai-growth-suite/index.html",
+        },
+        {
+          source: "/product/enterprise-ai-growth-suite/",
+          destination: "/product/enterprise-ai-growth-suite/index.html",
+        },
+        {
+          source: "/product/mindsleap-company-intro",
+          destination: "/product/mindsleap-company-intro/index.html",
+        },
+        {
+          source: "/product/mindsleap-company-intro/",
+          destination: "/product/mindsleap-company-intro/index.html",
+        },
         { source: "/proposal", destination: "/proposal/index.html" },
         { source: "/proposal/", destination: "/proposal/index.html" },
         { source: "/poster", destination: "/poster/index.html" },
         { source: "/poster/", destination: "/poster/index.html" },
+        { source: "/menu", destination: "/menu/index.html" },
+        { source: "/menu/", destination: "/menu/index.html" },
         { source: "/manuals", destination: "/manuals/index.html" },
         { source: "/manuals/", destination: "/manuals/index.html" },
         {
@@ -61,6 +95,14 @@ const nextConfig: NextConfig = {
         {
           source: "/poster/ai-hermes-workshop/",
           destination: "/poster/ai-hermes-workshop/index.html",
+        },
+        {
+          source: "/poster/ai-club",
+          destination: "/poster/ai-club/index.html",
+        },
+        {
+          source: "/poster/ai-club/",
+          destination: "/poster/ai-club/index.html",
         },
         {
           source: "/poster/arctic-expedition",

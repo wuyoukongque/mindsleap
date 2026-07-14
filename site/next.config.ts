@@ -105,6 +105,14 @@ const nextConfig: NextConfig = {
           destination: "/poster/ai-club/index.html",
         },
         {
+          source: "/poster/ai-hermes-workshop-template",
+          destination: "/poster/ai-hermes-workshop-template/index.html",
+        },
+        {
+          source: "/poster/ai-hermes-workshop-template/",
+          destination: "/poster/ai-hermes-workshop-template/index.html",
+        },
+        {
           source: "/poster/arctic-expedition",
           destination: "/poster/arctic-expedition/index.html",
         },

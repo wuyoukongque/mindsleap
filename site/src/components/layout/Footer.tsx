@@ -70,6 +70,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/ai" className="hover:text-white transition">
+                  {isZh ? "AI / Agent 访问" : "AI / Agent Access"}
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="hover:text-white transition">
                   {nav("about")}
                 </Link>

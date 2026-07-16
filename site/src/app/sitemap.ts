@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/news",
     "/research",
     "/research/fde-industry-report",
+    "/ai",
     "/topics",
     "/people",
     "/contact",

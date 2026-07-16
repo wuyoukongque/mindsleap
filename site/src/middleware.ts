@@ -1,6 +1,7 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
+import { acceptsMarkdown, isAgentContentPath } from "./lib/agent-routing";
 
 const intlMiddleware = createMiddleware(routing);
 const CASE_ACCESS_COOKIE = "mindsleap_case_access";
@@ -30,7 +31,22 @@ export default function middleware(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
-  return intlMiddleware(request);
+  if (isAgentContentPath(pathname) && acceptsMarkdown(request.headers.get("accept"))) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/api/agent-content${pathname.replace(/\/$/, "")}`;
+    url.search = "";
+    return NextResponse.rewrite(url);
+  }
+
+  const response = intlMiddleware(request);
+
+  if (isAgentContentPath(pathname)) {
+    const canonicalUrl = new URL(pathname, request.nextUrl.origin).toString();
+    response.headers.set("Link", `<${canonicalUrl}>; rel="alternate"; type="text/markdown"`);
+    response.headers.set("Vary", "Accept");
+  }
+
+  return response;
 }
 
 export const config = {

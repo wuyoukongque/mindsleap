@@ -21,6 +21,13 @@ export function GET() {
     "",
     `- ${siteUrl}`,
     "",
+    "## Agent Access",
+    "",
+    `- Chinese agent index: ${siteUrl}/zh/ai`,
+    `- English agent index: ${siteUrl}/en/ai`,
+    "- Canonical pages under /zh and /en can return Markdown when requested with the HTTP header Accept: text/markdown.",
+    "- HTML and Markdown representations share the same canonical URL and source content.",
+    "",
     "## Core Pages",
     "",
     `- Chinese home: ${siteUrl}/zh`,
@@ -86,9 +93,10 @@ export function GET() {
 
   return new Response(lines.join("\n"), {
     headers: {
-      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Type": "text/markdown; charset=utf-8",
       "Cache-Control": "public, max-age=3600, s-maxage=86400",
+      "X-Content-Type-Options": "nosniff",
+      "X-MindsLeap-Agent-Content": "llms-index-v1",
     },
   });
 }
-

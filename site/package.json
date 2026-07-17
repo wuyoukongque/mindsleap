@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "decks:pdf": "node scripts/generate-deck-pdfs.mjs",
+    "decks:check": "node scripts/check-deck-release.mjs",
+    "decks:prepare": "npm run decks:pdf && npm run decks:check"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",

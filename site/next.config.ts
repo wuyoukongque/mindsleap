@@ -82,6 +82,14 @@ const nextConfig: NextConfig = {
         },
         { source: "/proposal", destination: "/proposal/index.html" },
         { source: "/proposal/", destination: "/proposal/index.html" },
+        {
+          source: "/proposal/goger-ai-transformation-diagnostic",
+          destination: "/proposal/goger-ai-transformation-diagnostic/index.html",
+        },
+        {
+          source: "/proposal/goger-ai-transformation-diagnostic/",
+          destination: "/proposal/goger-ai-transformation-diagnostic/index.html",
+        },
         { source: "/poster", destination: "/poster/index.html" },
         { source: "/poster/", destination: "/poster/index.html" },
         { source: "/menu", destination: "/menu/index.html" },

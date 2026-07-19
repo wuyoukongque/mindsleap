@@ -7,9 +7,9 @@
     <script src="/proposal/password-gate.js"></script>
     <style>
       @font-face {
-        font-family: "Source Han Sans SC Goger";
-        src: url("./assets/SourceHanSansSC-GogerReport-subset.woff") format("woff");
-        font-weight: 900;
+        font-family: "MindsLeap Brand";
+        src: url("./fonts/MindsLeap-Brand.otf") format("opentype");
+        font-weight: 100 900;
         font-style: normal;
         font-display: swap;
       }
@@ -28,7 +28,7 @@
         --green: #16794a;
         --orange: #c65f1a;
         --red: #b42318;
-        --font-heading: "Source Han Sans SC Goger", "Source Han Sans SC Heavy", "Source Han Sans SC", "Noto Sans CJK SC", "Noto Sans SC", "PingFang SC", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Microsoft YaHei", sans-serif;
+        --font-heading: "MindsLeap Brand", "Noto Sans SC", "Inter", "PingFang SC", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Microsoft YaHei", system-ui, sans-serif;
         --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
         --font-mono: "SF Mono", "Roboto Mono", Consolas, monospace;
         --deck-scale: 1;
@@ -121,7 +121,7 @@
       .slide-title {
         margin: 0;
         color: var(--ink);
-        font: 900 62px/1.08 var(--font-heading);
+        font: 700 62px/1.08 var(--font-heading);
         letter-spacing: 0;
       }
 
@@ -163,7 +163,7 @@
         margin: 0;
         max-width: 1020px;
         color: var(--ink);
-        font: 900 86px/1.04 var(--font-heading);
+        font: 700 86px/1.04 var(--font-heading);
         letter-spacing: 0;
       }
 
@@ -189,7 +189,7 @@
         border: 1px solid var(--rule);
         color: var(--blue);
         background: #fff;
-        font: 750 16px/1 var(--font-body);
+        font: 600 16px/1 var(--font-body);
       }
 
       .cover-visual {
@@ -222,12 +222,12 @@
 
       .metric b {
         color: var(--blue);
-        font: 850 56px/1 var(--font-heading);
+        font: 700 56px/1 var(--font-heading);
       }
 
       .metric span {
         color: var(--ink);
-        font: 750 22px/1.28 var(--font-heading);
+        font: 600 22px/1.28 var(--font-heading);
       }
 
       .platform-map {
@@ -247,7 +247,7 @@
         text-align: center;
         color: var(--blue);
         background: #fff;
-        font: 850 32px/1.18 var(--font-heading);
+        font: 700 32px/1.18 var(--font-heading);
         box-shadow: 0 18px 42px rgba(30, 71, 124, 0.18);
       }
 
@@ -259,7 +259,7 @@
         border: 1px solid var(--rule);
         color: var(--ink);
         text-align: center;
-        font: 750 19px/1.2 var(--font-heading);
+        font: 600 19px/1.2 var(--font-heading);
       }
 
       .o1 { top: 18px; left: 70px; }
@@ -275,7 +275,7 @@
       .cover-stat strong {
         display: block;
         color: var(--blue);
-        font: 850 70px/1 var(--font-heading);
+        font: 700 70px/1 var(--font-heading);
       }
 
       .cover-stat p {
@@ -307,7 +307,7 @@
         right: 112px;
         bottom: 90px;
         color: rgba(255, 255, 255, 0.18);
-        font: 850 190px/1 var(--font-heading);
+        font: 700 190px/1 var(--font-heading);
       }
 
       .grid {
@@ -345,7 +345,7 @@
       .card h3 {
         margin: 0 0 14px;
         color: var(--blue);
-        font: 850 28px/1.2 var(--font-heading);
+        font: 700 28px/1.2 var(--font-heading);
       }
 
       .card p {
@@ -369,7 +369,7 @@
         display: block;
         margin-bottom: 16px;
         color: var(--blue);
-        font: 850 60px/1 var(--font-heading);
+        font: 700 60px/1 var(--font-heading);
       }
 
       .finding {
@@ -382,7 +382,7 @@
         background: var(--blue-50);
         border-left: 8px solid var(--blue);
         color: var(--ink);
-        font: 750 29px/1.36 var(--font-heading);
+        font: 600 29px/1.36 var(--font-heading);
       }
 
       .evidence-row {
@@ -396,7 +396,7 @@
 
       .evidence-row b {
         color: var(--blue);
-        font: 850 25px/1.2 var(--font-heading);
+        font: 700 25px/1.2 var(--font-heading);
       }
 
       .evidence-row span {
@@ -430,13 +430,13 @@
         place-items: center;
         color: #fff;
         background: var(--blue);
-        font: 850 22px/1 var(--font-heading);
+        font: 700 22px/1 var(--font-heading);
       }
 
       .layer h3 {
         margin: 0 0 9px;
         color: var(--ink);
-        font: 850 26px/1.2 var(--font-heading);
+        font: 700 26px/1.2 var(--font-heading);
       }
 
       .layer p {
@@ -459,7 +459,7 @@
         padding: 7px 11px;
         color: #fff;
         background: var(--blue);
-        font: 850 14px/1 var(--font-body);
+        font: 700 14px/1 var(--font-body);
       }
 
       .priority.high { background: var(--green); }
@@ -509,7 +509,7 @@
       .quadrant h3 {
         margin: 0 0 18px;
         color: var(--blue);
-        font: 850 28px/1.2 var(--font-heading);
+        font: 700 28px/1.2 var(--font-heading);
       }
 
       .bubble {
@@ -519,14 +519,14 @@
         background: #fff;
         border: 1px solid var(--rule);
         color: var(--ink);
-        font: 750 19px/1.2 var(--font-heading);
+        font: 600 19px/1.2 var(--font-heading);
       }
 
       .axis-x,
       .axis-y {
         position: absolute;
         color: var(--blue);
-        font: 850 18px/1 var(--font-body);
+        font: 700 18px/1 var(--font-body);
         letter-spacing: 0.08em;
       }
 
@@ -561,13 +561,13 @@
 
       .phase b {
         color: var(--blue);
-        font: 850 30px/1 var(--font-heading);
+        font: 700 30px/1 var(--font-heading);
       }
 
       .phase h3 {
         margin: 0;
         color: var(--ink);
-        font: 850 25px/1.24 var(--font-heading);
+        font: 700 25px/1.24 var(--font-heading);
       }
 
       .phase ul {
@@ -608,7 +608,7 @@
       .role-row.head > div {
         color: #fff;
         background: var(--blue);
-        font-weight: 850;
+        font-weight: 700;
       }
 
       .role-row b {
@@ -638,7 +638,7 @@
 
       .data-item b {
         color: var(--blue);
-        font: 850 23px/1.2 var(--font-heading);
+        font: 700 23px/1.2 var(--font-heading);
       }
 
       .data-item span {
@@ -660,7 +660,7 @@
       .compact-card h3 {
         margin: 0 0 10px;
         color: var(--blue);
-        font: 850 24px/1.2 var(--font-heading);
+        font: 700 24px/1.2 var(--font-heading);
       }
 
       .compact-card p {

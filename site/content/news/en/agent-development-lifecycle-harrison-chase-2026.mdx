@@ -1,0 +1,185 @@
+---
+title: "When the Demo Ends, the Real Work of AI Agents Begins"
+date: "2026-07-24"
+excerpt: "In a recent LangChain talk, Harrison Chase made a clear point: the hard part is no longer building an impressive AI agent demo. The real challenge is making agents reliable, testable, observable, and governable inside real business workflows."
+category: "ai-insights"
+image: "/images/news/agent-development-lifecycle-harrison-chase-2026.jpg"
+showOnHomepage: true
+locale: "en"
+author: "Lincoln Wang"
+sourceVideo: "https://www.youtube.com/watch?v=ZUjijNrg5sQ"
+---
+
+**Author: Lincoln Wang | Founder of MindsLeap | Global Partner at Founders Space | Founder of Founders AI Club**
+
+## "The Hardest Part Is Getting Them to Act Reliably"
+
+Harrison Chase opened this LangChain talk with a sentence that cuts straight to the heart of the problem.
+
+Over the past year, many teams have learned how to ship AI agents. The real separation now is not who can produce the prettiest first demo. It is who can get agents into production earlier, then improve them through a disciplined system.
+
+He put it plainly:
+
+> "The hardest part of building and deploying AI agents is getting them to act reliably."
+
+That sentence is worth sitting with.
+
+It means the competition around AI agents is entering a different stage. The first stage was the demo: make a model call tools, open a website, write some code, or complete a task that looks magical. The second stage is production: the same agent has to face hundreds, thousands, or even millions of real users and business scenarios.
+
+In the first stage, surprise matters most.
+
+In the second stage, reliability matters most.
+
+Harrison Chase is the co-founder and CEO of LangChain. Over the past few years, LangChain has been close to the center of how AI application development has evolved: from chains, to tool use, to LangGraph, LangSmith, and a broader agent development stack. In this talk, he was not simply announcing another feature. He was pointing to a deeper shift: companies can no longer treat AI agents as one-off projects. They need to treat them as a new kind of employee that requires engineering, operations, and governance.
+
+## Frameworks Are Not the Answer. Transparency Is.
+
+Harrison began with build.
+
+Of course, teams can use frameworks to build agents. The value is obvious: frameworks abstract model inputs, model outputs, tools, prompts, and retrieval so teams can get started faster.
+
+But he also shared a lesson from LangChain's early days.
+
+They once had a chain that quietly made five LLM calls under the hood. Users asked, "Why is this chain five times slower than calling OpenAI directly?" The answer was simple: the framework was making five calls, but the user could not see that.
+
+That was not a small bug. It was a signal.
+
+Once AI applications enter production, the scariest thing for developers is not complexity. It is hidden complexity. A business leader may only see that "this agent is slow." An engineer may need to see five model calls, three tool calls, and two context assembly steps. Without transparent tracing and clear structure, the system becomes a black box.
+
+So Harrison's view on frameworks is subtle: frameworks are useful, but they must not hide what is actually happening.
+
+This is especially important for enterprises. When many companies adopt AI tools, their first instinct is to find a large platform that packages all the complexity away. But an AI agent is not traditional SaaS. Each run may follow a different path depending on context, tools, permissions, and user feedback. If you cannot see the path, you cannot manage quality.
+
+## This Is Not Just Code. It Is a Work System.
+
+The more interesting point is that Harrison described agents in ways that increasingly do not look like code.
+
+A prompt can be a Markdown file. Tool connections can be MCP configuration. Skills can be a set of instructions, documents, and scripts. In many cases, an agent's "job description" is beginning to emerge from the repository itself.
+
+That shift is bigger than it first appears.
+
+In the past, companies built software by encoding processes into systems. Now, when companies build AI agents, they are defining boundaries for a system that can act: what it should read, what tools it can call, when it needs human approval, and when it must stop.
+
+Harrison used a higher-level term here: harness. Many coding agents are essentially harnesses. They do not merely call a model. They manage context, the file system, human intervention, subagents, skills, and the state of long-running tasks.
+
+This reminds me of a common enterprise misconception: people assume an AI agent is just "a model plus a few tools." Harrison is describing something else. An AI agent is a work system.
+
+If you treat it as a tool, it can answer questions.
+
+If you treat it as a work system, it can take responsibility for a process.
+
+## Testing Agents Is More Like Testing a Person Than Testing a Model
+
+In the test section, Harrison made the difference even clearer.
+
+He said that testing ordinary LLM applications is relatively simple. You are usually calling the model in a loop. You may need to handle rate limits, but the overall structure is not complicated.
+
+Agents are different.
+
+> "When you're testing agents, every agent might run for fifteen or thirty minutes. It doesn't just answer. It produces artifacts and interacts with the environment."
+
+That distinction matters.
+
+Traditional software testing often means providing an input and checking an output. Testing an AI agent is more like asking an employee to complete a task, then checking whether the work was truly done.
+
+Harrison used coding agent benchmarks as an example. You cannot only inspect which files an agent changed. You need to run unit tests and verify whether the result actually works. That is criteria-based judging: do not judge whether the process looked elegant; judge whether the outcome passes.
+
+The harder part is that real business agents often do not have a standard answer.
+
+Did a customer service agent handle the case appropriately? Did a sales agent advance the opportunity? Did an operations agent find the anomaly? These questions cannot be answered only with ground truth. They require datasets, edge cases, evaluation criteria, and business experts who can define what "good" means.
+
+That is why I keep saying AI transformation is not about buying models. It is about rebuilding organizational capability. What many companies lack is not people who can write prompts. It is people who can translate business judgment into evaluation standards.
+
+## After Deployment, the Problems Become Real
+
+When Harrison moved to deploy, he did not simply talk about "how to go live." He listed the kinds of questions that show up in the real world.
+
+If an agent fails halfway through a task, can it resume from the checkpoint, or does it have to start over?
+
+Does it have short-term and long-term memory?
+
+Should it stream only tokens back to the user, or also expose reasoning traces, tool calls, and execution state?
+
+How should human approval be embedded in the process?
+
+If an agent writes and executes code, where should that untrusted code run?
+
+These may sound like engineering questions, but they are also management questions.
+
+An agent that only runs once in a local demo can pretend these issues do not exist. But once it connects to Notion, CRM, ticketing systems, or finance systems, and begins calling tools on behalf of employees or the organization, it is no longer a chatbot. It is a digital employee with limited action rights.
+
+Harrison noted that human intervention is easy locally and hard at production scale. How do you pause an agent, wait for human approval, and then resume execution? Which tools require approval? Which actions can be automated?
+
+This is the dividing line for enterprise AI adoption.
+
+A mature AI-native organization is not one that lets AI automate everything. It is one that knows exactly where automation is required, where the system must pause, and where an audit trail must remain.
+
+## If You Cannot See the Trace, You Cannot Govern the Agent
+
+In the monitoring section, Harrison said something simple: monitoring tells you what the agent actually did.
+
+The foundation is tracing.
+
+> "This is probably the most basic thing you should set up before going into production."
+
+Tracing records every step an agent takes: the input and output at each step, which tools were called, what subagents did, and what context the LLM saw.
+
+This is not decorative. It is how teams debug.
+
+Harrison said most agent failures happen because the LLM did not receive the right context. Whether you can see what the model saw at that moment becomes central to diagnosing the issue.
+
+The next layer is finding the problems worth inspecting across thousands of traces. Likes, dislikes, user feedback, and even comments like "you got this wrong" or "you should have done X instead of Y" all become signals. LangChain calls this kind of signal perceived error: judging whether the agent made a mistake from the interaction trail between human and agent.
+
+This matters a great deal for enterprises.
+
+In the future, managing agents cannot mean a manager manually opening ten chat logs every day. Companies will need dashboards, online evaluation, and mechanisms that automatically cluster problems. Otherwise, the more agents an organization deploys, the less control it will have.
+
+## Governance Is Not the Last Step. It Wraps the Entire Lifecycle.
+
+Finally, Harrison talked about govern.
+
+Many people think of governance as a compliance step after launch. In his framework, governance is not a separate stage. It wraps the full lifecycle: build, test, deploy, and monitor.
+
+Cost control is part of it. LangChain itself uses coding agents heavily, and Harrison said costs have become somewhat out of control. Teams need visibility into costs, and they need ways to manage them.
+
+Tool permissions are another part.
+
+> "When an agent uses Notion, is it acting on behalf of me, a colleague, or a service account?"
+
+That question pulls the whole conversation back from technology into organization design.
+
+An agent calling tools is not merely an API permission problem. It is a question of responsibility. Who authorized the action? Who bears the consequences? Who can audit it? Which tool calls must include a human in the loop? Which contexts and skills can be shared?
+
+Once enterprises truly deploy AI agents, these questions become daily management questions.
+
+The real value of Harrison's talk is not that LangChain has built another product. It is that he offers a useful diagnosis: bringing AI agents into production is forcing companies to reinvent a hybrid of software engineering and organizational governance.
+
+## Final Thought: From "Can It Work?" to "Can We Manage It?"
+
+Many companies are still asking first-level questions: Can an agent help me write reports, research information, or run workflows?
+
+Harrison Chase's talk reminds us that the real question has already moved forward: once agents start working, can you continuously improve them? Can you test them? Can you see what they did? Can you insert human approval before critical actions? Can you control cost, permissions, and auditability?
+
+That is the distance between demo and production.
+
+A demo proves model capability.
+
+Production tests organizational capability.
+
+For Chinese entrepreneurs, this may be one of the most important dividing lines to understand this year: an AI agent is not a tool you simply "turn on." It is a new organizational unit. It needs a job description, a probation period, performance evaluation, permission boundaries, and continuous training and review.
+
+The future gap between companies will not be whether they have AI agents. It will be whether they can bring AI agents into their management system.
+
+When the demo ends, the real work begins.
+
+---
+
+## About MindsLeap
+
+MindsLeap is an AI-native organization transformation acceleration platform.
+
+Through deep collaboration with the Silicon Valley innovation incubator Founders Space, MindsLeap connects global AI frontier thinking, Silicon Valley's technology entrepreneurship ecosystem, and the real transformation scenarios of Chinese entrepreneurs.
+
+Around the development of AI-native organizations, MindsLeap is building a transformation ecosystem for entrepreneurs, founders, AI engineers, industry experts, and investors, helping companies move AI from cognition, strategy, and tools into organizational capability, business workflows, product innovation, and growth systems.
+
+This article was translated and adapted from the Chinese original with AI assistance.

@@ -76,7 +76,7 @@ export default function NewsArticleClient({ post, children }: Props) {
       <article className="pb-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* MDX Content */}
-          <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-headings:text-xl prose-p:text-gray-600 prose-a:text-primary prose-hr:hidden">
+          <div className="news-article-prose prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-headings:text-xl prose-p:text-gray-600 prose-a:text-primary prose-hr:hidden">
             {children}
           </div>
 

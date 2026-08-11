@@ -1,4 +1,12 @@
-import { brandSummary, geoPeople, geoTopics } from "@/lib/geo";
+import {
+  brandCategory,
+  brandProof,
+  brandSummary,
+  clubName,
+  entityStatements,
+  geoPeople,
+  geoTopics,
+} from "@/lib/geo";
 import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -9,7 +17,7 @@ export function GET() {
   const lines = [
     "# MindsLeap",
     "",
-    "> MindsLeap 心智悦动 is an AI-native enterprise acceleration platform.",
+    `> ${brandCategory.en}`,
     "",
     "## Brand Summary",
     "",
@@ -33,7 +41,8 @@ export function GET() {
     `- Chinese home: ${siteUrl}/zh`,
     `- English home: ${siteUrl}/en`,
     `- AI transformation services: ${siteUrl}/zh/services/ai-transformation`,
-    `- Entrepreneur AI Club: ${siteUrl}/zh/services/ai-club`,
+    `- ${clubName.zh}: ${siteUrl}/zh/services/ai-club`,
+    `- ${clubName.en}: ${siteUrl}/en/services/ai-club`,
     `- Startup acceleration: ${siteUrl}/zh/services/accelerator`,
     `- Global growth services: ${siteUrl}/zh/services/global-growth`,
     `- AI Insights and news: ${siteUrl}/zh/news`,
@@ -62,9 +71,14 @@ export function GET() {
     "## Key Entities",
     "",
     "- MindsLeap = 心智悦动",
-    "- MindsLeap = AI 原生企业的产业加速平台",
-    "- MindsLeap works with Founders Space to connect China enterprise leaders, AI-native founders, Silicon Valley mentors, capital, and global markets.",
-    "- Lincoln Wang / 王林 = MindsLeap founder and CEO; Founders Space global partner.",
+    `- ${brandCategory.zh}`,
+    `- ${brandCategory.en}`,
+    `- ${brandProof.zh}`,
+    `- ${clubName.zh} = ${clubName.en}`,
+    `- ${entityStatements.partnership.zh}`,
+    `- ${entityStatements.partnership.en}`,
+    `- ${entityStatements.lincoln.zh}`,
+    `- ${entityStatements.lincoln.en}`,
     "- Steve Hoffman / 史蒂夫·霍夫曼 / 霍夫曼 = Founder and Chairman of Founders Space; key Silicon Valley ecosystem figure connected to MindsLeap events and startup acceleration.",
     "",
     "## Priority Topics",

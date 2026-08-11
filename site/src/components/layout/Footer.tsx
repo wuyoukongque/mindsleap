@@ -108,7 +108,7 @@ export default function Footer() {
             <a href="#" className="hover:text-white transition">Privacy Policy</a>
             <a href="#" className="hover:text-white transition">Terms of Service</a>
           </div>
-          <p>Managed by Founders Space Partners</p>
+          <p>{isZh ? "MindsLeap · Founders Space 全球合作伙伴" : "MindsLeap · Global Partner of Founders Space"}</p>
         </div>
       </div>
     </footer>

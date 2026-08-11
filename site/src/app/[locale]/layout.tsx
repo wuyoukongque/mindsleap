@@ -1,9 +1,11 @@
-import { NextIntlClientProvider, useMessages } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import JsonLd from "@/components/shared/JsonLd";
+import { asGeoLocale, getEntityGraphJsonLd } from "@/lib/geo";
 import { getSiteUrl } from "@/lib/site";
 
 type Props = {
@@ -56,6 +58,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   setRequestLocale(locale);
+  const entityGraphJsonLd = getEntityGraphJsonLd(asGeoLocale(locale), getSiteUrl());
 
   return (
     <html lang={locale}>
@@ -68,6 +71,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
       </head>
       <body className="antialiased">
+        <JsonLd data={entityGraphJsonLd} />
         <NextIntlClientProvider>
           <Header />
           <main className="min-h-screen">{children}</main>

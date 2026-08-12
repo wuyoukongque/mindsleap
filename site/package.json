@@ -9,6 +9,7 @@
     "lint": "eslint",
     "geo:check": "node scripts/check-geo-entity-copy.mjs",
     "cases:check": "node scripts/check-client-case-news.mjs",
+    "services:check": "node scripts/check-services-hub.mjs",
     "decks:pdf": "node scripts/generate-deck-pdfs.mjs",
     "decks:check": "node scripts/check-deck-release.mjs",
     "decks:prepare": "npm run decks:pdf && npm run decks:check"

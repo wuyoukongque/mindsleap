@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "geo:check": "node scripts/check-geo-entity-copy.mjs",
     "decks:pdf": "node scripts/generate-deck-pdfs.mjs",
     "decks:check": "node scripts/check-deck-release.mjs",
     "decks:prepare": "npm run decks:pdf && npm run decks:check"

@@ -10,7 +10,7 @@ type Props = {
 
 const content = {
   zh: {
-    title: "企业家AI俱乐部",
+    title: "MindsLeap 企业家 AI 俱乐部",
     subtitle: "企业家AI转型实战社群",
     heroDescription:
       "30-50人精品闭门社群，汇聚最具前瞻性的企业家，共同探索AI时代的转型之路。",
@@ -19,9 +19,9 @@ const content = {
       { value: "9,800", label: "人均年费(元)" },
       { value: "30-50", label: "精品闭门规模" },
     ],
-    aboutTitle: "关于MindsLeap AI Club",
+    aboutTitle: "关于 MindsLeap 企业家 AI 俱乐部",
     aboutDescription:
-      "MindsLeap企业家AI俱乐部是一个专注于AI转型的高端企业家社群。我们相信，在AI时代，企业家之间的深度交流与资源共享是实现成功转型的关键。通过邀请硅谷AI专家闭门交流、前沿科技企业参访、企业AI应用分享和工作坊、以及会员之间的交流共创。我们为会员打造一个极致坦诚、持续进化、共创共赢以及有全球链接的多元社区。",
+      "MindsLeap 企业家 AI 俱乐部是一个专注于 AI 转型的高端企业家社群。我们相信，在 AI 时代，企业家之间的深度交流与资源共享是实现成功转型的关键。通过邀请硅谷 AI 专家闭门交流、前沿科技企业参访、企业 AI 应用分享和工作坊，以及会员之间的交流共创，我们为会员打造一个极致坦诚、持续进化、共创共赢且具有全球连接的多元社区。",
     activitiesTitle: "活动形式",
     activities: [
       {
@@ -60,13 +60,13 @@ const content = {
         description: "链接硅谷与全球AI前沿，培养国际化战略思维。",
       },
     ],
-    ctaTitle: "加入企业家AI俱乐部",
+    ctaTitle: "加入 MindsLeap 企业家 AI 俱乐部",
     ctaDescription: "与志同道合的企业家一起，开启AI转型之旅。",
     ctaButton: "申请加入",
     backLink: "返回所有服务",
   },
   en: {
-    title: "Founders AI Club",
+    title: "MindsLeap Founders AI Club",
     subtitle: "AI Transformation Community for Entrepreneurs",
     heroDescription:
       "An exclusive 30-50 person closed-door community bringing together the most forward-thinking entrepreneurs to explore AI transformation.",
@@ -75,7 +75,7 @@ const content = {
       { value: "9,800", label: "Annual Fee (CNY)" },
       { value: "30-50", label: "Exclusive Group Size" },
     ],
-    aboutTitle: "About the AI Club",
+    aboutTitle: "About the MindsLeap Founders AI Club",
     aboutDescription:
       "The MindsLeap Founders AI Club is a premium entrepreneur community focused on AI transformation. We believe that deep exchange and resource sharing among entrepreneurs is the key to successful transformation in the AI era. Through our intimate closed-door format, we create a platform for candid, efficient, and meaningful dialogue.",
     activitiesTitle: "Activity Formats",
@@ -124,7 +124,7 @@ const content = {
           "Connect with Silicon Valley and global AI frontiers, cultivate international strategic thinking.",
       },
     ],
-    ctaTitle: "Join the Founders AI Club",
+    ctaTitle: "Join the MindsLeap Founders AI Club",
     ctaDescription:
       "Start your AI transformation journey with like-minded entrepreneurs.",
     ctaButton: "Apply to Join",

@@ -12,7 +12,7 @@ const content = {
     subtitle: "连接企业家、产业场景、AI原生项目与全球市场",
     services: [
       {
-        title: "企业家AI俱乐部",
+        title: "MindsLeap 企业家 AI 俱乐部",
         description:
           "企业家AI转型实战社群，30-50人精品闭门会，私享会、Workshop、企业参访，极致坦诚、共创共赢。",
         href: "/services/ai-club",
@@ -47,7 +47,7 @@ const content = {
       "Connecting entrepreneurs, industry scenarios, AI-native ventures, and global markets",
     services: [
       {
-        title: "Founders AI Club",
+        title: "MindsLeap Founders AI Club",
         description:
           "An exclusive AI transformation community for entrepreneurs. Intimate 30-50 person closed-door sessions featuring workshops, site visits, and candid knowledge sharing.",
         href: "/services/ai-club",

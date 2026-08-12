@@ -1,4 +1,13 @@
-import { brandSummary, geoPeople, geoTopics, getGeoPerson, getGeoTopic, type GeoLocale } from "@/lib/geo";
+import {
+  brandSummary,
+  clubName,
+  entityStatements,
+  geoPeople,
+  geoTopics,
+  getGeoPerson,
+  getGeoTopic,
+  type GeoLocale,
+} from "@/lib/geo";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { getSiteUrl } from "@/lib/site";
 
@@ -47,6 +56,12 @@ function renderHome(locale: GeoLocale): AgentDocument {
     "",
     brandSummary[locale],
     "",
+    `## ${isZh ? "关键实体" : "Key Entities"}`,
+    "",
+    `- ${clubName[locale]}`,
+    `- ${entityStatements.partnership[locale]}`,
+    `- ${entityStatements.lincoln[locale]}`,
+    "",
     `## ${isZh ? "核心内容" : "Core Content"}`,
     "",
     `- [${isZh ? "主题知识库" : "Topic Knowledge Base"}](${siteUrl}/${locale}/topics)`,
@@ -80,6 +95,12 @@ function renderAgentIndex(locale: GeoLocale): AgentDocument {
     `# ${isZh ? "MindsLeap AI / Agent 内容索引" : "MindsLeap AI / Agent Content Index"}`,
     "",
     brandSummary[locale],
+    "",
+    `## ${isZh ? "关键实体" : "Key Entities"}`,
+    "",
+    `- ${clubName[locale]}`,
+    `- ${entityStatements.partnership[locale]}`,
+    `- ${entityStatements.lincoln[locale]}`,
     "",
     `## ${isZh ? "机器可读入口" : "Machine-readable Entry Points"}`,
     "",

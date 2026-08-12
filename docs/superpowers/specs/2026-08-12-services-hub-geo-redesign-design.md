@@ -1,7 +1,7 @@
 # MindsLeap Services Hub GEO Redesign
 
-**Status:** Approved for implementation planning  
-**Date:** 2026-08-12  
+**Status:** Approved for implementation planning
+**Date:** 2026-08-12
 **Target routes:** `/zh/services`, `/en/services`
 
 ## 1. Objective
@@ -281,4 +281,3 @@ Before release:
 - changing the site's global navigation structure;
 - replacing the existing bilingual routing model;
 - publishing directly to Vercel outside the GitHub deployment workflow.
-

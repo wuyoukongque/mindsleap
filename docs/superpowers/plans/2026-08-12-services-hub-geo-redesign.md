@@ -67,7 +67,7 @@ Add to `site/package.json`:
 "services:check": "node scripts/check-services-hub.mjs"
 ```
 
-Run: `npm run services:check`  
+Run: `npm run services:check`
 Expected: FAIL because the content model and page implementation do not yet satisfy the contract.
 
 - [ ] **Step 3: Commit the failing contract**
@@ -146,7 +146,7 @@ const serviceLinks = {
 
 - [ ] **Step 3: Run the validator**
 
-Run: `npm run services:check`  
+Run: `npm run services:check`
 Expected: still FAIL because rendering and discovery surfaces are not implemented.
 
 - [ ] **Step 4: Commit the fact model**
@@ -305,7 +305,7 @@ git commit -m "Expose services hub to agents and search"
 
 - [ ] **Step 1: Run the production build**
 
-Run: `npm run build` from `site/`  
+Run: `npm run build` from `site/`
 Expected: successful TypeScript compilation and static generation of `/zh/services` and `/en/services`.
 
 - [ ] **Step 2: Start the production server on the next free local port**
@@ -354,4 +354,3 @@ git commit -m "Polish services hub responsive layout"
 - [ ] **Step 7: Present local review URLs**
 
 Provide `/zh/services` and `/en/services` local URLs. Do not push either website repository until the user approves the implemented page.
-

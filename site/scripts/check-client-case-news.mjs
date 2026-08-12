@@ -89,6 +89,52 @@ for (const item of cases) {
   }
 }
 
+const sharedServicePage = path.join(
+  siteRoot,
+  "src",
+  "app",
+  "[locale]",
+  "services",
+  "training",
+  "page.tsx",
+);
+const transformationPage = path.join(
+  siteRoot,
+  "src",
+  "app",
+  "[locale]",
+  "services",
+  "ai-transformation",
+  "page.tsx",
+);
+const sharedServiceSource = fs.readFileSync(sharedServicePage, "utf8");
+const transformationSource = fs.readFileSync(transformationPage, "utf8");
+
+for (const item of cases) {
+  if (!sharedServiceSource.includes(item.slug)) {
+    errors.push(`AI transformation service page missing case link: ${item.slug}`);
+  }
+}
+
+for (const requiredCopy of [
+  "真实项目案例：从共同认知走向业务现场",
+  "Real Engagements: From Shared Understanding to Business Practice",
+  '"@type": "ItemList"',
+  "caseStudy.publishedDate",
+]) {
+  if (!sharedServiceSource.includes(requiredCopy)) {
+    errors.push(`AI transformation service page missing: ${requiredCopy}`);
+  }
+}
+
+if (!transformationSource.includes("showCaseStudies: true")) {
+  errors.push("AI transformation route does not enable verified case studies");
+}
+
+if (!transformationSource.includes("/services/ai-transformation")) {
+  errors.push("AI transformation route is missing its dedicated canonical URL");
+}
+
 if (errors.length > 0) {
   console.error(errors.join("\n"));
   process.exit(1);

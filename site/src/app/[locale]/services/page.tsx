@@ -22,10 +22,10 @@ function SectionHeading({
 }) {
   return (
     <div className="max-w-3xl">
-      <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#28756f]">
+      <p className="text-sm font-semibold uppercase tracking-[0.14em] text-blue-500">
         {eyebrow}
       </p>
-      <h2 className="mt-3 text-3xl font-bold leading-tight text-gray-950 md:text-4xl">
+      <h2 className="mt-3 text-3xl font-bold leading-tight text-primary md:text-4xl">
         {title}
       </h2>
       {description ? (
@@ -177,16 +177,10 @@ export default async function ServicesPage({ params }: Props) {
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
           <SectionHeading {...content.paths} />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {content.paths.items.map((path, index) => (
+            {content.paths.items.map((path) => (
               <article
                 key={path.number}
-                className={`border-t-4 bg-[#f7f9fc] p-6 md:p-7 ${
-                  index === 0
-                    ? "border-[#245388]"
-                    : index === 1
-                      ? "border-[#16867f]"
-                      : "border-[#c58a28]"
-                }`}
+                className="border-t-4 border-blue-500 bg-gray-50 p-6 md:p-7"
               >
                 <p className="text-sm font-bold text-gray-500">{path.number}</p>
                 <h3 className="mt-5 text-2xl font-bold text-gray-950">{path.title}</h3>
@@ -196,7 +190,7 @@ export default async function ServicesPage({ params }: Props) {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="font-semibold text-[#1e4f82] hover:text-[#28756f]"
+                      className="font-semibold text-blue-500 hover:text-primary"
                     >
                       {link.label} <span aria-hidden="true">→</span>
                     </Link>
@@ -208,7 +202,7 @@ export default async function ServicesPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="bg-[#eef2f6] py-16 md:py-24">
+      <section className="bg-gray-50 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
           <SectionHeading {...content.families} />
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
@@ -216,28 +210,28 @@ export default async function ServicesPage({ params }: Props) {
               <article key={service.href} className="rounded-lg border border-gray-200 bg-white p-6 md:p-8">
                 <div className="flex items-start justify-between gap-5 border-b border-gray-200 pb-5">
                   <h3 className="text-2xl font-bold text-gray-950">{service.name}</h3>
-                  <span className="text-sm font-bold text-[#28756f]">{service.number}</span>
+                  <span className="text-sm font-bold text-blue-500">{service.number}</span>
                 </div>
                 <dl className="mt-6 grid gap-5">
                   <div>
-                    <dt className="text-sm font-semibold text-[#1e4f82]">{content.families.targetLabel}</dt>
+                    <dt className="text-sm font-semibold text-primary">{content.families.targetLabel}</dt>
                     <dd className="mt-1 leading-7 text-gray-600">{service.audience}</dd>
                   </div>
                   <div>
-                    <dt className="text-sm font-semibold text-[#1e4f82]">{content.families.problemLabel}</dt>
+                    <dt className="text-sm font-semibold text-primary">{content.families.problemLabel}</dt>
                     <dd className="mt-1 leading-7 text-gray-600">{service.problem}</dd>
                   </div>
                   <div>
-                    <dt className="text-sm font-semibold text-[#1e4f82]">{content.families.deliveryLabel}</dt>
+                    <dt className="text-sm font-semibold text-primary">{content.families.deliveryLabel}</dt>
                     <dd className="mt-1 leading-7 text-gray-600">{service.delivery}</dd>
                   </div>
                 </dl>
                 <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3">
-                  <Link href={service.href} className="font-semibold text-[#1e4f82] hover:text-[#28756f]">
+                  <Link href={service.href} className="font-semibold text-blue-500 hover:text-primary">
                     {content.families.detailLabel} <span aria-hidden="true">→</span>
                   </Link>
                   {service.evidenceHref ? (
-                    <Link href={service.evidenceHref} className="font-semibold text-[#28756f] hover:text-[#1e4f82]">
+                    <Link href={service.evidenceHref} className="font-semibold text-blue-500 hover:text-primary">
                       {content.families.evidenceLabel} <span aria-hidden="true">→</span>
                     </Link>
                   ) : null}
@@ -248,23 +242,23 @@ export default async function ServicesPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="bg-[#112f52] py-16 text-white md:py-24">
+      <section className="bg-primary-dark py-16 text-white md:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#7fd4c8]">{content.delivery.eyebrow}</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-blue-300">{content.delivery.eyebrow}</p>
             <h2 className="mt-3 text-3xl font-bold leading-tight md:text-4xl">{content.delivery.title}</h2>
             <p className="mt-4 text-base leading-8 text-gray-200 md:text-lg">{content.delivery.description}</p>
           </div>
           <ol className="mt-10 grid gap-px overflow-hidden rounded-lg bg-white/20 md:grid-cols-4">
             {content.delivery.stages.map((stage) => (
-              <li key={stage.number} className="bg-[#112f52] p-6 md:min-h-64 md:p-7">
-                <p className="text-sm font-bold text-[#7fd4c8]">{stage.number}</p>
+              <li key={stage.number} className="bg-primary-dark p-6 md:min-h-64 md:p-7">
+                <p className="text-sm font-bold text-blue-300">{stage.number}</p>
                 <h3 className="mt-8 text-xl font-bold">{stage.title}</h3>
                 <p className="mt-4 leading-7 text-gray-200">{stage.description}</p>
               </li>
             ))}
           </ol>
-          <p className="mt-7 max-w-4xl border-l-2 border-[#7fd4c8] pl-5 leading-7 text-gray-200">
+          <p className="mt-7 max-w-4xl border-l-2 border-blue-300 pl-5 leading-7 text-gray-200">
             {content.delivery.note}
           </p>
         </div>
@@ -288,16 +282,16 @@ export default async function ServicesPage({ params }: Props) {
                 </div>
                 <div className="p-6">
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-semibold text-gray-500">
-                    <span className="text-[#1e4f82]">{project.organization}</span>
+                    <span className="text-primary">{project.organization}</span>
                     <span aria-hidden="true">|</span>
                     <time dateTime={project.publishedDate}>{project.date}</time>
                   </div>
                   <h3 className="mt-4 text-xl font-bold leading-8 text-gray-950">{project.title}</h3>
-                  <p className="mt-3 text-sm font-semibold leading-6 text-[#28756f]">{project.services}</p>
+                  <p className="mt-3 text-sm font-semibold leading-6 text-blue-500">{project.services}</p>
                   <p className="mt-4 leading-7 text-gray-600">{project.summary}</p>
                   <Link
                     href={`/news/${project.slug}`}
-                    className="mt-6 inline-flex font-semibold text-[#1e4f82] hover:text-[#28756f]"
+                    className="mt-6 inline-flex font-semibold text-blue-500 hover:text-primary"
                   >
                     {content.cases.linkLabel} <span aria-hidden="true" className="ml-2">→</span>
                   </Link>
@@ -308,20 +302,18 @@ export default async function ServicesPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="bg-[#eef2f6] py-16 md:py-24">
+      <section className="bg-gray-50 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
           <SectionHeading {...content.platform} />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {content.platform.items.map((item, index) => (
+            {content.platform.items.map((item) => (
               <article
                 key={item.title}
-                className={`border-l-4 bg-white p-6 md:p-7 ${
-                  index % 2 === 0 ? "border-[#245388]" : "border-[#16867f]"
-                }`}
+                className="border-l-4 border-blue-500 bg-white p-6 md:p-7"
               >
                 <h3 className="text-xl font-bold text-gray-950">{item.title}</h3>
                 <p className="mt-3 leading-7 text-gray-600">{item.description}</p>
-                <Link href={item.href} className="mt-5 inline-flex font-semibold text-[#1e4f82] hover:text-[#28756f]">
+                <Link href={item.href} className="mt-5 inline-flex font-semibold text-blue-500 hover:text-primary">
                   {item.linkLabel} <span aria-hidden="true" className="ml-2">→</span>
                 </Link>
               </article>
@@ -338,7 +330,7 @@ export default async function ServicesPage({ params }: Props) {
               <details key={faq.question} className="group py-5" open={index === 0}>
                 <summary className="flex cursor-pointer list-none items-start justify-between gap-5 font-semibold leading-7 text-gray-950">
                   <span>{faq.question}</span>
-                  <span aria-hidden="true" className="mt-1 text-xl text-[#28756f] group-open:rotate-45">+</span>
+                  <span aria-hidden="true" className="mt-1 text-xl text-blue-500 group-open:rotate-45">+</span>
                 </summary>
                 <p className="mt-4 pr-10 leading-7 text-gray-600">{faq.answer}</p>
               </details>
@@ -347,14 +339,14 @@ export default async function ServicesPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="bg-[#28756f] py-14 text-white md:py-18">
+      <section className="bg-brand-gradient py-14 text-white md:py-18">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-12">
           <div className="max-w-3xl">
             <h2 className="text-3xl font-bold leading-tight md:text-4xl">{content.cta.title}</h2>
             <p className="mt-4 text-base leading-8 text-white/85 md:text-lg">{content.cta.description}</p>
           </div>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
-            <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 py-3 font-semibold text-[#245388] hover:bg-gray-100">
+            <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 py-3 font-semibold text-primary hover:bg-gray-100">
               {content.cta.primaryLabel}
             </Link>
             <Link href="/services/ai-transformation" className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/70 px-6 py-3 font-semibold text-white hover:bg-white/10">

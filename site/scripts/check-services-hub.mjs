@@ -55,6 +55,29 @@ assert.ok(
 );
 assert.equal(files.hero.includes("useEffect"), false, "services hero must not autoplay or rotate");
 
+const servicesVisualSource = `${files.page}\n${files.hero}`.toLowerCase();
+for (const color of [
+  "#28756f",
+  "#16867f",
+  "#7fd4c8",
+  "#c58a28",
+  "#245388",
+  "#1e4f82",
+  "#112f52",
+  "#102b4c",
+  "#173f70",
+]) {
+  assert.equal(
+    servicesVisualSource.includes(color),
+    false,
+    `services hub contains an off-brand accent: ${color}`,
+  );
+}
+assert.ok(
+  servicesVisualSource.includes("bg-brand-gradient"),
+  "services hub CTA must use the approved brand gradient",
+);
+
 assert.ok(files.agent.includes("renderServicesHub"), "Agent Markdown renderer missing services hub");
 assert.ok(
   files.agent.includes('segments[1] === "services" && segments.length === 2'),

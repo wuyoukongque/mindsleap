@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/${locale}${page}`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
-      priority: page === "" ? 1 : 0.8,
+      priority: page === "" ? 1 : page === "/services" ? 0.9 : 0.8,
     }))
   );
 

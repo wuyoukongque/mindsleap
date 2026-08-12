@@ -40,6 +40,8 @@ export function GET() {
     "",
     `- Chinese home: ${siteUrl}/zh`,
     `- English home: ${siteUrl}/en`,
+    `- Chinese services and project evidence hub: ${siteUrl}/zh/services`,
+    `- English services and project evidence hub: ${siteUrl}/en/services`,
     `- AI transformation services: ${siteUrl}/zh/services/ai-transformation`,
     `- ${clubName.zh}: ${siteUrl}/zh/services/ai-club`,
     `- ${clubName.en}: ${siteUrl}/en/services/ai-club`,

@@ -44,6 +44,8 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return {
       beforeFiles: [
+        { source: "/office", destination: "/office/index.html" },
+        { source: "/office/", destination: "/office/index.html" },
         { source: "/design-system", destination: "/design-system/index.html" },
         { source: "/design-system/", destination: "/design-system/index.html" },
         { source: "/product", destination: "/product/index.html" },

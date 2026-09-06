@@ -45,7 +45,7 @@ function resize(){renderer.setSize(host.clientWidth,host.clientHeight);camera.as
 const keys=new Set();window.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(e.target.tagName))return;keys.add(e.key.toLowerCase());if(['w','a','s','d','q','e'].includes(e.key.toLowerCase()))e.preventDefault()});window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));window.addEventListener('blur',()=>keys.clear());
 const clock=new THREE.Clock();function frame(){requestAnimationFrame(frame);const dt=Math.min(clock.getDelta(),.08);if(keys.size){const f=new THREE.Vector3();camera.getWorldDirection(f);f.y=0;f.normalize();const r=f.clone().cross(new THREE.Vector3(0,1,0));const d=new THREE.Vector3();if(keys.has('w'))d.add(f);if(keys.has('s'))d.sub(f);if(keys.has('d'))d.add(r);if(keys.has('a'))d.sub(r);if(keys.has('e'))d.y++;if(keys.has('q'))d.y--;d.multiplyScalar(dt*2.5);camera.position.add(d);controls.target.add(d)}controls.update();renderer.render(scene,camera)}
 try {
-const response=await fetch('/office/MindsLeap-office-v1.glb');
+const response=await fetch('/office/MindsLeap-office-v1.glb?v=island-angle-2');
 if(!response.ok)throw new Error('HTTP '+response.status);
 window.MODEL_BYTES=new Uint8Array(await response.arrayBuffer());
 new GLTFLoader().parse(window.MODEL_BYTES.buffer,'',g=>{

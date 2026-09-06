@@ -11,3 +11,5 @@ The scene is a proportional estimate (40 source pixels per metre; 3 m ceiling), 
 - `vendor/`: Three.js 0.180.0 (MIT, see THREE-LICENSE.txt)
 
 Furniture, microphones and materials are schematic. Free navigation has no collision detection.
+
+Revision: restored the continuous angled island-to-column connection from the original plan. Countertop and base both join Structural_column_04.

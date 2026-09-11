@@ -58,7 +58,7 @@ export default function NewsArticleClient({ post, children }: Props) {
       {/* Featured Image */}
       {post.image && (
         <div className={`${imageMatchesArticleWidth ? "max-w-4xl" : "max-w-3xl"} mx-auto px-4 sm:px-6 lg:px-8 py-6`}>
-          <div className="relative h-48 md:h-72 rounded-2xl overflow-hidden shadow-lg">
+          <div className={`relative ${post.imageLayout === "poster" ? "aspect-video" : "h-48 md:h-72"} rounded-2xl overflow-hidden shadow-lg`}>
             <Image
               src={post.image}
               alt={post.title}

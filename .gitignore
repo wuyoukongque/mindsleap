@@ -1,0 +1,9 @@
+# Original assets (large files, not for Git)
+/Asset
+/Upload
+
+# OS files
+.DS_Store
+
+# Claude
+.claude/

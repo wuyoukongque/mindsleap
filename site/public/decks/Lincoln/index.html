@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lincoln Decks · MindsLeap</title>
+  <style>
+    :root {
+      --blue: #1e477c;
+      --blue-soft: #eff6ff;
+      --ink: #111111;
+      --muted: #4b5563;
+      --subtle: #9ca3af;
+      --rule: #e5e7eb;
+      --bg-alt: #f9fafb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "Noto Sans SC", "PingFang SC", sans-serif;
+      color: var(--ink);
+      background: #fff;
+      letter-spacing: -0.01em;
+    }
+    header {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 56px;
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255,255,255,.96);
+    }
+    .logo {
+      width: 260px;
+      height: 52px;
+      background: url("/decks/shared/mindsleap-template/mindsleap-foundersspace-joint-logo-blue.svg") left center / contain no-repeat;
+    }
+    nav {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    a { color: inherit; text-decoration: none; }
+    nav a { color: var(--blue); }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 80px 56px 100px;
+    }
+    .back {
+      display: inline-flex;
+      margin-bottom: 42px;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .eyebrow {
+      color: #3b82f6;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    h1 {
+      max-width: none;
+      margin: 0;
+      color: var(--blue);
+      font-size: 64px;
+      line-height: 1.02;
+      letter-spacing: -.035em;
+      white-space: nowrap;
+    }
+    .lead {
+      max-width: 720px;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.62;
+    }
+    .deck-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 54px;
+    }
+    .deck-card {
+      display: flex;
+      min-height: 330px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 34px;
+      border: 1px solid var(--rule);
+      background: var(--bg-alt);
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+    .deck-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,.08);
+    }
+    .tag {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 8px 12px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .deck-card h2 {
+      margin: 26px 0 14px;
+      color: var(--blue);
+      font-size: 30px;
+      line-height: 1.18;
+    }
+    .deck-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .meta {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--rule);
+      color: var(--subtle);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    @media (max-width: 720px) {
+      header { height: auto; align-items: flex-start; flex-direction: column; gap: 18px; padding: 24px; }
+      .logo { width: 230px; }
+      nav { flex-wrap: wrap; }
+      main { padding: 56px 24px 80px; }
+      h1 { font-size: 34px; }
+      .deck-card { min-height: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="https://www.mindsleap.ai/zh" aria-label="MindsLeap"></a>
+    <nav>
+      <a href="https://www.mindsleap.ai/zh">首页</a>
+      <a href="/decks">Decks</a>
+      <a href="https://www.mindsleap.ai/zh/contact">联系</a>
+    </nav>
+  </header>
+  <main>
+    <a class="back" href="/decks">← Back to Decks</a>
+    <div class="eyebrow">Lincoln Decks</div>
+    <h1>Lincoln 的培训与演讲课件</h1>
+    <p class="lead">这里收录 Lincoln 面向客户培训、企业家社群、研究分享和公开演讲的 HTML deck。</p>
+    <div class="deck-grid">
+      <a class="deck-card" href="/decks/Lincoln/system4-ai-opportunity-diagnostic/index.html#1">
+        <div>
+          <span class="tag">Consulting</span>
+          <h2>System 4 中国市场战略诊断与 AI 机会方案</h2>
+          <p>基于六场跨职能访谈与官方资料，完成中国市场战略诊断、证据分级、AI Agent 机会评估与 180 天实施路线图。</p>
+        </div>
+        <div class="meta">System 4 · AI Transformation · 32 slides</div>
+      </a>
+      <a class="deck-card" href="/decks/Lincoln/ai-digital-employee-marketing-workshop/index.html#1">
+        <div>
+          <span class="tag">Workshop</span>
+          <h2>AI 数字员工营销团队工作坊</h2>
+          <p>面向 AI 数字员工工作坊的一小时培训 deck，系统拆解营销团队工作流、数字员工定义、Skill 构建、人机协作、企业部署和现场练习路径。</p>
+        </div>
+        <div class="meta">AI Digital Employee · Marketing Workshop · 31 slides</div>
+      </a>
+      <a class="deck-card" href="/decks/Lincoln/yangmingyu-regional-brand-asset-training/index.html#1">
+        <div>
+          <span class="tag">Training</span>
+          <h2>杨铭宇区域品牌资产经营培训</h2>
+          <p>面向连锁餐饮区域负责人的品牌资产经营培训，围绕门店组合质量、A/B/C/D 分级治理、加盟商筛选、标准执行、时间四象限和 A 类店经验复制。</p>
+        </div>
+        <div class="meta">Yangmingyu · Regional Brand Asset · 38 slides</div>
+      </a>
+      <a class="deck-card" href="/decks/Lincoln/zhidu-ai-native-growth-plan/index.html#1">
+        <div>
+          <span class="tag">Consulting</span>
+          <h2>炙都 AI 原生品牌孵化与 6 个月复制增长方案</h2>
+          <p>围绕上海徐家汇新六百首店试营业，设计首店爆店、PMF 验证、单店财务模型、联营招商和开店复制的 Agent 工作流。</p>
+        </div>
+        <div class="meta">Lincoln · Zhidu · AI Native Restaurant · 12 slides</div>
+      </a>
+      <a class="deck-card" href="/decks/Lincoln/opc-chongqing-10min/index.html#1">
+        <div>
+          <span class="tag">Talk</span>
+          <h2>企业 AI 转型与 OPC 的机会</h2>
+          <p>面向重庆 OPC 活动的 10 分钟主题分享：从前线部署工程师 FDE，到 AI 原生企业创业者，讨论 OPC 在企业 AI 转型中的两条机会路径。</p>
+        </div>
+        <div class="meta">Lincoln · OPC Chongqing · 13 slides</div>
+      </a>
+      <a class="deck-card" href="/decks/Lincoln/pudong-ecommerce-ai-native-enterprise/index.html#1">
+        <div>
+          <span class="tag">Talk</span>
+          <h2>电商企业，如何转型为 AI 原生组织</h2>
+          <p>面向浦东电商行业协会的 AI 原生企业分享：从新品推广、商品内容、投放客服、组织工作流到 Agent / Skill / Memory / Workflow。</p>
+        </div>
+        <div class="meta">Lincoln · Pudong E-commerce · 31 slides</div>
+      </a>
+      <a class="deck-card" href="/decks/Lincoln/xiyouji-ai-agent-kickoff-training/index.html#1">
+        <div>
+          <span class="tag">Workshop</span>
+          <h2>嘻游记团队 AI Agent 转型启动工作坊</h2>
+          <p>围绕餐饮企业真实访谈需求，设计半天启动培训：统一 AI 转型认知、讲清 Agent 制作方法，并让各部门现场产出第一个 demo。</p>
+        </div>
+        <div class="meta">Xiyouji · AI Agent · Kickoff · 56 slides</div>
+      </a>
+      <a class="deck-card" href="/decks/Lincoln/ai-native-enterprise-conference-lincoln-talk/index.html#1">
+        <div>
+          <span class="tag">Talk</span>
+          <h2>AI 原生企业大会：传统企业如何转型为 AI 原生组织</h2>
+          <p>从组织操作系统、Token 管理、Agent / Skill / Memory / Workflow，到 Spec to Harness，讨论传统企业迈向 AI 原生组织的关键变化。</p>
+        </div>
+        <div class="meta">AI Native Enterprise · Lincoln Talk · 32 slides</div>
+      </a>
+      <a class="deck-card" href="/decks/Lincoln/ceibs-ai-agent-marketing-training/index.html#1">
+        <div>
+          <span class="tag">Training</span>
+          <h2>中欧商学院市场团队 AI Agent 工作流培训</h2>
+          <p>用 Spec、Skill、Workflow 和 Agentic Marketing Team 方法，帮助市场团队把高频工作沉淀为可复用 AI 工作流。</p>
+        </div>
+        <div class="meta">CEIBS · AI Agent · Marketing · 31 slides</div>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

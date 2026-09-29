@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Logos</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:#fff;font-family:var(--font-sans);color:#0f172a;}
+  .wrap{padding:18px 22px;display:flex;flex-direction:column;gap:22px;}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .row--primary{grid-template-columns:1fr 1fr;}
+  .section-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:#1e477c;margin:0 2px -10px;}
+  .cell{border:1px solid #f3f4f6;border-radius:10px;padding:22px 24px;display:flex;align-items:center;justify-content:center;min-height:116px;}
+  .cell--dark{background:#1e477c;border:none;}
+  .cell img{max-width:100%;max-height:68px;object-fit:contain;}
+  .cell .joint-logo{max-height:58px;}
+  .lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#9ca3af;margin-top:8px;text-align:center;}
+  .note{font-size:12px;line-height:1.6;color:#64748b;margin:-8px 2px 0;max-width:760px;}
+
+  /* ── Bilingual lockups ─────────────────────────────────────── */
+  /* Color tokens */
+  .ink-blue   { color:#1e477c; }
+  .ink-white  { color:#fff; }
+
+  /* Lockup typography */
+  .lockup { display:flex; align-items:baseline; gap:18px; }
+  .lockup--stacked { flex-direction:column; align-items:center; gap:10px; width:max-content; }
+  .lockup--stacked .word-en,
+  .lockup--stacked .word-cn { display:block; width:100%; text-align:center; }
+  .word-en {
+    font-family:"MindsLeap Brand","Noto Sans SC","Inter",system-ui,sans-serif;
+    font-weight:700;
+    font-size:34px;
+    line-height:1;
+    letter-spacing:-0.02em;
+  }
+  .word-cn {
+    font-family:"MindsLeap Brand","Noto Sans SC",system-ui,sans-serif;
+    font-weight:700;
+    font-size:29px;
+    line-height:1;
+    letter-spacing:0;
+  }
+</style></head><body>
+<div class="wrap">
+
+  <div class="section-label">Primary marks</div>
+  <div class="row row--primary">
+    <div>
+      <div class="cell"><img src="../assets/logos/mindsleap-logo-blue.png" alt="blue"></div>
+      <div class="lbl">Blue · on light</div>
+    </div>
+    <div>
+      <div class="cell cell--dark"><img src="../assets/logos/mindsleap-logo-white.png" alt="white"></div>
+      <div class="lbl">White · on dark</div>
+    </div>
+    <div>
+      <div class="cell"><img class="joint-logo" src="../assets/logos/mindsleap-foundersspace-joint-logo-blue.svg" alt="MindsLeap and Founders Space joint logo"></div>
+      <div class="lbl">Joint · MindsLeap + Founders Space</div>
+    </div>
+    <div>
+      <div class="cell cell--dark"><img class="joint-logo" src="../assets/logos/mindsleap-foundersspace-joint-logo-white.png" alt="White MindsLeap and Founders Space joint logo"></div>
+      <div class="lbl">Joint white · on dark</div>
+    </div>
+  </div>
+
+  <div class="section-label">Bilingual · compliant lockups</div>
+  <div class="note">MindsLeap and 心智悦动 stay as complete wordmarks. They may sit horizontally at equal visual rank, or stack vertically with matched width.</div>
+  <div class="row">
+    <div>
+      <div class="cell">
+        <div class="lockup">
+          <span class="word-en ink-blue">MindsLeap</span>
+          <span class="word-cn ink-blue">心智悦动</span>
+        </div>
+      </div>
+      <div class="lbl">A · horizontal pair</div>
+    </div>
+    <div>
+      <div class="cell">
+        <div class="lockup lockup--stacked">
+          <span class="word-en ink-blue">MindsLeap</span>
+          <span class="word-cn ink-blue">心智悦动</span>
+        </div>
+      </div>
+      <div class="lbl">B · stacked equal width</div>
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      <div class="cell cell--dark">
+        <div class="lockup">
+          <span class="word-en ink-white">MindsLeap</span>
+          <span class="word-cn ink-white">心智悦动</span>
+        </div>
+      </div>
+      <div class="lbl">A · horizontal on dark</div>
+    </div>
+    <div>
+      <div class="cell cell--dark">
+        <div class="lockup lockup--stacked">
+          <span class="word-en ink-white">MindsLeap</span>
+          <span class="word-cn ink-white">心智悦动</span>
+        </div>
+      </div>
+      <div class="lbl">B · stacked on dark</div>
+    </div>
+  </div>
+
+</div>
+</body></html>

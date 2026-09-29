@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MindsLeap Case · 企业 AI 转型案例集</title>
+  <style>
+    :root {
+      --blue: #1e477c;
+      --blue-soft: #eff6ff;
+      --ink: #111111;
+      --muted: #4b5563;
+      --subtle: #9ca3af;
+      --rule: #e5e7eb;
+      --bg: #ffffff;
+      --bg-alt: #f9fafb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "Noto Sans SC", "PingFang SC", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      letter-spacing: -0.01em;
+    }
+    header {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 56px;
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255,255,255,.96);
+    }
+    .logo {
+      width: 260px;
+      height: 52px;
+      background: url("/decks/shared/mindsleap-template/mindsleap-foundersspace-joint-logo-blue.svg") left center / contain no-repeat;
+    }
+    nav {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    a { color: inherit; text-decoration: none; }
+    nav a { color: var(--blue); }
+    main { overflow: hidden; }
+    .hero {
+      padding: 92px 56px 84px;
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--rule);
+    }
+    .inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      color: #3b82f6;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      color: var(--blue);
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: 1.02;
+      letter-spacing: -.035em;
+    }
+    .lead {
+      max-width: 780px;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: 21px;
+      line-height: 1.62;
+    }
+    .section {
+      padding: 72px 56px 96px;
+    }
+    .section h2 {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 36px;
+      line-height: 1.2;
+    }
+    .section p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .case-card {
+      display: grid;
+      min-height: 430px;
+      grid-template-rows: 190px 1fr;
+      border: 1px solid var(--rule);
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+      overflow: hidden;
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+    .case-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,.08);
+    }
+    .case-visual {
+      min-height: 190px;
+      background: var(--blue-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    .case-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .case-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(16,39,69,0), rgba(16,39,69,.48));
+    }
+    .case-body {
+      display: flex;
+      min-height: 240px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px 34px 32px;
+    }
+    .tag {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 8px 12px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .case-card h3 {
+      margin: 22px 0 14px;
+      color: var(--blue);
+      font-size: 30px;
+      line-height: 1.18;
+    }
+    .meta {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--rule);
+      color: var(--subtle);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .empty-card {
+      min-height: 430px;
+      padding: 34px;
+      border: 1px dashed var(--rule);
+      background: var(--bg-alt);
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .empty-card h3 {
+      margin: 24px 0 14px;
+      color: var(--blue);
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    footer {
+      padding: 42px 56px;
+      border-top: 1px solid var(--rule);
+      color: var(--subtle);
+      font-size: 14px;
+    }
+    @media (max-width: 720px) {
+      header { height: auto; align-items: flex-start; flex-direction: column; gap: 18px; padding: 24px; }
+      .logo { width: 230px; }
+      nav { flex-wrap: wrap; }
+      .hero, .section, footer { padding-left: 24px; padding-right: 24px; }
+      .case-card, .empty-card { min-height: 0; }
+      .case-body { min-height: 0; padding: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="https://www.mindsleap.ai/zh" aria-label="MindsLeap"></a>
+    <nav>
+      <a href="https://www.mindsleap.ai/zh">首页</a>
+      <a href="/decks">Decks</a>
+      <a href="https://www.mindsleap.ai/zh/contact">联系</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="inner">
+        <div class="eyebrow">MindsLeap Case Archive</div>
+        <h1>企业 AI 转型与增长案例集</h1>
+        <p class="lead">这里集中存放 MindsLeap 与客户共同推进的 AI 原生组织、品牌增长、Agent 工作流和业务转型案例。每个案例都保留可复盘、可沟通、可沉淀的方法论版本。</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="inner">
+        <h2>精选案例</h2>
+        <p>案例会随着客户项目推进持续更新，保留可复盘、可沟通、可沉淀的方法论版本。</p>
+        <div class="case-grid">
+          <a class="case-card" href="/case/zhidu-brand-strategy/">
+            <div class="case-visual">
+              <img src="/case/zhidu-brand-strategy/report/assets/zhidu-KV1.jpg" alt="炙都品牌案例" />
+            </div>
+            <div class="case-body">
+              <div>
+                <span class="tag">Case</span>
+                <h3>炙都品牌价值主张与 GTM 战略</h3>
+                <p>围绕“每一碗，专为你现做。”梳理创始人故事、品牌核心价值主张、关键视觉资产、产品利益点和首店 GTM 传播路径。</p>
+              </div>
+              <div class="meta">Zhidu · Restaurant Brand · AI Native Growth</div>
+            </div>
+          </a>
+          <a class="case-card" href="/case/fushanji-brand-strategy/">
+            <div class="case-visual">
+              <img src="/case/fushanji-brand-strategy/assets/fushanji-kv.jpg" alt="福山季品牌案例" style="object-position:center 38%;" />
+            </div>
+            <div class="case-body">
+              <div>
+                <span class="tag">Case</span>
+                <h3>福山季烟火小馆品牌战略</h3>
+                <p>围绕“城市里，总有一炉火为你留着。”梳理广东吊烧鸡的品牌故事、核心价值主张、产品证据链、空间体验和首店 GTM 开业打法。</p>
+              </div>
+              <div class="meta">Fushanji · Restaurant Brand · Brand Strategy</div>
+            </div>
+          </a>
+          <a class="case-card" href="/case/yangmingyu-menu-agent/">
+            <div class="case-visual">
+              <img src="/case/yangmingyu-menu-agent/assets/menu-screen-export.png" alt="杨铭宇菜单屏 Agent 案例" />
+            </div>
+            <div class="case-body">
+              <div>
+                <span class="tag">Case</span>
+                <h3>杨铭宇菜单屏 Agent 原型</h3>
+                <p>把连锁餐饮门店菜单屏制作拆成品牌资产、标准菜品图库、版式规则、自动质检和 PNG 导出闭环，验证全国门店内容生产的 AI 工作流。</p>
+              </div>
+              <div class="meta">Yangmingyu · Menu Screen · Agent Workflow</div>
+            </div>
+          </a>
+          <div class="empty-card">
+            <div>
+              <span class="tag">Coming Soon</span>
+              <h3>更多企业 AI 转型案例</h3>
+              <p>后续可加入 FDE 项目、Agent 工作流落地、组织转型诊断、行业增长方案等案例。</p>
+            </div>
+            <div class="meta">MindsLeap · Case Pipeline</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="inner">© MindsLeap · Upgrade AI Mindsets for Global Success</div>
+  </footer>
+</body>
+</html>
